@@ -195,6 +195,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="FLYKEDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FLYKEDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Model\Flight.cs" />
     <Compile Include="Resources\CustomControls\AdminRight.xaml.cs">
       <DependentUpon>AdminRight.xaml</DependentUpon>
     </Compile>
@@ -466,6 +472,17 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <None Include="FLYKEDataSet.xsc">
+      <DependentUpon>FLYKEDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FLYKEDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FLYKEDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FLYKEDataSet.xss">
+      <DependentUpon>FLYKEDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
