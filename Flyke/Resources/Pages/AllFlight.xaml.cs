@@ -16,13 +16,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Flyke.MVVM.Model;
+using Microsoft.Office.Interop.Excel;
 
 namespace Flyke.Pages
 {
     /// <summary>
     /// Interaction logic for AllFlight.xaml
     /// </summary>
-    public partial class AllFlight : Page
+    public partial class AllFlight : System.Windows.Controls.Page
     {
         public DateTime dateTimeDestination, dateTimeDeparture;
         public TimeSpan time;
@@ -33,7 +34,8 @@ namespace Flyke.Pages
         public AllFlight()
         {
             InitializeComponent();
-            DataProvider.sqlConnection.Open();
+            if (DataProvider.sqlConnection.State != ConnectionState.Open)
+                DataProvider.sqlConnection.Open();
             SqlCommand sqlCommand = new SqlCommand(
              "select [c].*, Logo, TenHang, (select count(*) from [SANBAYTRUNGGIAN] [sbtg] where [sbtg].MaChuyenBay = [c].MaChuyenBay) SoSBTG, " +
              "(select count(*) from [VE] [v1] where [v1].MaChuyenBay = [c].MaChuyenBay and [v1].TinhTrang = 'TRONG') SoVeTrong, " +

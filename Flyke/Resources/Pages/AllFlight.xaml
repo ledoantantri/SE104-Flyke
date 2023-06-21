@@ -9,6 +9,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       FontFamily="Raleway"
+      Background="White"
       Title="AllFlight">
     <Page.Resources>
         <convert:DurationConverter x:Key="DurationConverter"/>

@@ -76,8 +76,8 @@ namespace Flyke
 
             //ImageSource imgSource = new BitmapImage(new Uri(airlineLogo, UriKind.Relative));
             //image_Logo.Source = imgSource;
-
-            DataProvider.sqlConnection.Open();
+            if (DataProvider.sqlConnection.State != ConnectionState.Open)
+                DataProvider.sqlConnection.Open();
             SqlCommand sqlCommand = new SqlCommand(
              "select [c].*, [s1].Tinh TinhSBDi, [s2].Tinh TinhSBDen, [s1].TenSanBay TenSBDi, [s2].TenSanBay TenSBDen, TenHang from [CHUYENBAY] [c], [SANBAY] [s1], [SANBAY] [s2], [HANGMAYBAY] [hmb] " +
              "where [c].MaChuyenBay=@flightID " +

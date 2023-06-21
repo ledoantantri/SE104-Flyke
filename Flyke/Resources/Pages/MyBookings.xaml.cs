@@ -17,7 +17,7 @@ using Flyke.MVVM.View;
 using Flyke.MVVM.Model;
 using System.Data.SqlClient;
 using System.Data;
-using Flyke.MVVM.Model;
+
 
 namespace Flyke.Pages
 {

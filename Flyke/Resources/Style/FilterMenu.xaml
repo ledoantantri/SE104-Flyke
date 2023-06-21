@@ -64,7 +64,7 @@
                         </VisualStateManager.VisualStateGroups>
                         <!-- edit icon -->
                         <materialDesign:PackIcon Kind="MenuDown" x:Name="ExpandPath" RenderTransformOrigin="0.5,0.5"
-                                      Height="27" Width="27" Foreground="#8EB54C">
+                                      Height="27" Width="27" Foreground="Black">
                             <materialDesign:PackIcon.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>

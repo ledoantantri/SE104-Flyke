@@ -18,11 +18,12 @@ using System.Data;
 using Flyke.MVVM.Model;
 using Flyke.Pages;
 using System.Globalization;
+using Microsoft.Office.Interop.Excel;
 
 
 namespace Flyke.MVVM.View
 {
-    public partial class AddInforHK : Window
+    public partial class AddInforHK : System.Windows.Window
     {
 
 
@@ -153,7 +154,8 @@ namespace Flyke.MVVM.View
 
         private void NewHD()
         {
-            DataProvider.sqlConnection.Open();
+            if (DataProvider.sqlConnection.State != ConnectionState.Open)
+                DataProvider.sqlConnection.Open();
             SqlCommand sqlCommand = new SqlCommand("select [h].* from HOADON [h] order by NgayLap desc", DataProvider.sqlConnection);
             SqlDataReader reader = sqlCommand.ExecuteReader();
             if (reader.HasRows)
