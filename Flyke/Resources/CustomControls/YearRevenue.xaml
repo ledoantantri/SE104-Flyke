@@ -26,7 +26,7 @@
                 </ComboBox>
             </StackPanel>
             <Button Grid.Column="1" x:Name="Excel" Content="Xuất Excel" Background="White" Width="100" 
-                    Click="Excel_Click"/>
+                    Click="Excel_Click" Margin="30,413,30,-395"/>
         </Grid>
        
         <DataGrid Grid.Row="1" x:Name="YearRevenueTable" IsReadOnly="true">
