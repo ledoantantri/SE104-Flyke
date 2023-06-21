@@ -15,7 +15,7 @@ using Flyke.MVVM.Model;
 using System.Data;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
-using Flyke.Model;
+using Flyke.MVVM.Model;
 
 namespace Flyke.MVVM.View
 {

@@ -33,7 +33,7 @@
                     <TextBlock Margin="30,4,0,0" Text="Hạng vé:" Foreground="White" FontSize="18" Width="77" FontWeight="Bold"/>
                     <ComboBox x:Name="hangveSearchBox" Width="90" BorderBrush="White" Foreground="White" FontSize="13" Margin="5,3,0,3"/>
                     <Button x:Name="btnSearch" Width="57" Margin="4,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" Click="btnSearch_Click" >
-                        <TextBlock Text="Tìm" Foreground="White"/>
+                        <TextBlock Text="Tìm" Foreground="White" FontSize="12"/>
                     </Button>
                 </StackPanel>
             </Border>
@@ -64,25 +64,25 @@
                                             <StackPanel Orientation="Horizontal">
                                                 
                                                 <Grid>
-                                                    <StackPanel Margin="0,0,-200,0">
+                                                    <StackPanel Margin="0,0,-200,0" >
                                                         
-                                                        <DockPanel >
-                                                            <TextBlock Text="Tuyến: " Width="40" Margin="8,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="11"/>
-                                                            <TextBlock Text="{Binding Tuyen}" FontSize="16" Background="{x:Null}" FontWeight="Normal" Height="25" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
+                                                        <DockPanel>
+                                                            <TextBlock Text="Tuyến: " Width="40" Margin="8,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="11" Foreground="White"/>
+                                                            <TextBlock Text="{Binding Tuyen}" FontSize="16" Background="{x:Null}" FontWeight="Normal" Height="25" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="White"/>
                                                         </DockPanel>
                                                         <DockPanel >
-                                                            <TextBlock Text="Ngày giờ: " Width="53" Margin="8,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="11"/>
-                                                            <TextBlock Text="{Binding NgayGio}" FontSize="16" Background="{x:Null}" FontWeight="Normal" Height="25" />
+                                                            <TextBlock Text="Ngày giờ: " Width="53" Margin="8,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="11" Foreground="White"/>
+                                                            <TextBlock Text="{Binding NgayGio}" FontSize="16" Background="{x:Null}" FontWeight="Normal" Height="25" Foreground="White"/>
                                                         </DockPanel>
                                                         <DockPanel >
-                                                            <TextBlock Text="Số ghế: " Width="40" Margin="8,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="11"/>
-                                                            <TextBlock Text="{Binding SoGhe}" FontSize="16" Background="{x:Null}" FontWeight="Normal" Height="25"/>
-                                                            <TextBlock Text="Hạng vé: " Width="48" Margin="40,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="11"/>
-                                                            <TextBlock Text="{Binding HangVe}" FontSize="16" Background="{x:Null}" FontWeight="Normal" Height="25" />
+                                                            <TextBlock Text="Số ghế: " Width="40" Margin="8,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="11" Foreground="White"/>
+                                                            <TextBlock Text="{Binding SoGhe}" FontSize="16" Background="{x:Null}" FontWeight="Normal" Height="25" Foreground="White"/>
+                                                            <TextBlock Text="Hạng vé: " Width="48" Margin="40,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="11" Foreground="White"/>
+                                                            <TextBlock Text="{Binding HangVe}" FontSize="16" Background="{x:Null}" FontWeight="Normal" Height="25" Foreground="White"/>
                                                         </DockPanel>
                                                         <DockPanel >
-                                                            <TextBlock Text="Họ tên:" Width="43" Margin="8,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="11"/>
-                                                            <TextBlock Text="{Binding TenHK}" FontSize="16" Background="{x:Null}" FontWeight="Normal" Height="25"/>
+                                                            <TextBlock Text="Họ tên:" Width="43" Margin="8,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="11" Foreground="White"/>
+                                                            <TextBlock Text="{Binding TenHK}" FontSize="16" Background="{x:Null}" FontWeight="Normal" Height="25" Foreground="White"/>
                                                         </DockPanel>
                                                     </StackPanel>
                                                 </Grid>
@@ -101,7 +101,7 @@
                 </Grid.Background>
                 <Frame Name="fTicket"/>
             </Grid>-->
-
+            <Frame Name="fTicket"/>
         </Grid>
     </Grid>
 </Page>

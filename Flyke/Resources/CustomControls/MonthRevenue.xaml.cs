@@ -23,7 +23,7 @@ using DataTable = System.Data.DataTable;
 using MaterialDesignThemes.Wpf;
 using System.Drawing;
 using System.Windows.Controls.Primitives;
-using Flyke.Model;
+using Flyke.MVVM.Model;
 //using static Flyke.FlykeDataSet;
 
 namespace Flyke.Resources.CustomControls

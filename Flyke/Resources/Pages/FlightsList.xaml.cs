@@ -28,7 +28,7 @@ using Flyke.Converter;
 using System.Drawing;
 using Flyke.UserControls;
 using static Flyke.MVVM.View.AddInforHK;
-using Flyke.Model;
+using Flyke.MVVM.Model;
 
 namespace Flyke
 {

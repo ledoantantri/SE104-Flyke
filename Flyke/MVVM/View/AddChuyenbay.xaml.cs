@@ -1,4 +1,4 @@
-﻿using Flyke.Model;
+﻿using Flyke.MVVM.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;

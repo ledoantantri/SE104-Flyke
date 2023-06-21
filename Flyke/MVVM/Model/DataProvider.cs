@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Flyke.Model
+namespace Flyke.MVVM.Model
 {
     internal class DataProvider
     {

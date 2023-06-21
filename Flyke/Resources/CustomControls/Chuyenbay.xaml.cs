@@ -17,7 +17,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using static Flyke.Resources.CustomControls.Chuyenbay;
 using Flyke.MVVM.Model;
-using Flyke.Model;
+using Flyke.MVVM.Model;
 
 namespace Flyke.Resources.CustomControls
 {

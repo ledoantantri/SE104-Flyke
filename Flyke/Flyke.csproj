@@ -418,7 +418,6 @@
   <ItemGroup>
     <Compile Include="MVVM\Model\TaiKhoan.cs" />
     <Compile Include="MVVM\Model\DataProvider.cs" />
-    <Compile Include="MVVM\Model\ChuyenBay.cs" />
     <Compile Include="MVVM\Model\FlightClass.cs" />
     <Compile Include="MVVM\Model\HangVe.cs" />
     <Compile Include="MVVM\Model\SanBayTrungGian.cs" />

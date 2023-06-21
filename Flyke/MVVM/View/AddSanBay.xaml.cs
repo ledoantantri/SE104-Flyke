@@ -1,5 +1,5 @@
 ﻿
-using Flyke.Model;
+using Flyke.MVVM.Model;
 using Flyke.MVVM.Model;
 using Flyke.Resources.CustomControls;
 using Flyke.UserControls;

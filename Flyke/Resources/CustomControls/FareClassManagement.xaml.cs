@@ -18,7 +18,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Flyke.MVVM.View;
 using Flyke.Resources.CustomControls;
-using Flyke.Model;
+using Flyke.MVVM.Model;
 
 namespace Flyke.UserControls
 {

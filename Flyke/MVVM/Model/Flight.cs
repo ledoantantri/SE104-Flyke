@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Flyke
+namespace Flyke.MVVM.Model
 {
     internal class Flight : INotifyPropertyChanged
     {

@@ -17,7 +17,7 @@ using Flyke.MVVM.Model;
 using static Flyke.Resources.CustomControls.Sanbay;
 using static Flyke.Resources.CustomControls.Chuyenbay;
 using Flyke.UserControls;
-using Flyke.Model;
+
 
 namespace Flyke.MVVM.View
 {

@@ -14,7 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Flyke.MVVM.Model;
-using Flyke.Model;
+using Flyke.MVVM.Model;
 
 namespace Flyke.MVVM.View
 {

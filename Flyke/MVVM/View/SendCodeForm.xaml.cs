@@ -17,7 +17,7 @@ using System.Windows.Shapes;
 using Flyke.MVVM.Model;
 using System.Data.SqlClient;
 using System.Data;
-using Flyke.Model;
+using Flyke.MVVM.Model;
 
 namespace Flyke.MVVM.View
 {

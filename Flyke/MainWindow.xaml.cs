@@ -19,7 +19,7 @@ using System.Data.SqlClient;
 using Flyke.Pages;
 using Flyke.MVVM.View;
 using Flyke.UserControls;
-using Flyke.Model;
+using Flyke.MVVM.Model;
 using System.Windows.Threading;
 using System.Globalization;
 using Flyke.Resources.CustomControls;
@@ -55,6 +55,7 @@ namespace Flyke
 
             flights = new FlightsList();
             fContainer.Content = home;
+            
         }
 
         private void Flights_Return(object sender, RoutedEventArgs e)
