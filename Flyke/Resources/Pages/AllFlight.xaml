@@ -26,7 +26,7 @@
                     <GradientStop Color="#2027CC" Offset="0.9961" />
                 </LinearGradientBrush>
             </Grid.Background>
-            <TextBlock Text="Tất cả các chuyến bay" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontWeight="Bold" Foreground="White">
+            <TextBlock Text="DANH SÁCH CHUYẾN BAY" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontWeight="Bold" Foreground="White">
                 
             </TextBlock>
         </Grid>
@@ -34,7 +34,7 @@
             <ListView Grid.Row="2" Background="{x:Null}" Margin="2,2,2,2" Name="lvFlight" BorderBrush="{x:Null}" HorizontalContentAlignment="Center"  ScrollViewer.CanContentScroll="false" ScrollViewer.HorizontalScrollBarVisibility="Hidden" SelectionChanged="FlightList_SelectionChanged">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Border CornerRadius="4" Background="White" BorderBrush="DarkSeaGreen" BorderThickness="1" Margin="0 4 0 4">
+                    <Border CornerRadius="4" Background="White"  BorderThickness="1" Margin="0 4 0 4">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition/>
@@ -46,11 +46,11 @@
                             </Grid.ColumnDefinitions>
                                 <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
                                     <TextBlock Margin="10" FontSize="14"  >
-                                    <Run Text="Số ghế trống: " FontWeight="Bold" Foreground="#FFAE0C0C"/>
+                                    <Run Text="Số ghế trống: " FontWeight="Bold" Foreground="Black"/>
                                     <Run Text="{Binding AvailableSeats}"/>
                                     </TextBlock>
                                     <TextBlock Margin="10" FontSize="14" >
-                                    <Run Text="Số ghế đặt: " FontWeight="Bold" Foreground="#FFAE0C0C"/>
+                                    <Run Text="Số ghế đặt: " FontWeight="Bold" Foreground="Black"/>
                                     <Run Text="{Binding BookedSeats}"/>
                                     </TextBlock>
                                 </StackPanel>
@@ -91,7 +91,7 @@
                                         <WrapPanel>
                                             <materialDesign:PackIcon Kind="CircleOutline" VerticalAlignment="Center" Width="8" Height="8"/>
                                             <TextBlock Text="- - - - - - - - -" VerticalAlignment="Center"/>
-                                            <materialDesign:PackIcon Kind="Airplane" Foreground="#FF64B164" Width="25" Height="25"/>
+                                            <materialDesign:PackIcon Kind="Airplane" Foreground="BLACK" Width="25" Height="25"/>
                                             <TextBlock Text="- - - - - - - - -" VerticalAlignment="Center"/>
                                             <materialDesign:PackIcon Kind="Circle" VerticalAlignment="Center" Width="8" Height="8"/>
                                         </WrapPanel>
