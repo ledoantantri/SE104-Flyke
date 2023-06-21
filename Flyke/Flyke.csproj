@@ -284,10 +284,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Resources\Pages\ContactUs.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Resources\Pages\FlightDetail.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -427,9 +423,6 @@
     </Compile>
     <Compile Include="Resources\Pages\BookingsDetails.xaml.cs">
       <DependentUpon>BookingsDetails.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Resources\Pages\ContactUs.xaml.cs">
-      <DependentUpon>ContactUs.xaml</DependentUpon>
     </Compile>
     <Compile Include="Resources\Pages\FlightDetail.xaml.cs">
       <DependentUpon>FlightDetail.xaml</DependentUpon>

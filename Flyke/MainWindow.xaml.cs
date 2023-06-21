@@ -379,11 +379,11 @@ namespace Flyke
                 fContainer.Content = setting;
             }
         }
-        private void contactsUs_click(object sender, RoutedEventArgs e)
-        {
-            ContactUs contactUs = new ContactUs();
-            fContainer.Content = contactUs;
-        }
+        //private void contactsUs_click(object sender, RoutedEventArgs e)
+        //{
+        //    ContactUs contactUs = new ContactUs();
+        //    fContainer.Content = contactUs;
+        //}
         private void Reload_Mybookings(object sender, RoutedEventArgs e)
         {
             myBookings = new MyBookings();
