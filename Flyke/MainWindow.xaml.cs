@@ -37,7 +37,7 @@ namespace Flyke
         public static TaiKhoan curAccount = null;
         private AddInforHK addInforHK;
         private AllFlight allFlight;
-        private MyBookings myBookings;
+        private MyBookings myBookings;        
         public MainWindow()
         {
             InitializeComponent();

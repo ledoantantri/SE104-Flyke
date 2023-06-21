@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="600" d:DesignWidth="1020"
       Title="MyBookings" 
-      Background="#f1f6e5">
+      Background="White">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -33,7 +33,7 @@
                     <TextBlock Margin="30,4,0,0" Text="Hạng vé:" Foreground="White" FontSize="18" Width="77" FontWeight="Bold"/>
                     <ComboBox x:Name="hangveSearchBox" Width="90" BorderBrush="White" Foreground="White" FontSize="13" Margin="5,3,0,3"/>
                     <Button x:Name="btnSearch" Width="57" Margin="4,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" Click="btnSearch_Click" >
-                        <Image  Height="24" Width="26" RenderTransformOrigin="0,0" HorizontalAlignment="Left" Source="/resources/images/search_icon.png"/>
+                        <TextBlock Text="Tìm" Foreground="White"/>
                     </Button>
                 </StackPanel>
             </Border>
@@ -44,18 +44,28 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid Margin="10,0,0,0">
-                <StackPanel>
+                <StackPanel >
                     <TextBlock x:Name="StatusBookings" Margin="20,0,0,0" FontSize="14" FontWeight="Normal"/>
-                    <ListView x:Name="lvTicket" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="lvTicket_SelectionChanged" Height="514">
+                    <ListView x:Name="lvTicket" d:ItemsSource="{d:SampleData ItemCount=10}" SelectionChanged="lvTicket_SelectionChanged" Height="514">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <Grid Height="108">
-                                    <Border BorderBrush="White" Width="320" Height="110" VerticalAlignment="Top" Margin="0,0,0,0" CornerRadius="20,20,20,20" BorderThickness="1,1,4,4" Background="#FFE2F7C9">
+                                    <Border BorderBrush="White" Width="320" Height="110" VerticalAlignment="Top" Margin="0,0,0,0" CornerRadius="20,20,20,20" BorderThickness="1,1,4,4">
+                                        <Border.Background>
+
+                                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                                <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                                                <GradientStop Color="#2027CC" Offset="0.9961" />
+                                            </LinearGradientBrush>
+
+                                        </Border.Background>
+                                        
                                         <Grid>
                                             <StackPanel Orientation="Horizontal">
                                                 
                                                 <Grid>
                                                     <StackPanel Margin="0,0,-200,0">
+                                                        
                                                         <DockPanel >
                                                             <TextBlock Text="Tuyến: " Width="40" Margin="8,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="11"/>
                                                             <TextBlock Text="{Binding Tuyen}" FontSize="16" Background="{x:Null}" FontWeight="Normal" Height="25" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
@@ -85,12 +95,12 @@
                     </ListView>
                 </StackPanel>
             </Grid>
-            <Grid Grid.Column="1" >
+            <!--<Grid Grid.Column="1" >
                 <Grid.Background>
                     <ImageBrush ImageSource="/resources/images/ticketbg.png" Stretch="Uniform"/>
                 </Grid.Background>
                 <Frame Name="fTicket"/>
-            </Grid>
+            </Grid>-->
 
         </Grid>
     </Grid>

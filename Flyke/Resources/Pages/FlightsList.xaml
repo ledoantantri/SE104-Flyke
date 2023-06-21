@@ -437,7 +437,7 @@
                 <Button Grid.Column="1" HorizontalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Click="btnSearch_Click">
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                         <materialDesign:PackIcon  Kind="Search" Width="25" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <TextBlock Text="Thay đổi tìm kiếm" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+                        <TextBlock Text="Tìm kiếm" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
                     </StackPanel>
                 </Button>
 

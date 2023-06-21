@@ -61,8 +61,22 @@
                         <RowDefinition Height="Auto"/>
 
                     </Grid.RowDefinitions>
-                    <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Continue" Background="#FF3F9866" Margin="10" Click="btnCont_Click"/>
-                    <TextBlock Text="Sơ đồ vé" Grid.Row="0" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Foreground="#FF439E22" VerticalAlignment="Center" Height="27"/>
+                    <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Tiếp theo" Margin="10" Click="btnCont_Click" Foreground="White">
+                        <Button.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                                <GradientStop Color="#2027CC" Offset="0.9961" />
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                    <TextBlock Text="CHỖ NGỒI" Grid.Row="0" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"  VerticalAlignment="Center" Height="27">
+                        <TextBlock.Foreground>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                                <GradientStop Color="#2027CC" Offset="0.9961" />
+                            </LinearGradientBrush>
+                        </TextBlock.Foreground>
+                    </TextBlock>
                     <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1">
                         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Grid.ColumnDefinitions>
@@ -136,7 +150,14 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
 
-                <TextBlock Text="Chi tiết chuyến bay" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Foreground="#FF439E22" VerticalAlignment="Center"/>
+                <TextBlock Text="Chi tiết chuyến bay" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock.Foreground>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                            <GradientStop Color="#2027CC" Offset="0.9961" />
+                        </LinearGradientBrush>
+                    </TextBlock.Foreground>
+                </TextBlock>
                 <Grid Grid.Row="1" >
 
 
@@ -157,7 +178,7 @@
                         <TextBlock Text="{Binding Converter={StaticResource DateConverter}}" FontSize="15" Foreground="Gray" HorizontalAlignment="Center"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26" Width="80">
-                        <materialDesign:PackIcon Kind="AirplaneClock" VerticalAlignment="Center" Foreground="#DD89A0E9" Width="25" Height="25" Margin="5 0 0 0"/>
+                        
                         <TextBlock Text="{Binding Converter={StaticResource DurationConverter}}" Margin="5 0 0 0" VerticalAlignment="Center" FontSize="15" HorizontalAlignment="Center" Name="tb_Time"/>
                     </StackPanel>
                     <StackPanel VerticalAlignment="Center" Grid.Column="1" Grid.RowSpan="3">
