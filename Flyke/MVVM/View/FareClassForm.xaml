@@ -1,0 +1,47 @@
+﻿<Window x:Class="Flyke.MVVM.View.FareClassForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Flyke.MVVM.View"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="FareClassForm" Height="350" Width="500"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Foreground="White">
+    <Border CornerRadius="40">
+        <Border.Background>
+            <LinearGradientBrush EndPoint="0 1">
+                <GradientStop Color="White" Offset="1"/>
+                <GradientStop Color="#8EB54C" Offset="0.4"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <StackPanel>
+            <TextBlock Text="Thêm hạng vé" TextAlignment="Center" Foreground="White" FontSize="35"   Margin="0 20 0 30"/>
+            <TextBox x:Name="Name" materialDesign:HintAssist.Hint="Tên hạng vé"
+                             materialDesign:HintAssist.Foreground="White"
+                             
+                             VerticalAlignment="Center" FontSize="15" Width="300" BorderBrush="White"/>
+            <TextBox x:Name="Percentage" materialDesign:HintAssist.Hint="Tỷ lệ (%)"
+                             
+                             materialDesign:HintAssist.Foreground="White"
+                             VerticalAlignment="Center" FontSize="15" Width="300" Margin="0 20 0 0" BorderBrush="White"/>
+            <TextBlock x:Name="txblError"  Foreground="Red" Margin="0 30 0 0" HorizontalAlignment="Center" FontWeight="Medium"/>
+            <StackPanel Orientation="Horizontal" Width="350" Margin="0 20 0 0">
+                <Button 
+                            materialDesign:ButtonAssist.CornerRadius="5" Click="BtnSave_click"
+                            Width="100" Content="Lưu" Foreground="White" FontSize="17" Margin="30 0"
+                        Background="#8EB54C">
+                </Button>
+                <Button 
+                            materialDesign:ButtonAssist.CornerRadius="5" Click="BtnCancel_click"
+                            Width="100" Content="Hủy" Foreground="#8EB54C" FontSize="17" Margin="30 0"
+                            Background="Transparent">
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</Window>

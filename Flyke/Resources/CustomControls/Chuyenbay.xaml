@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="Flyke.Resources.CustomControls.Chuyenbay"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Flyke.Resources.CustomControls"
+             mc:Ignorable="d" 
+             Background="#F5F5F5"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition  Height="40"/>
+        </Grid.RowDefinitions>
+        <DataGrid Grid.Row="0" x:Name="CBTable" SelectionChanged="CBTable_SelectionChanged" IsReadOnly="True">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#DDDDDD"/>
+                    <Setter Property="FontWeight" Value="SemiBold"/>
+                    <Setter Property="FontSize" Value="18"/>
+                    <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+                <Style TargetType="DataGridCell">
+                    <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Style.Resources>
+                        <Style TargetType="ContentPresenter">
+                            <Setter Property="VerticalAlignment" Value="Center" />
+                            <Setter Property="HorizontalAlignment" Value="Center" />
+                        </Style>
+                    </Style.Resources>
+                </Style>
+            </DataGrid.Resources>
+
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="STT" Width="50" Binding="{Binding STT}"/>
+                <DataGridTextColumn Header="Mã chuyến" Width="100" Binding="{Binding maCB}"/>
+                <DataGridTextColumn Header="Từ" Width="*" Binding="{Binding SBdi}"/>
+                <DataGridTextColumn Header="Đến" Width="*" Binding="{Binding SBden}"/>
+                <DataGridTextColumn Header="Ngày giờ" Width="120" Binding="{Binding datetime}"/>
+                <DataGridTextColumn Header="Thời gian bay" Width="90" Binding="{Binding tgBay}"/>
+                <DataGridTextColumn Header="Giá" Width="100" Binding="{Binding Gia}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Right">
+            <Button Content="Thêm" Click="Them_Click" Foreground="White" Margin="0 0 10 0">
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                        <GradientStop Color="#2027CC" Offset="0.9961" />
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button Content="Xóa" Click="Xoa_Click" Foreground="White" Margin="0 0 10 0">
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                        <GradientStop Color="#2027CC" Offset="0.9961" />
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button Content="Sửa"  Click="Sua_Click" Foreground="White" Margin="0 0 10 0">
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                        <GradientStop Color="#2027CC" Offset="0.9961" />
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+
+    </Grid>
+</UserControl>
