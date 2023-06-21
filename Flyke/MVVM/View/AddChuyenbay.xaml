@@ -10,13 +10,13 @@
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
          xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:uc1="clr-namespace:Flyke.Resources.CustomControls"
-        Title="AddChuyenbay" Height="760" Width="1000"
+        Title="AddChuyenbay" Height="650" Width="1000"
         FontFamily="Raleway">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="45"/>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
             <RowDefinition Height="170"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
