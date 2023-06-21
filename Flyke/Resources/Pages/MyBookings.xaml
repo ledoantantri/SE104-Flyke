@@ -25,13 +25,13 @@
                 </Border.Background>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="12,0,0,0" >
                     <TextBlock Margin="0,4,0,0" Text="Từ:" Foreground="White" FontSize="18" Width="30" FontWeight="Bold"/>
-                    <ComboBox x:Name="tuSearchTxt" Margin="5,3,0,3" Foreground="White" FontSize="13" Width="120" BorderThickness="0,0,0,1" BorderBrush="White"/>
+                    <ComboBox x:Name="tuSearchTxt" Margin="5,3,0,3" Foreground="Black" FontSize="13" Width="120" BorderThickness="0,0,0,1" BorderBrush="White"/>
                     <TextBlock Margin="30,4,0,0" Text="Đến:" Foreground="White" FontSize="18" Width="43" FontWeight="Bold"/>
-                    <ComboBox x:Name="denSearchTxt" Margin="5,3,0,3" Foreground="White" FontSize="13" Width="120" BorderThickness="0,0,0,1" BorderBrush="White"/>
+                    <ComboBox x:Name="denSearchTxt" Margin="5,3,0,3" Foreground="Black" FontSize="13" Width="120" BorderThickness="0,0,0,1" BorderBrush="White"/>
                     <TextBlock Margin="30,4,0,0" Text="Ngày:" Foreground="White" FontSize="18" Width="52" FontWeight="Bold"/>
-                    <DatePicker Width="120" BorderBrush="White" Foreground="White" FontSize="13" Margin="5,3,0,3" Style="{StaticResource MaterialDesignDatePicker}" x:Name="ngaySearchBox"/>
+                    <DatePicker Width="120" BorderBrush="White" Foreground="Black" FontSize="13" Margin="5,3,0,3" Style="{StaticResource MaterialDesignDatePicker}" x:Name="ngaySearchBox"/>
                     <TextBlock Margin="30,4,0,0" Text="Hạng vé:" Foreground="White" FontSize="18" Width="77" FontWeight="Bold"/>
-                    <ComboBox x:Name="hangveSearchBox" Width="90" BorderBrush="White" Foreground="White" FontSize="13" Margin="5,3,0,3"/>
+                    <ComboBox x:Name="hangveSearchBox" Width="90" BorderBrush="White" Foreground="Black" FontSize="13" Margin="5,3,0,3"/>
                     <Button x:Name="btnSearch" Width="57" Margin="4,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" Click="btnSearch_Click" >
                         <TextBlock Text="Tìm" Foreground="White" FontSize="12"/>
                     </Button>
