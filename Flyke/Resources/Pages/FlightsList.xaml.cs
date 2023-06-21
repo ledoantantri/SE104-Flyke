@@ -78,7 +78,8 @@ namespace Flyke
         {
             infoSearch.Text = departure + " -> " + destination + " | " + date + " | " + flightClass + " | " + quantity + " người";
            
-            DataProvider.sqlConnection.Open();
+            if (DataProvider.sqlConnection.State != ConnectionState.Open)
+                DataProvider.sqlConnection.Open();
             SqlCommand sqlCommand = new SqlCommand();
             if (flightClass != "")
             {

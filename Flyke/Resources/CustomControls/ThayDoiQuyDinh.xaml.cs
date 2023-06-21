@@ -108,8 +108,10 @@ namespace Flyke.CustomControls
                     return;
                 }
                 ruleChangeVM.ThoiGianBayToiThieu = int.Parse(TGBTT.Text);
+                
                 SqlConnection sqlCon = DataProvider.sqlConnection;
-                sqlCon.Open();
+                if (sqlCon.State != ConnectionState.Open)
+                    sqlCon.Open();
                 SqlCommand cmd = new SqlCommand("Update BANGTHAMSO set GiaTri=" + ruleChangeVM.ThoiGianBayToiThieu + "where CONVERT(varchar, TenThamSo)='ThoiGianBayToiThieu'", sqlCon);
                 cmd.CommandType = CommandType.Text;
                 cmd.ExecuteNonQuery();

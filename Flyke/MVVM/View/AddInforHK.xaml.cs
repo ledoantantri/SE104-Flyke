@@ -82,6 +82,7 @@ namespace Flyke.MVVM.View
         private bool CheckCMND()
         {
             bool check = true;
+            if (DataProvider.sqlConnection.State != ConnectionState.Open)
             DataProvider.sqlConnection.Open();
             SqlCommand sqlCommand = new SqlCommand(
                 "select [v].CMND from [VE] [v] where [v].CMND = @cmnd ", DataProvider.sqlConnection);
