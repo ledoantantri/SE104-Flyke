@@ -67,7 +67,7 @@ namespace Flyke.MVVM.View
             to = txbEmail.Text;
             from = "trileprovt@gmail.com";
             pass = "tsrfmfamwlvsbbmx";
-            message = "Mã xác thực tài khoản ứng dụng Quản Lý Bán Vé Máy Bay của bạn là: " + randomCode;
+            message = "Mã xác thực tài khoản ứng dụng Flyke của bạn là: " + randomCode;
             mailMessage.To.Add(to);
             mailMessage.From = new MailAddress(from);
             mailMessage.Body = message;
