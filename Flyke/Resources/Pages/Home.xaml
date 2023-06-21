@@ -30,15 +30,15 @@
 
             <TextBlock Margin="700,225,0,275" Height="50" Text="Điểm đi" Foreground="White" FontSize="15"/>
             <ComboBox Name="cbbDeparture"
-                                FontSize="15" Foreground="White"
+                                FontSize="10" Foreground="White"
                                 Style="{StaticResource MaterialDesignFloatingHintComboBox}"
-                                Margin="788,211,43,0" Height="35" VerticalAlignment="Top"/>
+                                Margin="788,211,43,0" Height="50" VerticalAlignment="Top"/>
 
             <TextBlock Margin="700,272,20,253" Text="Điểm đến" Foreground="White" FontSize="15"/>
             <ComboBox Name="cbbDestination"
                                 FontSize="15" Foreground="White"
                                 Style="{StaticResource MaterialDesignFloatingHintComboBox}"
-                                Margin="788,261,43,0" Height="31" VerticalAlignment="Top"/>
+                                Margin="788,261,43,0" Height="50" VerticalAlignment="Top"/>
 
             <TextBlock Margin="700,320,20,180" Height="50" Text="Ngày" 
                                                Foreground="White" FontSize="15"/>

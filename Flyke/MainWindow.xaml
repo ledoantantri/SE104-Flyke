@@ -17,7 +17,7 @@
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="100"/>
-                        <RowDefinition/>
+                        <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <Grid.Background>
                         <LinearGradientBrush StartPoint="1,0" EndPoint="0,1">
@@ -60,14 +60,14 @@
                             </StackPanel>
                         </Button>
 
-                        <Button x:Name="btnMyBookings" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30 60 0 0" Height="40" Click="btnMyBookings_Click" Visibility="Collapsed">
+                        <Button x:Name="btnMyBookings" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5 80 0 0" Height="40" Click="btnMyBookings_Click" Visibility="Collapsed">
                             <StackPanel Orientation="Horizontal">
                                 
                                 
                                 <TextBlock Margin="15 0 0 0" FontSize="20" Text="Đơn vé của tôi" Foreground="#FFF"/>
                             </StackPanel>
                         </Button>
-                        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 60 10 0" Height="35" Click="btnAllFlight_Click">
+                        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5 40 0 0" Height="45" Click="btnAllFlight_Click">
                             <StackPanel Orientation="Horizontal">
                                 <!--<materialDesign:PackIcon Kind="Plane" Foreground="White" Height="30" Width="30"/>-->
                                 <TextBlock Margin="15 0 0 0" FontSize="20" Text="Chuyến bay" Foreground="#FFF" VerticalAlignment="Center"/>
@@ -80,31 +80,31 @@
                             </StackPanel>
                         </Button>-->
 
-                        <Button x:Name="btn_setting" HorizontalAlignment="Left" Margin="10 0 0 0" Height="35" Click="setting_click" Visibility="Collapsed">
+                        <Button x:Name="btn_setting" HorizontalAlignment="Left" Margin="5 0 0 0" Height="40" Click="setting_click" Visibility="Collapsed">
                             <StackPanel Orientation="Horizontal">
                                 
-                                <TextBlock Margin="15 0 0 0" FontSize="20" Text="Thông tin tài khoản" Foreground="#FFF"/>
+                                <TextBlock Margin="15 0 0 0" FontSize="20" Text="Tài khoản" Foreground="#FFF"/>
                             </StackPanel>
                         </Button>
-                        <Button  x:Name="btn_SalesmanRight" HorizontalAlignment="Left" Margin="10 0 0 0" Height="35" Click="AdminAccessBtn" Visibility="Collapsed">
+                        <Button  x:Name="btn_SalesmanRight" HorizontalAlignment="Left" Margin="5 60 0 0" Height="40" Click="AdminAccessBtn" Visibility="Collapsed">
                             <StackPanel Orientation="Horizontal">
                                 
-                                <TextBlock Margin="15 0 0 0" FontSize="20" Text="Quản lý - Báo cáo" Foreground="#FFF"/>
+                                <TextBlock Margin="15 0 0 0" FontSize="20" Text="Báo cáo doanh thu" Foreground="#FFF"/>
                             </StackPanel>
                         </Button>
-                        <Button x:Name="btn_UserManagement" HorizontalAlignment="Left" Margin="10 0 0 0" Height="37" Click="userManagement_Click" Visibility="Collapsed">
+                        <Button x:Name="btn_UserManagement" HorizontalAlignment="Left" Margin="5 120 0 0" Height="40" Click="userManagement_Click" Visibility="Collapsed">
                             <StackPanel Orientation="Horizontal">
                                 
                                 <TextBlock Margin="15 0 0 0" FontSize="20" Text="Quản lý người dùng" Foreground="#FFF"/>
                             </StackPanel>
                         </Button>
-                        <Button x:Name="btn_ChangeRule" HorizontalAlignment="Left" Margin="10 0 0 0" Height="37" Click="changeRule_Click" Visibility="Collapsed">
+                        <Button x:Name="btn_ChangeRule" HorizontalAlignment="Left" Margin="5 180 0 0" Height="40" Click="changeRule_Click" Visibility="Collapsed">
                             <StackPanel Orientation="Horizontal">
                                 
                                 <TextBlock Margin="15 0 0 0" FontSize="20" Text="Thay đổi quy định" Foreground="#FFF"/>
                             </StackPanel>
                         </Button>
-                        <Button HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10 0 10 10" Height="37" Click="loginBtn_Click">
+                        <Button HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5 240 0 10" Height="40" Click="loginBtn_Click">
                             <StackPanel Orientation="Horizontal">
                                 <!--<materialDesign:PackIcon Kind="SignIn" Foreground="White" Height="30" Width="30"/>-->
                                 <TextBlock x:Name="tblLogin" Margin="15 0 0 0" FontSize="20" Text="Đăng nhập" Foreground="#FFF" VerticalAlignment="Center"/>
