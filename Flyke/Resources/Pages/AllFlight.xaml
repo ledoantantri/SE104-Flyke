@@ -19,7 +19,17 @@
             <RowDefinition Height="0.15*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Tất cả các chuyến bay" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontWeight="Bold" Foreground="#FF43C863"></TextBlock>
+        <Grid>
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                    <GradientStop Color="#2027CC" Offset="0.9961" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <TextBlock Text="Tất cả các chuyến bay" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontWeight="Bold" Foreground="White">
+                
+            </TextBlock>
+        </Grid>
         <Grid Grid.Row="1">
             <ListView Grid.Row="2" Background="{x:Null}" Margin="2,2,2,2" Name="lvFlight" BorderBrush="{x:Null}" HorizontalContentAlignment="Center"  ScrollViewer.CanContentScroll="false" ScrollViewer.HorizontalScrollBarVisibility="Hidden" SelectionChanged="FlightList_SelectionChanged">
             <ListView.ItemTemplate>
