@@ -64,7 +64,7 @@
                             <StackPanel Orientation="Horizontal">
                                 
                                 
-                                <TextBlock Margin="15 0 0 0" FontSize="20" Text="Đơn vé của tôi" Foreground="#FFF"/>
+                                <TextBlock Margin="15 0 0 0" FontSize="20" Text="Đặt vé" Foreground="#FFF"/>
                             </StackPanel>
                         </Button>
                         <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5 40 0 0" Height="45" Click="btnAllFlight_Click">
