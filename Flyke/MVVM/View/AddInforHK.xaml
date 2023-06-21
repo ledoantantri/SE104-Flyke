@@ -11,7 +11,7 @@
         Title="Thông Tin Hóa Đơn" 
         Height="650" Width="1000">
 
-    <Grid Background="#FFDEF5B6">        
+    <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
             <RowDefinition Height="130"/>
@@ -33,7 +33,14 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <StackPanel>
-                <TextBlock Text="THÔNG TIN HÓA ĐƠN" Margin="30,0,0,0" FontSize="20" Foreground="#FF4C9821" FontWeight="Bold"/>
+                <TextBlock Text="THÔNG TIN HÓA ĐƠN" Margin="30,0,0,0" FontSize="20" FontWeight="Bold">
+                    <TextBlock.Foreground>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                            <GradientStop Color="#2027CC" Offset="0.9961" />
+                        </LinearGradientBrush>
+                    </TextBlock.Foreground>
+                </TextBlock>
                 <DockPanel Height="30">
                     <TextBlock Text="Mã hóa đơn: " Margin="60,5,0,0" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
                     <TextBox x:Name="maHoaDonTxt" HorizontalAlignment="Left" Margin="10,0,0,0" TextDecorations="{x:Null}" Visibility="Visible" UndoLimit="99" IsEnabled="False" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Width="200" FontSize="14" VerticalAlignment="Center"/>
@@ -48,7 +55,14 @@
                 </DockPanel>
             </StackPanel>
             <StackPanel Grid.Column="1">
-                <TextBlock Text="THÔNG TIN CHUYẾN BAY" Margin="30,0,0,0" FontSize="20" Foreground="#FF4C9821" FontWeight="Bold"/>
+                <TextBlock Text="THÔNG TIN CHUYẾN BAY" Margin="30,0,0,0" FontSize="20" FontWeight="Bold">
+                    <TextBlock.Foreground>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                            <GradientStop Color="#2027CC" Offset="0.9961" />
+                        </LinearGradientBrush>
+                    </TextBlock.Foreground>
+                </TextBlock>
                 <Grid >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="250"/>
@@ -86,31 +100,45 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.ColumnSpan="2">
-                <TextBlock Text="THÔNG TIN HÀNH KHÁCH" Margin="30,0,0,0" FontSize="20" Foreground="#FF4C9821" FontWeight="Bold"/>
+                <TextBlock Text="THÔNG TIN HÀNH KHÁCH" Margin="30,0,0,0" FontSize="20" FontWeight="Bold">
+                    <TextBlock.Foreground>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                            <GradientStop Color="#2027CC" Offset="0.9961" />
+                        </LinearGradientBrush>
+                    </TextBlock.Foreground>
+                </TextBlock>
                 <DockPanel Height="44">
                     <TextBlock Text="Mã hành khách: " Margin="60,7,0,0" FontSize="14"/>
                     <TextBox x:Name="maHanhKhachText"  HorizontalAlignment="Right" Margin="0,2,20,0" TextDecorations="{x:Null}" Visibility="Visible" UndoLimit="99" IsEnabled="False" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" FontSize="14" Width="300" VerticalAlignment="Top"/>
                 </DockPanel>
                 <DockPanel Height="45">
                     <TextBlock Text="Họ tên: " Margin="60,6,0,0" FontSize="14"/>
-                    <TextBox Width="300" Height="28" BorderBrush="#FF4C9821" BorderThickness="1" x:Name="tenHanhKhachTxt" HorizontalAlignment="Right" Margin="0,0,20,0" PreviewTextInput="tenHanhKhachTxt_PreviewTextInput" FontSize="14" Background="{x:Null}" VerticalAlignment="Top"/>
+                    <TextBox Width="300" Height="28" BorderBrush="Black" BorderThickness="1" x:Name="tenHanhKhachTxt" HorizontalAlignment="Right" Margin="0,0,20,0" PreviewTextInput="tenHanhKhachTxt_PreviewTextInput" FontSize="14" Background="{x:Null}" VerticalAlignment="Top"/>
                 </DockPanel>
                 <DockPanel Height="45">
                     <TextBlock Text="CMND/CCCD: " Margin="60,6,0,0" FontSize="14" HorizontalAlignment="Left"/>
-                    <TextBox Width="300" Height="28" MaxLength="9" BorderBrush="#FF4C9821" BorderThickness="1" x:Name="cmndTxt" HorizontalAlignment="Right" Margin="0,0,20,0" PreviewTextInput="cmndTxt_PreviewTextInput" FontSize="14" VerticalAlignment="Top"/>
+                    <TextBox Width="300" Height="28" MaxLength="9" BorderBrush="Black" BorderThickness="1" x:Name="cmndTxt" HorizontalAlignment="Right" Margin="0,0,20,0" PreviewTextInput="cmndTxt_PreviewTextInput" FontSize="14" VerticalAlignment="Top"/>
                 </DockPanel>
                 <DockPanel Height="45">
                     <TextBlock Text="Số điện thoại: " Margin="60,6,0,0" FontSize="14"/>
-                    <TextBox Width="300" Height="30" MaxLength="11" BorderBrush="#FF4C9821" BorderThickness="1" x:Name="sdtTxt" HorizontalAlignment="Right" Margin="0,0,20,0" PreviewTextInput="sdtTxt_PreviewTextInput" FontSize="14" VerticalAlignment="Top"/>
+                    <TextBox Width="300" Height="30" MaxLength="11" BorderBrush="Black" BorderThickness="1" x:Name="sdtTxt" HorizontalAlignment="Right" Margin="0,0,20,0" PreviewTextInput="sdtTxt_PreviewTextInput" FontSize="14" VerticalAlignment="Top"/>
 
                 </DockPanel>
             </StackPanel>
             <StackPanel Grid.Column="2">
-                <TextBlock Text="THÔNG TIN VÉ" Margin="30,0,0,0" FontSize="20" Foreground="#FF4C9821" FontWeight="Bold"/>
+                <TextBlock Text="THÔNG TIN VÉ" Margin="30,0,0,0" FontSize="20" FontWeight="Bold">
+                    <TextBlock.Foreground>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                            <GradientStop Color="#2027CC" Offset="0.9961" />
+                        </LinearGradientBrush>
+                    </TextBlock.Foreground>
+                </TextBlock>
                 <DockPanel Height="38">
                     <TextBlock Text="Mã vé: " Margin="60,7,0,0" FontSize="14"/>
                     <ComboBox Width="150" FontSize="16" 
-                      BorderBrush="#FF4C9821" BorderThickness="1"
+                      BorderBrush="Black" BorderThickness="1"
                       x:Name="maVeBox" HorizontalAlignment="Left" Margin="30,0,0,0" SelectionChanged="maVeBox_SelectionChanged" Height="30"/>
                 </DockPanel>
                 <DockPanel Height="38">
@@ -121,7 +149,14 @@
                     <TextBlock Text="Hạng vé: " Margin="60,7,0,0" FontSize="14"/>
                     <TextBox x:Name="hangVeTxt" HorizontalAlignment="Left" Margin="20,2,0,0" TextDecorations="{x:Null}" Visibility="Visible" UndoLimit="99" IsEnabled="False" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Width="200" FontSize="14" VerticalAlignment="Top"/>
                 </DockPanel>
-                <Button x:Name="btnXacNhanVe"  Height="38" Width="160" Content="Xác nhận vé" Foreground="Black" FontSize="17" Background="#FF64C32E" Margin="0,17,0,0" Click="btnXacNhanVe_Click"/>
+                <Button x:Name="btnXacNhanVe"  Height="38" Width="160" Content="Xác nhận vé" Foreground="White" FontSize="17" Margin="0,17,0,0" Click="btnXacNhanVe_Click">
+                    <Button.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                            <GradientStop Color="#2027CC" Offset="0.9961" />
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
             </StackPanel>
         </Grid>
 
@@ -150,8 +185,22 @@
                     <TextBox x:Name="tienTxt"  Text="0" HorizontalAlignment="Left" Margin="20,0,0,0" TextDecorations="{x:Null}" Visibility="Visible" UndoLimit="99" IsEnabled="False" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" FontSize="17"/>
                 </DockPanel>
                 <Grid>
-                    <Button x:Name="btnTTSau"  Height="38" Width="170" Content="Thanh toán sau" Foreground="Black" FontSize="17" Background="#FF64C32E"  Margin="740,5,0,0" Click="btnTTSau_Click" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <Button x:Name="btnTTNgay"  Height="38" Width="170" Content="Thanh toán ngay" Foreground="Black" FontSize="17" Background="#FF64C32E"  Margin="520,5,0,0" Click="btnTTNgay_Click" HorizontalAlignment="Left"/>
+                    <Button x:Name="btnTTSau"  Height="38" Width="170" Content="Thanh toán sau" Foreground="White" FontSize="17" Margin="740,5,0,0" Click="btnTTSau_Click" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <Button.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                                <GradientStop Color="#2027CC" Offset="0.9961" />
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btnTTNgay"  Height="38" Width="170" Content="Thanh toán ngay" Foreground="White" FontSize="17" Margin="520,5,0,0" Click="btnTTNgay_Click" HorizontalAlignment="Left">
+                        <Button.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                                <GradientStop Color="#2027CC" Offset="0.9961" />
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
                 </Grid>
 
             </StackPanel>

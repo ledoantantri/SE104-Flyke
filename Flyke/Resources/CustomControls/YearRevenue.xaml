@@ -5,9 +5,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Flyke.Resources.CustomControls"
              mc:Ignorable="d" 
-             Background="#8EB54C"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                <GradientStop Color="#2027CC" Offset="0.9961" />
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition/>
@@ -28,7 +33,7 @@
             <Button Grid.Column="1" x:Name="Excel" Content="Xuất Excel" Background="White" Width="100" 
                     Click="Excel_Click" Margin="30,413,30,-395"/>
         </Grid>
-       
+
         <DataGrid Grid.Row="1" x:Name="YearRevenueTable" IsReadOnly="true">
             <DataGrid.Resources>
                 <Style TargetType="{x:Type DataGridColumnHeader}">

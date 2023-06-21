@@ -209,7 +209,7 @@
                         <ListBox Background="{x:Null}" Foreground="#000000" FontWeight="Bold">
                             <ListBox.Resources>
                                 <!-- Math Converter -->
-                                
+
 
                                 <Style TargetType="{x:Type Expander}">
                                     <!-- Set isExpander -->
@@ -345,7 +345,7 @@
 
                             <Border Background="{DynamicResource MaterialDesignDivider}" Height="1" HorizontalAlignment="Stretch" SnapsToDevicePixels="True" />
 
-                            
+
 
                             <Expander>
                                 <Expander.Header>
@@ -358,7 +358,7 @@
                                     <Border Background="{DynamicResource MaterialDesignDivider}" Height="1" HorizontalAlignment="Stretch" SnapsToDevicePixels="True" />
 
                                     <Button Content="2+ điểm dừng" HorizontalContentAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#000000" Click="moreTwoStopFilter_Click"/>
-                                    
+
                                 </StackPanel>
                             </Expander>
                             <Border Background="{DynamicResource MaterialDesignDivider}" Height="1" HorizontalAlignment="Stretch" SnapsToDevicePixels="True" />
@@ -367,15 +367,15 @@
                                 <Expander.Header>
                                     <TextBlock Text="Hãng máy bay" FontWeight="Bold" FontSize="17" />
                                 </Expander.Header>
-                                <ListView Name="lvAirline" Margin="20 0 20 0" SelectionMode="Single" SelectionChanged="lvAirline_SelectionChanged"> 
+                                <ListView Name="lvAirline" Margin="20 0 20 0" SelectionMode="Single" SelectionChanged="lvAirline_SelectionChanged">
                                     <ListView.ItemTemplate>
                                         <DataTemplate>
                                             <DockPanel>
                                                 <TextBlock Text="{Binding}" Background="{x:Null}" Foreground="#000000" Margin="9 0 0 0" FontSize="14" FontFamily="Segoe UI Semibold"/>
                                             </DockPanel>
-                                            </DataTemplate>
+                                        </DataTemplate>
                                     </ListView.ItemTemplate>
-                                    
+
                                 </ListView>
                             </Expander>
                             <Border Background="{DynamicResource MaterialDesignDivider}" Height="1" HorizontalAlignment="Stretch" SnapsToDevicePixels="True" />
@@ -430,7 +430,7 @@
                     <ColumnDefinition Width="86*"/>
                     <ColumnDefinition Width="34*"/>
                 </Grid.ColumnDefinitions>
-                <Border Grid.Column="0" Background="#FF96D5E8" CornerRadius="0 10 10 0">
+                <Border Grid.Column="0" Background="#d44655" CornerRadius="0 10 10 0">
                     <TextBlock Text="Jakarta -> Tokyo  |  24/05/2023  | Hạng 1 | 2 người" FontSize="15" VerticalAlignment="Center" Margin="10 0 0 0" Name="infoSearch"/>
                 </Border>
 

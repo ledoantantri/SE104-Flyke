@@ -11,7 +11,7 @@
         WindowStyle="None"
         AllowsTransparency="True"
         Background="Transparent">
-    <Border CornerRadius="20" BorderThickness="2" BorderBrush="WhiteSmoke" MouseDown="Grid_MouseDown" Background="#8EB54C">
+    <Border CornerRadius="20" BorderThickness="2" BorderBrush="WhiteSmoke" MouseDown="Grid_MouseDown" Background="White">
         <StackPanel>
             <Button Style ="{StaticResource MaterialDesignIconButton}"  
                             HorizontalAlignment="Right" Margin="0 5 7 0"
@@ -20,7 +20,14 @@
             </Button>
             <TextBlock Text="QUÊN MẬT KHẨU" Margin="0 25 0 5"
                    FontSize="20" HorizontalAlignment="Center"
-                   Foreground="White" FontWeight="Heavy" FontFamily="Palatino Linotype"/>
+                       FontWeight="Heavy" FontFamily="Palatino Linotype">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                        <GradientStop Color="#2027CC" Offset="0.9961" />
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
             <TextBlock x:Name="Errortxt" Foreground="#FF0000" HorizontalAlignment="Center"/>
             <Grid>
                 <materialDesign:ColorZone x:Name="verifyCode" Mode="Light"  Padding="8 0" Width="260" Height="35" CornerRadius="10" Panel.ZIndex="1" Margin="0 10 0 30"
@@ -36,18 +43,19 @@
                     <TextBox x:Name="txbEmail" materialDesign:HintAssist.Hint="Nhập email đã đăng ký tài khoản"
                          materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
                          BorderThickness="0"
+                            Foreground="Black"
                          VerticalAlignment="Center" 
                          FontSize="15"/>
                 </materialDesign:ColorZone>
             </Grid>
             <Grid>
                 <Button x:Name="btnsendcode" Style="{StaticResource MaterialDesignRaisedDarkButton}" Click="SendCode_Click"
-                    Height="35" Width="260" BorderBrush="White" Content="Gửi mã xác thực" FontSize="15"
+                    Height="35" Width="260" Content="Gửi mã xác thực" FontSize="15" Foreground="White"
                     materialDesign:ButtonAssist.CornerRadius="10">
                     <Button.Background>
-                        <LinearGradientBrush EndPoint="0 1">
-                            <GradientStop Color="White" Offset="1"/>
-                            <GradientStop Color="#8EB54C" Offset="0.2"/>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                            <GradientStop Color="#2027CC" Offset="0.9961" />
                         </LinearGradientBrush>
                     </Button.Background>
                 </Button>

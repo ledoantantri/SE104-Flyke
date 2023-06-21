@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Flyke.MVVM.Model
 {
-    internal class VeMayBay
+    internal class SymbolTicket
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -48,7 +48,7 @@ namespace Flyke.MVVM.Model
         }
         private string maVe;
         public string MaVe { get { return maVe; } set { maVe = value; } }
-        public VeMayBay(string maVe, string tuyen, string ngayGio, string soGhe, string hangVe, string tenHK)
+        public SymbolTicket(string maVe, string tuyen, string ngayGio, string soGhe, string hangVe, string tenHK)
         {
             this.maVe = maVe;
             this.tuyen = tuyen;
@@ -58,7 +58,7 @@ namespace Flyke.MVVM.Model
             this.tenHK = tenHK;
         }
 
-        public VeMayBay(string maVe, string soGhe, string hangVe, string tenHK)
+        public SymbolTicket(string maVe, string soGhe, string hangVe, string tenHK)
         {
             this.maVe=maVe;
             this.hangVe=hangVe;

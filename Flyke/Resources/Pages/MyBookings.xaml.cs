@@ -51,7 +51,7 @@ namespace Flyke.Pages
             sqlCommand.Parameters.Add("@userID", SqlDbType.NVarChar).Value = userID;
             SqlDataReader reader = sqlCommand.ExecuteReader();
 
-            List<VeMayBay> list = new List<VeMayBay>();
+            List<SymbolTicket> list = new List<SymbolTicket>();
 
             if (reader.HasRows)
             {
@@ -63,7 +63,7 @@ namespace Flyke.Pages
                     string soghe = reader["SoGhe"].ToString();
                     string hangve = reader["TenHangVe"].ToString();
                     string tenhk = reader["TenHK"].ToString();
-                    list.Add(new VeMayBay(mave, tuyen, ngaygio, soghe, hangve, tenhk));
+                    list.Add(new SymbolTicket(mave, tuyen, ngaygio, soghe, hangve, tenhk));
                 }
             }
             DataProvider.sqlConnection.Close();
@@ -89,7 +89,7 @@ namespace Flyke.Pages
         private void lvTicket_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             bookingsDetail = new BookingsDetail();
-            VeMayBay ticket = (VeMayBay)lvTicket.SelectedItem;
+            SymbolTicket ticket = (SymbolTicket)lvTicket.SelectedItem;
             if (ticket != null)
             {
                 bookingsDetail.ReturnBookings += ReturnBookings;
@@ -106,7 +106,7 @@ namespace Flyke.Pages
         private void ReturnBookings(object sender, RoutedEventArgs e)
         {
             bookingsDetail = new BookingsDetail();
-            VeMayBay ticket = (VeMayBay)lvTicket.SelectedItem;
+            SymbolTicket ticket = (SymbolTicket)lvTicket.SelectedItem;
             if (ticket != null)
             {
                 bookingsDetail.ReturnBookings += ReturnBookings;
@@ -149,7 +149,7 @@ namespace Flyke.Pages
             sqlCommand.Parameters.Add("@userID", SqlDbType.NVarChar).Value = user_id;
             SqlDataReader reader = sqlCommand.ExecuteReader();
 
-            List<VeMayBay> listSearch = new List<VeMayBay>();
+            List<SymbolTicket> listSearch = new List<SymbolTicket>();
 
             if (reader.HasRows)
             {
@@ -161,7 +161,7 @@ namespace Flyke.Pages
                     string soghe = reader["SoGhe"].ToString();
                     string hangve = reader["TenHangVe"].ToString();
                     string tenhk = reader["TenHK"].ToString();
-                    listSearch.Add(new VeMayBay(mave, tuyen, ngaygio, soghe, hangve, tenhk));
+                    listSearch.Add(new SymbolTicket(mave, tuyen, ngaygio, soghe, hangve, tenhk));
                 }
             }
             DataProvider.sqlConnection.Close();

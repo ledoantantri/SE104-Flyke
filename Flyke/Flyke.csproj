@@ -201,6 +201,7 @@
       <DependentUpon>FLYKEDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="MVVM\Model\Flight.cs" />
+    <Compile Include="MVVM\Model\SymbolTicket.cs" />
     <Compile Include="Resources\CustomControls\AdminRight.xaml.cs">
       <DependentUpon>AdminRight.xaml</DependentUpon>
     </Compile>
@@ -421,7 +422,6 @@
     <Compile Include="MVVM\Model\FlightClass.cs" />
     <Compile Include="MVVM\Model\HangVe.cs" />
     <Compile Include="MVVM\Model\SanBayTrungGian.cs" />
-    <Compile Include="MVVM\Model\VeMayBay.cs" />
     <Compile Include="MVVM\Model\Ve.cs" />
     <Compile Include="Resources\Pages\AllFlight.xaml.cs">
       <DependentUpon>AllFlight.xaml</DependentUpon>

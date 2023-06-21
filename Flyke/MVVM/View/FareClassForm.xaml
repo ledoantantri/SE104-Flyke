@@ -16,30 +16,44 @@
         <Border.Background>
             <LinearGradientBrush EndPoint="0 1">
                 <GradientStop Color="White" Offset="1"/>
-                <GradientStop Color="#8EB54C" Offset="0.4"/>
             </LinearGradientBrush>
         </Border.Background>
         <StackPanel>
-            <TextBlock Text="Thêm hạng vé" TextAlignment="Center" Foreground="White" FontSize="35"   Margin="0 20 0 30"/>
+            <TextBlock Text="Thêm hạng vé" TextAlignment="Center" FontSize="35"   Margin="0 20 0 30">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                        <GradientStop Color="#2027CC" Offset="0.9961" />
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
             <TextBox x:Name="Name" materialDesign:HintAssist.Hint="Tên hạng vé"
-                             materialDesign:HintAssist.Foreground="White"
-                             
-                             VerticalAlignment="Center" FontSize="15" Width="300" BorderBrush="White"/>
+                             materialDesign:HintAssist.Foreground="Black"
+                             Foreground="Black"
+                             VerticalAlignment="Center" FontSize="15" Width="300" BorderBrush="Black"/>
             <TextBox x:Name="Percentage" materialDesign:HintAssist.Hint="Tỷ lệ (%)"
-                             
-                             materialDesign:HintAssist.Foreground="White"
-                             VerticalAlignment="Center" FontSize="15" Width="300" Margin="0 20 0 0" BorderBrush="White"/>
+                             Foreground="Black"
+                             materialDesign:HintAssist.Foreground="Black"
+                             VerticalAlignment="Center" FontSize="15" Width="300" Margin="0 20 0 0" BorderBrush="Black"/>
             <TextBlock x:Name="txblError"  Foreground="Red" Margin="0 30 0 0" HorizontalAlignment="Center" FontWeight="Medium"/>
             <StackPanel Orientation="Horizontal" Width="350" Margin="0 20 0 0">
-                <Button 
-                            materialDesign:ButtonAssist.CornerRadius="5" Click="BtnSave_click"
-                            Width="100" Content="Lưu" Foreground="White" FontSize="17" Margin="30 0"
-                        Background="#8EB54C">
+                <Button materialDesign:ButtonAssist.CornerRadius="5" Click="BtnSave_click"
+                        Width="100" Content="Lưu" Foreground="White" FontSize="17" Margin="30 0">
+                    <Button.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                            <GradientStop Color="#2027CC" Offset="0.9961" />
+                        </LinearGradientBrush>
+                    </Button.Background>
                 </Button>
-                <Button 
-                            materialDesign:ButtonAssist.CornerRadius="5" Click="BtnCancel_click"
-                            Width="100" Content="Hủy" Foreground="#8EB54C" FontSize="17" Margin="30 0"
-                            Background="Transparent">
+                <Button materialDesign:ButtonAssist.CornerRadius="5" Click="BtnCancel_click"
+                        Width="100" Content="Hủy" Foreground="White" FontSize="17" Margin="30 0">
+                    <Button.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                            <GradientStop Color="#2027CC" Offset="0.9961" />
+                        </LinearGradientBrush>
+                    </Button.Background>
                 </Button>
             </StackPanel>
         </StackPanel>

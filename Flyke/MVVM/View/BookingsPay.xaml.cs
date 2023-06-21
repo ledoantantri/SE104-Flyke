@@ -27,7 +27,7 @@ namespace Flyke.MVVM.View
         private string MaHD;
         public event RoutedEventHandler ReturnBookings;
         public event RoutedEventHandler Return;
-        List<VeMayBay> list_ticker;
+        List<SymbolTicket> list_ticker;
         public BookingsPay()
         {
             InitializeComponent();
@@ -55,7 +55,7 @@ namespace Flyke.MVVM.View
                 , DataProvider.sqlConnection);
             sqlCommand.Parameters.Add("@maHD", SqlDbType.NVarChar).Value = maHD;
             SqlDataReader reader = sqlCommand.ExecuteReader();
-            list_ticker = new List<VeMayBay>();
+            list_ticker = new List<SymbolTicket>();
 
             if (reader.HasRows)
             {
@@ -65,7 +65,7 @@ namespace Flyke.MVVM.View
                     string soghe = reader["SoGhe"].ToString();
                     string hangve = reader["TenHangVe"].ToString();
                     string tenHK = reader["TenHK"].ToString();
-                    list_ticker.Add(new VeMayBay(mave, soghe, hangve, tenHK));
+                    list_ticker.Add(new SymbolTicket(mave, soghe, hangve, tenHK));
                 }
             }
             DataProvider.sqlConnection.Close();
@@ -154,7 +154,7 @@ namespace Flyke.MVVM.View
 
         private void RemoveVe()
         {
-            foreach (VeMayBay ticket in list_ticker)
+            foreach (SymbolTicket ticket in list_ticker)
             {
                 DataProvider.sqlConnection.Open();
                 SqlCommand sqlCommand = new SqlCommand(
