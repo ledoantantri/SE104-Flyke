@@ -17,7 +17,7 @@ using System.Windows.Shapes;
 using System.Xml.Linq;
 using Flyke.MVVM.ViewModel;
 using Flyke.MVVM.Model;
-using Flyke.MVVM.Model;
+
 
 namespace Flyke.CustomControls
 {

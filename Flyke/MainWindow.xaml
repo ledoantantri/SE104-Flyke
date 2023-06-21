@@ -55,7 +55,7 @@
                     <Grid Grid.Row="1">
                         <Button HorizontalAlignment="left" VerticalAlignment="Top" Margin="10 0 0 0" Height="40" Click="btnHome_Click">
                             <StackPanel Orientation="Horizontal" >
-                                <materialDesign:PackIcon Kind="Home" Foreground="White" Height="30" Width="30"/>
+                                <!--<materialDesign:PackIcon Kind="Home" Foreground="White" Height="30" Width="30"/>-->
                                 <TextBlock Name="timer" Margin="10 0 0 0" FontSize="20" Text="Trang chủ" Foreground="#FFF" VerticalAlignment="Center"/>
                             </StackPanel>
                         </Button>
@@ -69,7 +69,7 @@
                         </Button>
                         <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 60 10 0" Height="35" Click="btnAllFlight_Click">
                             <StackPanel Orientation="Horizontal">
-                                <materialDesign:PackIcon Kind="Plane" Foreground="White" Height="30" Width="30"/>
+                                <!--<materialDesign:PackIcon Kind="Plane" Foreground="White" Height="30" Width="30"/>-->
                                 <TextBlock Margin="15 0 0 0" FontSize="20" Text="Chuyến bay" Foreground="#FFF" VerticalAlignment="Center"/>
                             </StackPanel>
                         </Button>
@@ -106,7 +106,7 @@
                         </Button>
                         <Button HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10 0 10 10" Height="37" Click="loginBtn_Click">
                             <StackPanel Orientation="Horizontal">
-                                <materialDesign:PackIcon Kind="SignIn" Foreground="White" Height="30" Width="30"/>
+                                <!--<materialDesign:PackIcon Kind="SignIn" Foreground="White" Height="30" Width="30"/>-->
                                 <TextBlock x:Name="tblLogin" Margin="15 0 0 0" FontSize="20" Text="Đăng nhập" Foreground="#FFF" VerticalAlignment="Center"/>
                             </StackPanel>
                         </Button>

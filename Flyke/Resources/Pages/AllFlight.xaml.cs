@@ -1,5 +1,4 @@
-﻿using Flyke.MVVM.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
@@ -16,7 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Flyke.Resources;
+using Flyke.MVVM.Model;
 
 namespace Flyke.Pages
 {
@@ -37,8 +36,8 @@ namespace Flyke.Pages
             DataProvider.sqlConnection.Open();
             SqlCommand sqlCommand = new SqlCommand(
              "select [c].*, Logo, TenHang, (select count(*) from [SANBAYTRUNGGIAN] [sbtg] where [sbtg].MaChuyenBay = [c].MaChuyenBay) SoSBTG, " +
-             "(select count(*) from [Flight] [v1] where [v1].MaChuyenBay = [c].MaChuyenBay and [v1].TinhTrang = 'TRONG') SoVeTrong, " +
-             "(select count(*) from [Flight] [v2] where [v2].MaChuyenBay = [c].MaChuyenBay and [v2].TinhTrang != 'TRONG') SoVeDat " +
+             "(select count(*) from [VE] [v1] where [v1].MaChuyenBay = [c].MaChuyenBay and [v1].TinhTrang = 'TRONG') SoVeTrong, " +
+             "(select count(*) from [VE] [v2] where [v2].MaChuyenBay = [c].MaChuyenBay and [v2].TinhTrang != 'TRONG') SoVeDat " +
              "from [CHUYENBAY] [c], [SANBAY] [s1], [SANBAY] [s2], [HANGMAYBAY] [hmb] " +
              "where [c].SanBayDi=[s1].MaSanBay " +
              "and [c].SanBayDen=[s2].MaSanBay " +
@@ -76,7 +75,7 @@ namespace Flyke.Pages
             DataProvider.sqlConnection.Close();
 
             lvFlight.ItemsSource = flight_list;
-            
+
         }
         private void FlightList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

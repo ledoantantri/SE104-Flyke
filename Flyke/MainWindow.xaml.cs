@@ -1,27 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Data;
 using System.Data.SqlClient;
 using Flyke.Pages;
-using Flyke.MVVM.View;
-using Flyke.UserControls;
-using Flyke.MVVM.Model;
 using System.Windows.Threading;
 using System.Globalization;
+using Flyke.MVVM.Model;
+using Flyke.MVVM.View;
+using Flyke.MVVM.ViewModel;
 using Flyke.Resources.CustomControls;
 using Flyke.CustomControls;
 
@@ -37,7 +24,7 @@ namespace Flyke
         public static TaiKhoan curAccount = null;
         private AddInforHK addInforHK;
         private AllFlight allFlight;
-        private MyBookings myBookings;        
+        private MyBookings myBookings;
         public MainWindow()
         {
             InitializeComponent();
@@ -55,7 +42,6 @@ namespace Flyke
 
             flights = new FlightsList();
             fContainer.Content = home;
-            
         }
 
         private void Flights_Return(object sender, RoutedEventArgs e)
@@ -308,8 +294,8 @@ namespace Flyke
                 {
                     MainWindow.curAccount = null;
                     tblLogin.Text = "Đăng nhập";
-                    
-                    
+                    //BitmapImage bitmap = new BitmapImage(new Uri("/Images/login.png", UriKind.Relative));
+                    //imgLogin.Source = bitmap;
                     btn_UserManagement.Visibility = Visibility.Collapsed;
                     btn_SalesmanRight.Visibility = Visibility.Collapsed;
                     btn_ChangeRule.Visibility = Visibility.Collapsed;
@@ -324,7 +310,8 @@ namespace Flyke
         {
             btnHome_Click(sender, e);
             tblLogin.Text = "Đăng xuất";
-         
+            //BitmapImage bitmap = new BitmapImage(new Uri("/Images/logout.png", UriKind.Relative));
+            //imgLogin.Source = bitmap;
             if (MainWindow.curAccount.type == 1)
             {
                 btn_UserManagement.Visibility = Visibility.Visible;
