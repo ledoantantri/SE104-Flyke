@@ -65,8 +65,8 @@ namespace Flyke.MVVM.View
             randomCode = rd.Next(999999).ToString();
             MailMessage mailMessage = new MailMessage();
             to = txbEmail.Text;
-            from = "zincat510@gmail.com";
-            pass = "jywghiutqphlbaun";
+            from = "trileprovt@gmail.com";
+            pass = "tsrfmfamwlvsbbmx";
             message = "Mã xác thực tài khoản ứng dụng Quản Lý Bán Vé Máy Bay của bạn là: " + randomCode;
             mailMessage.To.Add(to);
             mailMessage.From = new MailAddress(from);

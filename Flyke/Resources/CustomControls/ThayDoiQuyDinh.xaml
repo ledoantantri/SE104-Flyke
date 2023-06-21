@@ -27,7 +27,14 @@
             </Button>
         </DockPanel>
         <StackPanel x:Name="panelTGBTT"  Orientation="Horizontal" Visibility="Collapsed" Margin="0 8 0 0">
-            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Đồng ý" Width="100" Margin="260 0 20 0" Background="#8EB54C" Click="OkTGBTTBtn_Click"/>
+            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Đồng ý" Width="100" Margin="260 0 20 0" Click="OkTGBTTBtn_Click">
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                        <GradientStop Color="#2027CC" Offset="0.9961" />
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
             <Button Style="{StaticResource MaterialDesignOutlinedLightButton}" Content="Hủy" Width="70" Click="CancelTGBTTBtn_Click"/>
         </StackPanel>
         <Border BorderThickness="0 1 0 0" BorderBrush="Gray" Margin="30 10"/>
@@ -41,7 +48,14 @@
             </Button>
         </DockPanel>
         <StackPanel x:Name="panelSSBTGTD"  Orientation="Horizontal" Visibility="Collapsed" Margin="0 8 0 0">
-            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Đồng ý" Width="100" Margin="260 0 20 0" Background="#8EB54C" Click="OkSSBTGTDBtn_Click"/>
+            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Đồng ý" Width="100" Margin="260 0 20 0" Click="OkSSBTGTDBtn_Click">
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                        <GradientStop Color="#2027CC" Offset="0.9961" />
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
             <Button Style="{StaticResource MaterialDesignOutlinedLightButton}" Content="Hủy" Width="70" Click="CancelSSBTGTDBtn_Click"/>
         </StackPanel>
         <Border BorderThickness="0 1 0 0" BorderBrush="Gray" Margin="30 10"/>
@@ -55,7 +69,14 @@
             </Button>
         </DockPanel>
         <StackPanel x:Name="panelTGDTT"  Orientation="Horizontal" Visibility="Collapsed" Margin="0 8 0 0">
-            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Đồng ý" Width="100" Margin="260 0 20 0" Background="#8EB54C" Click="OkTGDTTBtn_Click"/>
+            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Đồng ý" Width="100" Margin="260 0 20 0"  Click="OkTGDTTBtn_Click">
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                        <GradientStop Color="#2027CC" Offset="0.9961" />
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
             <Button Style="{StaticResource MaterialDesignOutlinedLightButton}" Content="Hủy" Width="70" Click="CancelTGDTTBtn_Click"/>
         </StackPanel>
         <Border BorderThickness="0 1 0 0" BorderBrush="Gray" Margin="30 10"/>
@@ -69,7 +90,14 @@
             </Button>
         </DockPanel>
         <StackPanel x:Name="panelTGDTD"  Orientation="Horizontal" Visibility="Collapsed" Margin="0 8 0 0">
-            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Đồng ý" Width="100" Margin="260 0 20 0" Background="#8EB54C" Click="OkTGDTDBtn_Click"/>
+            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Đồng ý" Width="100" Margin="260 0 20 0"  Click="OkTGDTDBtn_Click">
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                        <GradientStop Color="#2027CC" Offset="0.9961" />
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
             <Button Style="{StaticResource MaterialDesignOutlinedLightButton}" Content="Hủy" Width="70" Click="CancelTGDTDBtn_Click"/>
         </StackPanel>
         <Border BorderThickness="0 1 0 0" BorderBrush="Gray" Margin="30 10"/>
@@ -83,7 +111,14 @@
             </Button>
         </DockPanel>
         <StackPanel x:Name="panelSGTKHCPDV"  Orientation="Horizontal" Visibility="Collapsed" Margin="0 8 0 0">
-            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Đồng ý" Width="100" Margin="260 0 20 0" Background="#8EB54C" Click="OkSGTKHCPDVBtn_Click"/>
+            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Đồng ý" Width="100" Margin="260 0 20 0" Click="OkSGTKHCPDVBtn_Click">
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                        <GradientStop Color="#2027CC" Offset="0.9961" />
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
             <Button Style="{StaticResource MaterialDesignOutlinedLightButton}" Content="Hủy" Width="70" Click="CancelSGTKHCPDVBtn_Click"/>
         </StackPanel>
         <Border BorderThickness="0 1 0 0" BorderBrush="Gray" Margin="30 10"/>
@@ -97,7 +132,14 @@
             </Button>
         </DockPanel>
         <StackPanel x:Name="panelSGTKHCPHV"  Orientation="Horizontal" Visibility="Collapsed" Margin="0 8 0 0">
-            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Đồng ý" Width="100" Margin="260 0 20 0" Background="#8EB54C" Click="OkSGTKHCPHVBtn_Click"/>
+            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Đồng ý" Width="100" Margin="260 0 20 0" Click="OkSGTKHCPHVBtn_Click">
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                        <GradientStop Color="#2027CC" Offset="0.9961" />
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
             <Button Style="{StaticResource MaterialDesignOutlinedLightButton}" Content="Hủy" Width="70" Click="CancelSGTKHCPHVBtn_Click"/>
         </StackPanel>
     </StackPanel>

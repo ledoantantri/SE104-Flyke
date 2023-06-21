@@ -198,5 +198,3 @@ D:\UIT\GitHub\Flyke\Flyke\obj\Debug\Flyke.csproj.CoreCompileInputs.cache
 D:\UIT\GitHub\Flyke\Flyke\obj\Debug\Flyke.csproj.CopyComplete
 D:\UIT\GitHub\Flyke\Flyke\obj\Debug\Flyke.exe
 D:\UIT\GitHub\Flyke\Flyke\obj\Debug\Flyke.pdb
-D:\UIT\GitHub\Flyke\Flyke\obj\Debug\Flyke.csproj.Fody.CopyLocal.cache
-D:\UIT\GitHub\Flyke\Flyke\obj\Debug\Flyke.csproj.Fody.RuntimeCopyLocal.cache

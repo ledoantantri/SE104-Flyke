@@ -63,9 +63,9 @@
                     Height="35" Width="260" BorderBrush="White" Content="Xác thực" FontSize="15" Visibility="Hidden"
                     materialDesign:ButtonAssist.CornerRadius="10">
                     <Button.Background>
-                        <LinearGradientBrush EndPoint="0 1" >
-                            <GradientStop Color="White" Offset="1"/>
-                            <GradientStop Color="#8EB54C" Offset="0.2"/>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                            <GradientStop Color="#FB4A4A" Offset="-0.1093" />
+                            <GradientStop Color="#2027CC" Offset="0.9961" />
                         </LinearGradientBrush>
                     </Button.Background>
                 </Button>
