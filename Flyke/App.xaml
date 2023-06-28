@@ -11,6 +11,10 @@
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Shadows.xaml" />
                 <ResourceDictionary Source="Resources/Style/MainStyle.xaml"/>
                 <ResourceDictionary Source="Resources/Style/FilterMenu.xaml"/>
+                <ResourceDictionary Source="Resources/Color/UIColor.xaml"/>
+                <ResourceDictionary Source="Resources/Style/TextStyle.xaml"/>
+                <ResourceDictionary Source="Resources/Style/ButtonStyle.xaml"/>
+                <ResourceDictionary Source="Resources/Style/ImageStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

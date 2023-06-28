@@ -19,7 +19,7 @@
             </LinearGradientBrush>
         </Border.Background>
         <StackPanel>
-            <TextBlock Text="Thêm hạng vé" TextAlignment="Center" FontSize="35"   Margin="0 20 0 30">
+            <TextBlock Text="THÊM HẠNG VÉ" TextAlignment="Center" FontSize="30" FontWeight="Bold" Margin="0 20 0 30">
                 <TextBlock.Foreground>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
                         <GradientStop Color="#FB4A4A" Offset="-0.1093" />

@@ -8,9 +8,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="370" d:DesignWidth="800"
              Background="White">
-
     <StackPanel>
-        <TextBlock Text="THAY ĐỔI QUY ĐỊNH"  FontSize="25" TextAlignment="Center" Foreground="White"  FontWeight="Bold"   Padding="5">
+        <TextBlock Text="THAY ĐỔI QUY ĐỊNH"  FontSize="25"  TextAlignment="Center"  Foreground="White"  FontWeight="Bold"  Padding="5">
             <TextBlock.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
                         <GradientStop Color="#FB4A4A" Offset="-0.1093" />
@@ -18,16 +17,17 @@
                     </LinearGradientBrush>
                 </TextBlock.Background>
         </TextBlock>
+        
         <DockPanel Margin="30 10 30 0">
-            <TextBlock Text="Thời gian bay tối thiểu (phút)"  FontSize="17"   Width="350" VerticalAlignment="Center"/>
-            <TextBox x:Name="TGBTT" Text="{Binding ThoiGianBayToiThieu, Mode=OneWay}" FontSize="17"   BorderBrush="White" IsReadOnly="True"/>
+            <TextBlock Text="Thời gian bay tối thiểu (phút)"  FontSize="17"  Width="350"  VerticalAlignment="Center"/>
+            <TextBox x:Name="TGBTT" Text="{Binding ThoiGianBayToiThieu, Mode=OneWay}" Margin="10, 0, 0, 0" FontSize="17"   BorderBrush="White" IsReadOnly="True"/>
             <Button Style="{StaticResource MaterialDesignIconButton}" HorizontalAlignment="Right" ToolTip="Chỉnh sửa"
                         Height="22" Width="40" Click="editTGBTT_Click">
                 <TextBlock Text="Sửa"/>
             </Button>
         </DockPanel>
         <StackPanel x:Name="panelTGBTT"  Orientation="Horizontal" Visibility="Collapsed" Margin="0 8 0 0">
-            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Đồng ý" Width="100" Margin="260 0 20 0" Click="OkTGBTTBtn_Click">
+            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Đồng ý" Foreground="White" Width="100" Margin="260 0 20 0" Click="OkTGBTTBtn_Click">
                 <Button.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
                         <GradientStop Color="#FB4A4A" Offset="-0.1093" />
@@ -41,14 +41,14 @@
         
         <DockPanel Margin="30 0">
             <TextBlock Text="Số sân bay trung gian tối đa"  FontSize="17"   Width="350" VerticalAlignment="Center"/>
-            <TextBox x:Name="SSBTGTD" Text="{Binding SoSanBayTrungGianToiDa, Mode=OneWay}" FontSize="17"   BorderBrush="White" IsReadOnly="True"/>
+            <TextBox x:Name="SSBTGTD" Text="{Binding SoSanBayTrungGianToiDa, Mode=OneWay}" Margin="10, 0, 0, 0" FontSize="17"   BorderBrush="White" IsReadOnly="True"/>
             <Button Style="{StaticResource MaterialDesignIconButton}" HorizontalAlignment="Right" ToolTip="Chỉnh sửa"
                         Height="22" Width="40" Click="editSSBTGTD_Click">
                 <TextBlock Text="Sửa"/>
             </Button>
         </DockPanel>
         <StackPanel x:Name="panelSSBTGTD"  Orientation="Horizontal" Visibility="Collapsed" Margin="0 8 0 0">
-            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Đồng ý" Width="100" Margin="260 0 20 0" Click="OkSSBTGTDBtn_Click">
+            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Đồng ý" Foreground="White" Width="100" Margin="260 0 20 0" Click="OkSSBTGTDBtn_Click">
                 <Button.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
                         <GradientStop Color="#FB4A4A" Offset="-0.1093" />
@@ -62,14 +62,14 @@
 
         <DockPanel Margin="30 0">
             <TextBlock Text="Thời gian dừng tối thiểu (phút)"  FontSize="17"   Width="350" VerticalAlignment="Center"/>
-            <TextBox x:Name="TGDTT" Text="{Binding ThoiGianDungToiThieu, Mode=OneWay}"  FontSize="17"   BorderBrush="White" IsReadOnly="True"/>
+            <TextBox x:Name="TGDTT" Text="{Binding ThoiGianDungToiThieu, Mode=OneWay}" Margin="10, 0, 0, 0"  FontSize="17"   BorderBrush="White" IsReadOnly="True"/>
             <Button Style="{StaticResource MaterialDesignIconButton}" HorizontalAlignment="Right" ToolTip="Chỉnh sửa"
                         Height="22" Width="40" Click="editTGDTT_Click">
                 <TextBlock Text="Sửa"/>
             </Button>
         </DockPanel>
         <StackPanel x:Name="panelTGDTT"  Orientation="Horizontal" Visibility="Collapsed" Margin="0 8 0 0">
-            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Đồng ý" Width="100" Margin="260 0 20 0"  Click="OkTGDTTBtn_Click">
+            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Đồng ý" Foreground="White" Width="100" Margin="260 0 20 0"  Click="OkTGDTTBtn_Click">
                 <Button.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
                         <GradientStop Color="#FB4A4A" Offset="-0.1093" />
@@ -83,14 +83,14 @@
 
         <DockPanel Margin="30 0">
             <TextBlock Text="Thời gian dừng tối đa (phút)" FontSize="17"   Width="350" VerticalAlignment="Center"/>
-            <TextBox x:Name="TGDTD" Text="{Binding ThoiGianDungToiDa, Mode=OneWay}"  FontSize="17"   BorderBrush="White" IsReadOnly="True"/>
+            <TextBox x:Name="TGDTD" Text="{Binding ThoiGianDungToiDa, Mode=OneWay}" Margin="10, 0, 0, 0"  FontSize="17"   BorderBrush="White" IsReadOnly="True"/>
             <Button Style="{StaticResource MaterialDesignIconButton}" HorizontalAlignment="Right" ToolTip="Chỉnh sửa"
                         Height="22" Width="40" Click="editTGDTD_Click">
                 <TextBlock Text="Sửa"/>
             </Button>
         </DockPanel>
         <StackPanel x:Name="panelTGDTD"  Orientation="Horizontal" Visibility="Collapsed" Margin="0 8 0 0">
-            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Đồng ý" Width="100" Margin="260 0 20 0"  Click="OkTGDTDBtn_Click">
+            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Đồng ý" Foreground="White" Width="100" Margin="260 0 20 0"  Click="OkTGDTDBtn_Click">
                 <Button.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
                         <GradientStop Color="#FB4A4A" Offset="-0.1093" />
@@ -104,14 +104,14 @@
 
         <DockPanel Margin="30 0">
             <TextBlock Text="Thời gian chậm nhất cho phép đặt vé (giờ)"  FontSize="17"   Width="350" VerticalAlignment="Center"/>
-            <TextBox x:Name="SGTKHCPDV" Text="{Binding SoGioTruocKhoiHanhChoPhepDatVe, Mode=OneWay}"  FontSize="17"   BorderBrush="White" IsReadOnly="True"/>
+            <TextBox x:Name="SGTKHCPDV" Text="{Binding SoGioTruocKhoiHanhChoPhepDatVe, Mode=OneWay}" Margin="10, 0, 0, 0"  FontSize="17"   BorderBrush="White" IsReadOnly="True"/>
             <Button Style="{StaticResource MaterialDesignIconButton}" HorizontalAlignment="Right" ToolTip="Chỉnh sửa"
                         Height="22" Width="40" Click="editSGTKHCPDV_Click">
                 <TextBlock Text="Sửa"/>
             </Button>
         </DockPanel>
         <StackPanel x:Name="panelSGTKHCPDV"  Orientation="Horizontal" Visibility="Collapsed" Margin="0 8 0 0">
-            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Đồng ý" Width="100" Margin="260 0 20 0" Click="OkSGTKHCPDVBtn_Click">
+            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Đồng ý" Foreground="White" Width="100" Margin="260 0 20 0" Click="OkSGTKHCPDVBtn_Click">
                 <Button.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
                         <GradientStop Color="#FB4A4A" Offset="-0.1093" />
@@ -125,14 +125,14 @@
      
         <DockPanel Margin="30 0">
             <TextBlock Text="Thời gian chậm nhất cho phép hủy đặt vé (giờ)"  FontSize="17"   Width="350" VerticalAlignment="Center"/>
-            <TextBox x:Name="SGTKHCPHV" Text="{Binding SoGioTruocKhoiHanhChoPhepHuyVe, Mode=OneWay}"  FontSize="17"   BorderBrush="White" IsReadOnly="True"/>
+            <TextBox x:Name="SGTKHCPHV" Text="{Binding SoGioTruocKhoiHanhChoPhepHuyVe, Mode=OneWay}" Margin="10, 0, 0, 0"  FontSize="17"   BorderBrush="White" IsReadOnly="True"/>
             <Button Style="{StaticResource MaterialDesignIconButton}" HorizontalAlignment="Right" ToolTip="Chỉnh sửa"
                         Height="22" Width="40" Click="editSGTKHCPHV_Click">
                 <TextBlock Text="Sửa"/>
             </Button>
         </DockPanel>
         <StackPanel x:Name="panelSGTKHCPHV"  Orientation="Horizontal" Visibility="Collapsed" Margin="0 8 0 0">
-            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Đồng ý" Width="100" Margin="260 0 20 0" Click="OkSGTKHCPHVBtn_Click">
+            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Đồng ý" Foreground="White" Width="100" Margin="260 0 20 0" Click="OkSGTKHCPHVBtn_Click">
                 <Button.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
                         <GradientStop Color="#FB4A4A" Offset="-0.1093" />

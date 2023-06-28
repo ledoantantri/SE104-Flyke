@@ -6,7 +6,9 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Flyke.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="550" d:DesignWidth="1000" Background="Transparent"
+      d:DesignHeight="550" 
+      d:DesignWidth="1000" 
+      Background="Transparent"
       Title="Home">
     <Grid>
         <Border>
@@ -14,20 +16,14 @@
                 <ImageBrush ImageSource="/Resources/Images/bg.png" />
             </Border.Background>
         </Border>
+        
         <Grid>
-            <Image Source="/Resources/Images/Flyke logo.png" Margin="788,49,146,434"/>
+            <Image Source="/Resources/Images/Flyke logo.png" Margin="772,34,128,416" Style="{StaticResource ImgLogo}"/>
 
-            <TextBlock Text="Chào mừng đến với Flyke!" Margin="694,139,52,375" FontSize="20" FontWeight="Bold">
-                <TextBlock.Foreground>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                        <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                        <GradientStop Color="#2027CC" Offset="0.9961" />
-                    </LinearGradientBrush>
-                </TextBlock.Foreground>
-            </TextBlock>
+            <TextBlock Text="Chào mừng đến với Flyke!" Margin="694,139,52,375" FontSize="20" FontWeight="Bold" Style="{StaticResource TxtHeader}"/>
 
             <TextBlock Text="Hãy thử tìm kiếm một vài chuyến bay..." Margin="685,180,43,334" FontSize="15" FontWeight="Regular" Foreground="White"/>
-
+            
             <TextBlock Margin="700,225,0,275" Height="50" Text="Điểm đi" Foreground="White" FontSize="15"/>
             <ComboBox Name="cbbDeparture"
                                 FontSize="10" Foreground="Black"
@@ -53,16 +49,9 @@
                                 Margin="788,349,43,0" FontSize="15" Foreground="Black"
                                 Style="{StaticResource MaterialDesignFloatingHintComboBox}" VerticalAlignment="Top"/>
 
-            <Button
-                     Width="120" Height="40" BorderBrush="Transparent"
-                     Content="Tìm kiếm" Foreground="White" FontSize="20" Click="btnSearch_Click" VerticalAlignment="Top" Margin="761,475,119,0" >
-                <Button.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                        <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                        <GradientStop Color="#2027CC" Offset="0.9961" />
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
+            <Button Style="{StaticResource BtnPrimary}"
+                     Width="120" Height="40" 
+                     Content="Tìm kiếm" FontSize="18" Click="btnSearch_Click"  Margin="761,400,120,0" />
         </Grid>
     </Grid>
 

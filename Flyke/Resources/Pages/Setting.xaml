@@ -12,14 +12,9 @@
       FontFamily="Raleway">
 
     <StackPanel>
-        <TextBlock Text="Thông tin tài khoản"  FontSize="25" TextAlignment="Center" Foreground="White"  FontWeight="Bold" Padding="5">
-            <TextBlock.Background>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                            <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                            <GradientStop Color="#2027CC" Offset="0.9961" />
-                        </LinearGradientBrush>
-                </TextBlock.Background>
-        </TextBlock>
+        <TextBlock Text="THÔNG TIN TÀI KHOẢN"  FontSize="30" TextAlignment="Center"  FontWeight="Bold" Padding="5"
+                   Style="{StaticResource TxtHeader}"/>
+
         <DockPanel Margin="30 60 30 0">
             <TextBlock Text="Tên đăng nhập"  FontSize="17"   Width="350" VerticalAlignment="Center"/>
             <TextBox x:Name="Uname" Text="{Binding username}" FontSize="17"   BorderBrush="White" IsReadOnly="True"/>
@@ -35,14 +30,8 @@
             </Button>
         </DockPanel>
         <StackPanel x:Name="panelDName"  Orientation="Horizontal" Visibility="Collapsed" Margin="0 8 0 0">
-            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Đồng ý" Width="100" Margin="260 0 20 0" Click="OkDnameBtn_Click">
-                <Button.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                        <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                        <GradientStop Color="#2027CC" Offset="0.9961" />
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
+            <Button Style="{StaticResource BtnPrimary}" Content="Đồng ý"
+                    Width="100" Height="35" Margin="260 0 20 0" Click="OkDnameBtn_Click"/>
             <Button Style="{StaticResource MaterialDesignOutlinedLightButton}" Content="Hủy" Width="70" Click="CancelDnameBtn_Click"/>
         </StackPanel>
         <Border BorderThickness="0 1 0 0" BorderBrush="Gray" Margin="30 10"/>
@@ -55,16 +44,11 @@
                 <TextBlock Text="Sửa"/>
             </Button>
         </DockPanel>
+        
         <StackPanel x:Name="panelEmail"  Orientation="Horizontal" Visibility="Collapsed" Margin="0 8 0 0">
             <TextBlock x:Name="txblError" Margin="20 5 0 0" Foreground="Red"  FontWeight="Medium"/>
-            <Button Style="{StaticResource MaterialDesignRaisedLightButton}" Content="Đồng ý" Width="100" Margin="260 0 20 0"  Click="OkEmailBtn_Click">
-                <Button.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                    <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                    <GradientStop Color="#2027CC" Offset="0.9961" />
-                </LinearGradientBrush>
-                </Button.Background>
-            </Button>
+            <Button Style="{StaticResource BtnPrimary}" Content="Đồng ý" 
+                    Width="100" Height="35" Margin="260 0 20 0"  Click="OkEmailBtn_Click"/>
             <Button Style="{StaticResource MaterialDesignOutlinedLightButton}" Content="Hủy" Width="70" Click="CancelEmailBtn_Click"/>
         </StackPanel>
         <Border BorderThickness="0 1 0 0" BorderBrush="Gray" Margin="30 10"/>

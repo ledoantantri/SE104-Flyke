@@ -61,14 +61,9 @@
                         <RowDefinition Height="Auto"/>
 
                     </Grid.RowDefinitions>
-                    <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Tiếp theo" Margin="10" Click="btnCont_Click" Foreground="White">
-                        <Button.Background>
-                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                                <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                                <GradientStop Color="#2027CC" Offset="0.9961" />
-                            </LinearGradientBrush>
-                        </Button.Background>
-                    </Button>
+                    <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource BtnPrimary}" Width="90" Height="30" FontSize="15"
+                            Content="Tiếp theo" Margin="10" Click="btnCont_Click" Foreground="White"/>
+
                     <TextBlock Text="CHỖ NGỒI" Grid.Row="0" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"  VerticalAlignment="Center" Height="27">
                         <TextBlock.Foreground>
                             <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">

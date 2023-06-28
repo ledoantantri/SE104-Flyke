@@ -296,6 +296,8 @@ namespace Flyke
                     tblLogin.Text = "Đăng nhập";
                     //BitmapImage bitmap = new BitmapImage(new Uri("/Images/login.png", UriKind.Relative));
                     //imgLogin.Source = bitmap;
+                    btnSearchFlight.IsChecked = true;
+                    icLogin.Kind = MaterialDesignThemes.Wpf.PackIconKind.Login;
                     btn_UserManagement.Visibility = Visibility.Collapsed;
                     btn_SalesmanRight.Visibility = Visibility.Collapsed;
                     btn_ChangeRule.Visibility = Visibility.Collapsed;
@@ -310,6 +312,8 @@ namespace Flyke
         {
             btnHome_Click(sender, e);
             tblLogin.Text = "Đăng xuất";
+            icLogin.Kind = MaterialDesignThemes.Wpf.PackIconKind.Logout;
+            btnSearchFlight.IsChecked=true;
             //BitmapImage bitmap = new BitmapImage(new Uri("/Images/logout.png", UriKind.Relative));
             //imgLogin.Source = bitmap;
             if (MainWindow.curAccount.type == 1)

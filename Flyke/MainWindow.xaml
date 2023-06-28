@@ -6,120 +6,111 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Flyke"
         mc:Ignorable="d"
-        Height="600" Width="1320" Background="White" WindowStartupLocation="CenterScreen"
+        Height="600" 
+        Width="1320"  
+        Background="Transparent"
+        WindowStartupLocation="CenterScreen"
         Title="Flyke"
         FontFamily="Raleway">
     <Grid>
-        
         <DockPanel LastChildFill="True">
-            <Grid  x:Name="GridNav">
+            <Grid  x:Name="GridNav" Width="300" Background="{StaticResource ColorBg}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="100"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <Grid.Background>
-                        <LinearGradientBrush StartPoint="1,0" EndPoint="0,1">
-                            <GradientStop Color="#FF4343" Offset="0.0109" />
-                            <GradientStop Color="#4449CF" Offset="0.941" />
-                        </LinearGradientBrush>
-                    </Grid.Background>
-                    
-
-
-                    <Grid Grid.Row="0">
-                        <ToggleButton x:Name="Tg_Btn" VerticalAlignment="Center" Style="{DynamicResource iToggleButtonStyle}" Height="30" Width="30" Margin="15 0 0 0" HorizontalAlignment="Left">
-                            <ToggleButton.Triggers>
-                                <EventTrigger RoutedEvent="ToggleButton.Unchecked">
+                <Grid Grid.Row="0">
+                    <ToggleButton x:Name="Tg_Btn" VerticalAlignment="Center" Style="{DynamicResource MaterialDesignHamburgerToggleButton}" IsChecked="True" Foreground="White" 
+                                      Height="30" Width="30" Margin="20 0 0 0" HorizontalAlignment="Left">
+                        <ToggleButton.Triggers>
+                            <EventTrigger RoutedEvent="ToggleButton.Checked">
                                     <BeginStoryboard>
                                         <Storyboard x:Name="ShowStackPanel">
-                                            <DoubleAnimation Storyboard.TargetName="GridNav" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="73" To="210" Duration="0:0:0.5">
+                                            <DoubleAnimation Storyboard.TargetName="GridNav" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="70" To="300" Duration="0:0:0.3">
                                             </DoubleAnimation>
                                         </Storyboard>
                                     </BeginStoryboard>
                                 </EventTrigger>
-                                <EventTrigger RoutedEvent="ToggleButton.Checked">
+                                <EventTrigger RoutedEvent="ToggleButton.Unchecked">
                                     <BeginStoryboard>
                                         <Storyboard x:Name="HideStackPanel">
-                                            <DoubleAnimation Storyboard.TargetName="GridNav" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="210" To="73" Duration="0:0:0.5">
+                                            <DoubleAnimation Storyboard.TargetName="GridNav" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="300" To="70" Duration="0:0:0.3">
                                             </DoubleAnimation>
                                         </Storyboard>
                                     </BeginStoryboard>
-
                                 </EventTrigger>
                             </ToggleButton.Triggers>
                         </ToggleButton>
                     </Grid>
 
-                    <Grid Grid.Row="1">
-                        <Button HorizontalAlignment="left" VerticalAlignment="Top" Margin="10 0 0 0" Height="40" Click="btnHome_Click">
+                <Grid Grid.Row="1">
+                    <StackPanel Width="300">
+                        <RadioButton x:Name="btnSearchFlight" Style="{StaticResource Btn_Home}" Click="btnHome_Click" IsChecked="True">
                             <StackPanel Orientation="Horizontal" >
-                                <!--<materialDesign:PackIcon Kind="Home" Foreground="White" Height="30" Width="30"/>-->
-                                <TextBlock Name="timer" Margin="10 0 0 0" FontSize="20" Text="Trang chủ" Foreground="#FFF" VerticalAlignment="Center"/>
+                                <materialDesign:PackIcon Margin="20 0 0 0" Kind="AirplaneSearch" Foreground="White" Height="30" Width="30" VerticalAlignment="Center"/>
+                                <TextBlock Name="timer" Margin="20 0 0 0" FontSize="20" Text="Tìm kiếm chuyến bay" Foreground="#FFF" FontWeight="Bold" VerticalAlignment="Center"/>
                             </StackPanel>
-                        </Button>
+                        </RadioButton>
 
-                        <Button x:Name="btnMyBookings" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5 80 0 0" Height="40" Click="btnMyBookings_Click" Visibility="Collapsed">
-                            <StackPanel Orientation="Horizontal">
-                                
-                                
-                                <TextBlock Margin="15 0 0 0" FontSize="20" Text="Lịch sử đặt vé" Foreground="#FFF"/>
+                        <RadioButton Style="{StaticResource Btn_Home}" Click="btnAllFlight_Click">
+                            <StackPanel Orientation="Horizontal" >
+                                <materialDesign:PackIcon Margin="20 0 0 0" Kind="Plane" Foreground="White" Height="30" Width="30" VerticalAlignment="Center"/>
+                                <TextBlock Margin="20 0 0 0" FontSize="20" Text="Danh sách chuyến bay" Foreground="#FFF" FontWeight="Bold" VerticalAlignment="Center"/>
                             </StackPanel>
-                        </Button>
-                        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5 40 0 0" Height="45" Click="btnAllFlight_Click">
-                            <StackPanel Orientation="Horizontal">
-                                <!--<materialDesign:PackIcon Kind="Plane" Foreground="White" Height="30" Width="30"/>-->
-                                <TextBlock Margin="15 0 0 0" FontSize="20" Text="Chuyến bay" Foreground="#FFF" VerticalAlignment="Center"/>
-                            </StackPanel>
-                        </Button>
-                        <!--<Button HorizontalAlignment="Left" Margin="10 0 0 0" Height="35" Click="contactsUs_click">
-                            <StackPanel  Orientation="Horizontal">
-                                <Image Source="/resources/images/envelope_52px.png" Height="30" Width="30" />
-                                <TextBlock Margin="15 0 0 0" FontSize="20" Text="Liên lạc" Foreground="#FFF"/>
-                            </StackPanel>
-                        </Button>-->
+                        </RadioButton>
 
-                        <Button x:Name="btn_setting" HorizontalAlignment="Left" Margin="5 0 0 0" Height="40" Click="setting_click" Visibility="Collapsed">
-                            <StackPanel Orientation="Horizontal">
-                                
-                                <TextBlock Margin="15 0 0 0" FontSize="20" Text="Tài khoản" Foreground="#FFF"/>
+                        <RadioButton x:Name="btnMyBookings" Style="{StaticResource Btn_Home}" Click="btnMyBookings_Click" Visibility="Collapsed">
+                            <StackPanel Orientation="Horizontal" >
+                                <materialDesign:PackIcon Margin="20 0 0 0" Kind="TicketConfirmation" Foreground="White" Height="30" Width="30" VerticalAlignment="Center"/>
+                                <TextBlock Margin="20 0 0 0" FontSize="20" Text="Lịch sử đặt vé" Foreground="#FFF" FontWeight="Bold" VerticalAlignment="Center"/>
                             </StackPanel>
-                        </Button>
-                        <Button  x:Name="btn_SalesmanRight" HorizontalAlignment="Left" Margin="5 60 0 0" Height="40" Click="AdminAccessBtn" Visibility="Collapsed">
-                            <StackPanel Orientation="Horizontal">
-                                
-                                <TextBlock Margin="15 0 0 0" FontSize="20" Text="Báo cáo doanh thu" Foreground="#FFF"/>
+                        </RadioButton>
+
+                        <RadioButton x:Name="btn_setting" Style="{StaticResource Btn_Home}" Click="setting_click" Visibility="Collapsed">
+                            <StackPanel Orientation="Horizontal" >
+                                <materialDesign:PackIcon Margin="20 0 0 0" Kind="User" Foreground="White" Height="30" Width="30" VerticalAlignment="Center"/>
+                                <TextBlock Margin="20 0 0 0" FontSize="20" Text="Tài khoản" Foreground="#FFF" FontWeight="Bold" VerticalAlignment="Center"/>
                             </StackPanel>
-                        </Button>
-                        <Button x:Name="btn_UserManagement" HorizontalAlignment="Left" Margin="5 120 0 0" Height="40" Click="userManagement_Click" Visibility="Collapsed">
-                            <StackPanel Orientation="Horizontal">
-                                
-                                <TextBlock Margin="15 0 0 0" FontSize="20" Text="Quản lý người dùng" Foreground="#FFF"/>
+                        </RadioButton>
+
+                        <RadioButton x:Name="btn_SalesmanRight" Style="{StaticResource Btn_Home}" Click="AdminAccessBtn" Visibility="Collapsed">
+                            <StackPanel Orientation="Horizontal" >
+                                <materialDesign:PackIcon Margin="20 0 0 0" Kind="Table" Foreground="White" Height="30" Width="30" VerticalAlignment="Center"/>
+                                <TextBlock Margin="20 0 0 0" FontSize="20" Text="Báo cáo doanh thu" Foreground="#FFF" FontWeight="Bold" VerticalAlignment="Center"/>
                             </StackPanel>
-                        </Button>
-                        <Button x:Name="btn_ChangeRule" HorizontalAlignment="Left" Margin="5 180 0 0" Height="40" Click="changeRule_Click" Visibility="Collapsed">
-                            <StackPanel Orientation="Horizontal">
-                                
-                                <TextBlock Margin="15 0 0 0" FontSize="20" Text="Thay đổi quy định" Foreground="#FFF"/>
+                        </RadioButton>
+
+                        <RadioButton x:Name="btn_UserManagement" Style="{StaticResource Btn_Home}" Click="userManagement_Click" Visibility="Collapsed">
+                            <StackPanel Orientation="Horizontal" >
+                                <materialDesign:PackIcon Margin="20 0 0 0" Kind="AccountGroup" Foreground="White" Height="30" Width="30" VerticalAlignment="Center"/>
+                                <TextBlock Margin="20 0 0 0" FontSize="20" Text="Quản lý người dùng" Foreground="#FFF" FontWeight="Bold" VerticalAlignment="Center"/>
                             </StackPanel>
-                        </Button>
-                        <Button HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5 240 0 10" Height="40" Click="loginBtn_Click">
-                            <StackPanel Orientation="Horizontal">
-                                <!--<materialDesign:PackIcon Kind="SignIn" Foreground="White" Height="30" Width="30"/>-->
-                                <TextBlock x:Name="tblLogin" Margin="15 0 0 0" FontSize="20" Text="Đăng nhập" Foreground="#FFF" VerticalAlignment="Center"/>
+                        </RadioButton>
+
+                        <RadioButton x:Name="btn_ChangeRule" Style="{StaticResource Btn_Home}" Click="changeRule_Click" Visibility="Collapsed">
+                            <StackPanel Orientation="Horizontal" >
+                                <materialDesign:PackIcon Margin="20 0 0 0" Kind="Settings" Foreground="White" Height="30" Width="30" VerticalAlignment="Center"/>
+                                <TextBlock Margin="20 0 0 0" FontSize="20" Text="Thay đổi quy định" Foreground="#FFF" FontWeight="Bold" VerticalAlignment="Center"/>
                             </StackPanel>
-                        </Button>
-                    </Grid>
+                        </RadioButton>
+
+                        <RadioButton Style="{StaticResource Btn_Home}" Click="loginBtn_Click">
+                            <StackPanel Orientation="Horizontal" >
+                                <materialDesign:PackIcon x:Name="icLogin" Margin="20 0 0 0" Kind="Login" Foreground="White" Height="30" Width="30" VerticalAlignment="Center"/>
+                                <TextBlock x:Name="tblLogin" Margin="20 0 0 0" FontSize="20" Text="Đăng nhập" Foreground="#FFF" FontWeight="Bold" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </RadioButton>
+                    </StackPanel>
                 </Grid>
             </Grid>
-            <Grid Background="#f1f6e5">
+
+            <Grid Background="White">
                 <Frame 
                        Name="fContainer"
-                       NavigationUIVisibility="Hidden">
+                       NavigationUIVisibility="Hidden" Grid.RowSpan="2">
                 </Frame>
             </Grid>
         </DockPanel>
     </Grid>
-    
 </Window>

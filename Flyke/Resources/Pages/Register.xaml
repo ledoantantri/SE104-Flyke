@@ -84,15 +84,9 @@
         </StackPanel>
         <StackPanel>
             <Button Style="{StaticResource MaterialDesignOutlinedLightButton}"
-                            materialDesign:ButtonAssist.CornerRadius="5" Click="BtnSignup_click"
-                            Width="100" Content="Đăng ký" FontSize="14" Margin="0 30" Background="White" >
-                <Button.Foreground>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                        <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                        <GradientStop Color="#2027CC" Offset="0.9961" />
-                    </LinearGradientBrush>
-                </Button.Foreground>
-            </Button>
+                    materialDesign:ButtonAssist.CornerRadius="5" Click="BtnSignup_click"
+                    Width="100" Content="Đăng ký" FontSize="14" Margin="0 30" Background="White" 
+                    Foreground="{StaticResource ColorPrimary}"/>
         </StackPanel>
     </StackPanel>
 </Page>
