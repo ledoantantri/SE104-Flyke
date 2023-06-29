@@ -34,44 +34,16 @@
                 </Style>
             </DataGrid.Resources>
 
-
             <DataGrid.Columns>
                 <DataGridTextColumn Header="STT" Width="100" Binding="{Binding STT}"/>
                 <DataGridTextColumn Header="Mã hãng" Width="300" Binding="{Binding mahang}"/>
                 <DataGridTextColumn Header="Tên hãng" Width="*" Binding="{Binding tenhang}"/>
-
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Right" >
-
-            <Button Content="Thêm" Click="Them_Click" Margin="0 0 10 0" Foreground="White">
-                <Button.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                        <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                        <GradientStop Color="#2027CC" Offset="0.9961" />
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-
-            <Button Content="Xóa"  Click="Xoa_Click" Margin="0 0 10 0" Foreground="White">
-                <Button.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                        <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                        <GradientStop Color="#2027CC" Offset="0.9961" />
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-
-            <Button Content="Sửa" Click="Sua_Click" Margin="0 0 10 0" Foreground="White">
-                <Button.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                        <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                        <GradientStop Color="#2027CC" Offset="0.9961" />
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-            
+            <Button Content="Thêm" Click="Them_Click" Margin="0 0 10 0" Width="70" Height="30" Style="{StaticResource BtnPrimary}"/>
+            <Button Content="Xóa"  Click="Xoa_Click" Margin="0 0 10 0" Width="70" Height="30" Style="{StaticResource BtnPrimary}"/>
+            <Button Content="Sửa" Click="Sua_Click" Margin="0 0 10 0" Width="70" Height="30" Style="{StaticResource BtnPrimary}"/>
         </StackPanel>
-
     </Grid>
 </UserControl>

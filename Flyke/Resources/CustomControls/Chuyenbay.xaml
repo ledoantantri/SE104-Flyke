@@ -46,32 +46,14 @@
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Right">
-            <Button Content="Thêm" Click="Them_Click" Foreground="White" Margin="0 0 10 0">
-                <Button.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                        <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                        <GradientStop Color="#2027CC" Offset="0.9961" />
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
+            <Button Content="Thêm" Click="Them_Click" Width="50" Height="30" Style="{StaticResource BtnPrimary}" 
+                    Margin="0 0 10 0"/>
 
-            <Button Content="Xóa" Click="Xoa_Click" Foreground="White" Margin="0 0 10 0">
-                <Button.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                        <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                        <GradientStop Color="#2027CC" Offset="0.9961" />
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
+            <Button Content="Xóa" Click="Xoa_Click" Width="50" Height="30" Style="{StaticResource BtnPrimary}" 
+                    Margin="0 0 10 0"/>
 
-            <Button Content="Sửa"  Click="Sua_Click" Foreground="White" Margin="0 0 10 0">
-                <Button.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                        <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                        <GradientStop Color="#2027CC" Offset="0.9961" />
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
+            <Button Content="Sửa"  Click="Sua_Click" Width="50" Height="30" Style="{StaticResource BtnPrimary}" 
+                    Margin="0 0 10 0"/>
         </StackPanel>
 
     </Grid>

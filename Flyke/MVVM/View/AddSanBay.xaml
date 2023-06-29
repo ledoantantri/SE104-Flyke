@@ -16,48 +16,33 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <DockPanel>
-                <TextBlock x:Name="headertxt" Text="Thêm sân bay" TextAlignment="Center" FontSize="20" Margin="10">
-                    <TextBlock.Foreground>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                            <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                            <GradientStop Color="#2027CC" Offset="0.9961" />
-                        </LinearGradientBrush>
-                    </TextBlock.Foreground>
+                <TextBlock x:Name="headertxt" Text="Thêm sân bay" Style="{StaticResource TxtTitle}" 
+                           FontSize="20" VerticalAlignment="Center" Margin="10 0 0 0">
                 </TextBlock>
-                <Button Style ="{StaticResource MaterialDesignIconButton}"
-                Height="25" Width="25" Click="BtnClose_Click"
-                ToolTip="Close"
-                HorizontalAlignment="Right"
-                Grid.Row="0" >
-                    <materialDesign:PackIcon Kind="Close" Foreground="Black"/>
+                <Button Style ="{StaticResource BtnCloseWindow}"
+                        Click="BtnClose_Click" Margin="0 0 10 0"
+                        Grid.Row="0" >
+                    <materialDesign:PackIcon Kind="CloseThick" Width="25" Height="25" Foreground="Black"/>
                 </Button>
             </DockPanel>
         </Grid>
         <StackPanel Grid.Row="1" Orientation="Vertical" Margin="0,40">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
-                <TextBlock Text="Mã sân bay: " Margin="10"/>
+                <TextBlock Text="Mã sân bay: " FontSize="15" Margin="10 0 10 0" Style="{StaticResource TxtHeader}" VerticalAlignment="Center"/>
                 <TextBox Width="300" Height="30" BorderBrush="Black" BorderThickness="1" x:Name="masanbayTxb"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
-                <TextBlock Text="Tên sân bay: " Margin="10"/>
+                <TextBlock Text="Tên sân bay: " FontSize="15" Margin="10 0 10 0" Style="{StaticResource TxtHeader}" VerticalAlignment="Center"/>
                 <TextBox Width="300" Height="30" BorderBrush="Black" BorderThickness="1" x:Name="tensanbayTxb"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
-                <TextBlock Text="Tỉnh: " Margin="10"/>
+                <TextBlock Text="Tỉnh: " FontSize="15" Margin="10 0 10 0" Style="{StaticResource TxtHeader}" VerticalAlignment="Center"/>
                 <TextBox Width="300" Height="30" BorderBrush="Black" BorderThickness="1" x:Name="tinhTxb" Margin="40,0,0,0"/>
             </StackPanel>
-            <Button Style="{StaticResource MaterialDesignOutlinedLightButton}"
-                            materialDesign:ButtonAssist.CornerRadius="5"
-                            Width="100" Content="OK" Foreground="White" FontSize="14" Margin="0 30" Click="Add_Click">
-                <Button.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                        <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                        <GradientStop Color="#2027CC" Offset="0.9961" />
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
+            <Button Style="{StaticResource BtnPrimary}" Height="25"
+                            Width="100" Content="OK" FontSize="14" Margin="0 30" Click="Add_Click"/>
         </StackPanel>
     </Grid>
 </Window>

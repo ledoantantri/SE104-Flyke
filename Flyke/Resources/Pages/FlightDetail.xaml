@@ -61,17 +61,11 @@
                         <RowDefinition Height="Auto"/>
 
                     </Grid.RowDefinitions>
-                    <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource BtnPrimary}" Width="90" Height="30" FontSize="15"
-                            Content="Tiếp theo" Margin="10" Click="btnCont_Click" Foreground="White"/>
+                    <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource BtnPrimary}" Width="100" Height="30" FontSize="15"
+                            Content="Tiếp theo" Margin="10" Click="btnCont_Click"/>
 
-                    <TextBlock Text="CHỖ NGỒI" Grid.Row="0" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"  VerticalAlignment="Center" Height="27">
-                        <TextBlock.Foreground>
-                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                                <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                                <GradientStop Color="#2027CC" Offset="0.9961" />
-                            </LinearGradientBrush>
-                        </TextBlock.Foreground>
-                    </TextBlock>
+                    <TextBlock Text="CHỖ NGỒI" Grid.Row="0" FontSize="20" Style="{StaticResource TxtTitle}" HorizontalAlignment="Center"  VerticalAlignment="Center" Height="27"/>
+
                     <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1">
                         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Grid.ColumnDefinitions>
@@ -84,9 +78,6 @@
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
 
-                            <!-- Table of Class color -->
-
-                            <!--Seats Chart -->
                             <ItemsControl Grid.Column="0" Name="SeatsChart1">
                                 <ItemsControl.ItemTemplate >
                                     <DataTemplate>
@@ -136,8 +127,6 @@
                 </Grid>
             </Grid>
 
-            <!--Flight details -->
-
             <Grid Grid.Column="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="35"/>
@@ -145,17 +134,9 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
 
-                <TextBlock Text="Chi tiết chuyến bay" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <TextBlock.Foreground>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                            <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                            <GradientStop Color="#2027CC" Offset="0.9961" />
-                        </LinearGradientBrush>
-                    </TextBlock.Foreground>
-                </TextBlock>
+                <TextBlock Text="Chi tiết chuyến bay" FontSize="20" Style="{StaticResource TxtTitle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
                 <Grid Grid.Row="1" >
-
-
                     <Grid.RowDefinitions>
 
                         <RowDefinition Height="50"/>
@@ -173,7 +154,7 @@
                         <TextBlock Text="{Binding Converter={StaticResource DateConverter}}" FontSize="15" Foreground="Gray" HorizontalAlignment="Center"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26" Width="80">
-                        
+
                         <TextBlock Text="{Binding Converter={StaticResource DurationConverter}}" Margin="5 0 0 0" VerticalAlignment="Center" FontSize="15" HorizontalAlignment="Center" Name="tb_Time"/>
                     </StackPanel>
                     <StackPanel VerticalAlignment="Center" Grid.Column="1" Grid.RowSpan="3">
@@ -251,8 +232,6 @@
                     </Grid>
                 </Border>
             </Grid>
-
-
         </Grid>
     </Grid>
 </Page>

@@ -12,8 +12,8 @@
       FontFamily="Raleway">
 
     <StackPanel>
-        <TextBlock Text="THÔNG TIN TÀI KHOẢN"  FontSize="30" TextAlignment="Center"  FontWeight="Bold" Padding="5"
-                   Style="{StaticResource TxtHeader}"/>
+        <TextBlock Text="THÔNG TIN TÀI KHOẢN"  FontSize="30" Padding="5"
+                   Style="{StaticResource TxtTitle}"/>
 
         <DockPanel Margin="30 60 30 0">
             <TextBlock Text="Tên đăng nhập"  FontSize="17"   Width="350" VerticalAlignment="Center"/>

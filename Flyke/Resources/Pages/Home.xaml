@@ -20,7 +20,7 @@
         <Grid>
             <Image Source="/Resources/Images/Flyke logo.png" Margin="772,34,128,416" Style="{StaticResource ImgLogo}"/>
 
-            <TextBlock Text="Chào mừng đến với Flyke!" Margin="694,139,52,375" FontSize="20" FontWeight="Bold" Style="{StaticResource TxtHeader}"/>
+            <TextBlock Text="Chào mừng đến với Flyke!" Margin="694,139,52,375" FontSize="20" Style="{StaticResource TxtTitle}"/>
 
             <TextBlock Text="Hãy thử tìm kiếm một vài chuyến bay..." Margin="685,180,43,334" FontSize="15" FontWeight="Regular" Foreground="White"/>
             

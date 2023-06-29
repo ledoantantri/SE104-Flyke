@@ -19,14 +19,7 @@
             </LinearGradientBrush>
         </Border.Background>
         <StackPanel>
-            <TextBlock x:Name="headertxt" Text="Thêm User" TextAlignment="Center" FontSize="35"   Margin="0 20 0 30">
-                <TextBlock.Foreground>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                        <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                        <GradientStop Color="#2027CC" Offset="0.9961" />
-                    </LinearGradientBrush>
-                </TextBlock.Foreground>
-            </TextBlock>
+            <TextBlock x:Name="headertxt" Text="Thêm User" Style="{StaticResource TxtTitle}" FontSize="35" Margin="0 20 0 30"/>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -76,30 +69,14 @@
                     </ComboBox>
                 </StackPanel>
             </Grid>
-            <TextBlock x:Name="txblError"  Foreground="Red" Margin="0 40 0 0" HorizontalAlignment="Center" FontWeight="Medium"/>
+            <TextBlock x:Name="txblError" Foreground="Red" Margin="0 40 0 0" HorizontalAlignment="Center" FontWeight="Medium"/>
             <StackPanel Orientation="Horizontal" Width="350" Margin="0 30 0 0">
-                <Button Style="{StaticResource MaterialDesignOutlinedLightButton}"
-                            materialDesign:ButtonAssist.CornerRadius="5" Click="BtnSave_click"
-                            Width="100" Content="Lưu" Foreground="White" FontSize="17" Margin="30 0">
-                    <Button.Background>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                            <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                            <GradientStop Color="#2027CC" Offset="0.9961" />
-                        </LinearGradientBrush>
-                    </Button.Background>
-                </Button>
-                <Button Style="{StaticResource MaterialDesignOutlinedLightButton}"
-                            materialDesign:ButtonAssist.CornerRadius="5" Click="BtnCancel_click"
-                            Width="100" Content="Hủy" Foreground="White" FontSize="17" Margin="30 0">
-                    <Button.Background>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                            <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                            <GradientStop Color="#2027CC" Offset="0.9961" />
-                        </LinearGradientBrush>
-                    </Button.Background>
-                </Button>
-            </StackPanel>
+                <Button Style="{StaticResource BtnPrimary}" Click="BtnSave_click" Height="40"
+                            Width="100" Content="Lưu" FontSize="17" Margin="30 0"/>
 
+                <Button Style="{StaticResource BtnPrimary}" Click="BtnCancel_click" Height="40"
+                            Width="100" Content="Hủy" FontSize="17" Margin="30 0"/>
+            </StackPanel>
         </StackPanel>
     </Border>
 </Window>

@@ -16,51 +16,35 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <DockPanel>
-                <TextBlock x:Name="headertxt" Text="Thêm sân bay trung gian" TextAlignment="Center" FontSize="20" Margin="10">
-                    <TextBlock.Foreground>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                            <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                            <GradientStop Color="#2027CC" Offset="0.9961" />
-                        </LinearGradientBrush>
-                    </TextBlock.Foreground>
-                </TextBlock>
-                <Button Style ="{StaticResource MaterialDesignIconButton}"
-                Height="25" Width="25" Click="BtnClose_Click"
-                ToolTip="Close"
-                HorizontalAlignment="Right"
-                Grid.Row="0" >
-                    <materialDesign:PackIcon Kind="Close" Foreground="Black"/>
+                <TextBlock x:Name="headertxt" Style="{StaticResource TxtTitle}" Text="Thêm sân bay trung gian" VerticalAlignment="Center" FontSize="22" Margin="20 0 0 0"/>
+
+                <Button Style ="{StaticResource BtnCloseWindow}"
+                        Click="BtnClose_Click"
+                        Margin="0 0 20 0"
+                        Grid.Row="0" >
+                    <materialDesign:PackIcon Kind="CloseThick" Height="25" Width="25" Foreground="Black"/>
                 </Button>
             </DockPanel>
         </Grid>
-        <StackPanel Grid.Row="1" Orientation="Vertical" Margin="0,50">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
-                <TextBlock Text="Tên sân bay: " VerticalAlignment ="Center" Margin="0,0,10,0"/>
-                <ComboBox Width="300" FontSize="18" VerticalAlignment="Center" Margin="20,0,0,0"
+        <StackPanel Grid.Row="1" Orientation="Vertical" Margin="20 30 0 0">
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Tên sân bay: " VerticalAlignment="Center" FontSize="18" Style="{StaticResource TxtHeader}" Margin="0,0,10,0"/>
+                <ComboBox Width="300" FontSize="18" VerticalAlignment="Center" Margin="30,0,0,0"
                       BorderBrush="Black" BorderThickness="1"
                       Background="#F5F5F5"
                       x:Name="SBTGcBox"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
-                <TextBlock Text="Thời gian dừng: " Margin="0,0,10,0" VerticalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Thời gian dừng: " Margin="0,0,10,0" FontSize="18" VerticalAlignment="Center" Style="{StaticResource TxtHeader}"/>
                 <TextBox Width="300" Height="30" BorderBrush="Black" BorderThickness="1" x:Name="thoigiandungTxb"/>
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
-                <TextBlock Text="Ghi chú: " VerticalAlignment ="Center" Margin="0,0,10,0"/>
-                <TextBox Width="300" Height="80" BorderBrush="Black" BorderThickness="1" x:Name="ghichuTxb" Margin="40,0,0,0"/>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Ghi chú: " VerticalAlignment ="Center" Margin="0,0,10,0" FontSize="18" Style="{StaticResource TxtHeader}"/>
+                <TextBox Width="300" Height="80" BorderBrush="Black" BorderThickness="1" x:Name="ghichuTxb" Margin="60,0,0,0"/>
             </StackPanel>
-            <Button Style="{StaticResource MaterialDesignOutlinedLightButton}"
-                            materialDesign:ButtonAssist.CornerRadius="5"
-                            Width="100" Content="OK" Foreground="White" FontSize="14" Margin="0 30" Click="Add_Click">
-                <Button.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                        <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                        <GradientStop Color="#2027CC" Offset="0.9961" />
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
+            <Button Style="{StaticResource BtnPrimary}"
+                            Width="100" Height="25" Content="OK" FontSize="14" Margin="0 30 0 0" Click="Add_Click"/>
         </StackPanel>
-
     </Grid>
 </Window>

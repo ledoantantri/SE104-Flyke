@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Flyke.MVVM.View" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="Thanh Toán Hóa Đơn" Height="370" Width="560">
+        Title="Thanh toán hóa đơn" Height="370" Width="560">
     <Grid>
         <Border >
             <Border.Background>
@@ -14,14 +14,7 @@
                 </LinearGradientBrush>
             </Border.Background>
             <StackPanel>
-                <TextBlock Text="THANH TOÁN HÓA ĐƠN" FontSize="24" FontWeight="Bold" Margin="0,10,0,0" HorizontalAlignment="Center">
-                    <TextBlock.Foreground>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                            <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                            <GradientStop Color="#2027CC" Offset="0.9961" />
-                        </LinearGradientBrush>
-                    </TextBlock.Foreground>
-                </TextBlock>
+                <TextBlock Text="THANH TOÁN HÓA ĐƠN" FontSize="24" Style="{StaticResource TxtTitle}" Margin="0,10,0,0" HorizontalAlignment="Center"/>
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="290"/>
@@ -63,30 +56,12 @@
                     <TextBlock Width="Auto" x:Name="tienTxt" HorizontalAlignment="Left" Margin="10,5,0,0" FontSize="14"/>
                 </DockPanel>
                 <DockPanel Margin="80,15,0,0">
-                    <Button x:Name="btnDelete" Content="Hủy hóa đơn" Foreground="White" FontSize="14" HorizontalAlignment="Stretch" Width="130" Click="btnDelete_Click" BorderBrush="{x:Null}">
-                        <Button.Background>
-                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                                <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                                <GradientStop Color="#2027CC" Offset="0.9961" />
-                            </LinearGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button x:Name="btnPay" Content="Thanh toán" Foreground="White" FontSize="14" HorizontalAlignment="Stretch" Width="130" Click="btnPay_Click" Margin="30,0,0,0">
-                        <Button.Background>
-                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                                <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                                <GradientStop Color="#2027CC" Offset="0.9961" />
-                            </LinearGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button x:Name="btnCancle" Content="Hủy" Foreground="White" FontSize="14" Width="130" Click="btnHuy_Click" HorizontalAlignment="Left" Margin="30,0,0,0">
-                        <Button.Background>
-                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                                <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                                <GradientStop Color="#2027CC" Offset="0.9961" />
-                            </LinearGradientBrush>
-                        </Button.Background>
-                    </Button>
+                    <Button x:Name="btnDelete" Content="Hủy hóa đơn" Style="{StaticResource BtnPrimary}" Height="30"
+                            FontSize="14" HorizontalAlignment="Stretch" Width="130" Click="btnDelete_Click"/>
+                    <Button x:Name="btnPay" Content="Thanh toán" Style="{StaticResource BtnPrimary}" Height="30" 
+                            FontSize="14" HorizontalAlignment="Stretch" Width="130" Click="btnPay_Click" Margin="30,0,0,0"/>
+                    <Button x:Name="btnCancle" Content="Hủy" Style="{StaticResource BtnPrimary}" Height="30" 
+                            FontSize="14" Width="130" Click="btnHuy_Click" HorizontalAlignment="Left" Margin="30,0,0,0"/>
                 </DockPanel>
             </StackPanel>
         </Border>

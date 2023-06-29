@@ -1,6 +1,13 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="TxtTitle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource ColorPrimary}" />
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+    </Style>
+
     <Style x:Key="TxtHeader" TargetType="TextBlock">
         <Setter Property="Foreground" Value="{StaticResource ColorPrimary}" />
+        <Setter Property="TextAlignment" Value="Center"/>
     </Style>
 </ResourceDictionary>

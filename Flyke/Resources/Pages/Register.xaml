@@ -83,10 +83,8 @@
             </PasswordBox>
         </StackPanel>
         <StackPanel>
-            <Button Style="{StaticResource MaterialDesignOutlinedLightButton}"
-                    materialDesign:ButtonAssist.CornerRadius="5" Click="BtnSignup_click"
-                    Width="100" Content="Đăng ký" FontSize="14" Margin="0 30" Background="White" 
-                    Foreground="{StaticResource ColorPrimary}"/>
+            <Button Style="{StaticResource BtnSecondPrimary}" Height="30" Click="BtnSignup_click"
+                    Width="100" Content="Đăng ký" FontSize="14" Margin="0 30"/>
         </StackPanel>
     </StackPanel>
 </Page>

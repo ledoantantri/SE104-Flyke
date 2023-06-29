@@ -8,7 +8,7 @@
              d:DesignHeight="100" d:DesignWidth="350">
     <Grid>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Hạng vé: " VerticalAlignment="Center" Margin="0 0 10 0"/>
+            <TextBlock Text="Hạng vé: " VerticalAlignment="Center" Margin="0 0 10 0" Style="{StaticResource TxtHeader}"/>
             <ComboBox Width="100" FontSize="18" 
                              BorderBrush="Black" BorderThickness="1"
                              Background="#F5F5F5"
@@ -18,7 +18,7 @@
                              x:Name="maHVcBox">
             </ComboBox>
 
-            <TextBlock Text="Số lượng: " VerticalAlignment="Center" Margin="20 0 10 0"/>
+            <TextBlock Text="Số lượng: " VerticalAlignment="Center" Margin="20 0 10 0" Style="{StaticResource TxtHeader}"/>
             <ComboBox Width="100" FontSize="18" 
                              BorderBrush="Black" BorderThickness="1"
                              Background="#F5F5F5"

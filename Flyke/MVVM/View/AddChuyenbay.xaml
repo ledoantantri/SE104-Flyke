@@ -23,20 +23,12 @@
         
         <Grid Grid.Row="0">
             <Grid HorizontalAlignment="Center">
-                <TextBlock x:Name="headertxt" Text="THÊM CHUYẾN BAY" TextAlignment="Center" FontWeight="Bold" FontSize="20"   Margin="10">
-                    <TextBlock.Foreground>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                            <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                            <GradientStop Color="#2027CC" Offset="0.9961" />
-                        </LinearGradientBrush>
-                    </TextBlock.Foreground>
-                </TextBlock>
-                <Button Style ="{StaticResource MaterialDesignIconButton}"
-                Height="25" Width="25" Click="BtnClose_Click"
-                ToolTip="Close"
-                HorizontalAlignment="Right"
-                Grid.Row="0" Margin="950 0 0 0">
-                    <materialDesign:PackIcon Kind="Close" Foreground="Black" />
+                <TextBlock x:Name="headertxt" Text="THÊM CHUYẾN BAY" Style="{StaticResource TxtTitle}" FontSize="20" VerticalAlignment="Center"/>
+
+                <Button Style ="{StaticResource BtnCloseWindow}"
+                        Click="BtnClose_Click"
+                        Grid.Row="0" Margin="950 0 0 0">
+                    <materialDesign:PackIcon Kind="CloseThick" Width="25" Height="25" Foreground="Black" />
                 </Button>
             </Grid>
         </Grid>
@@ -49,26 +41,13 @@
             
             <StackPanel Grid.Column="0" Orientation="Vertical" Margin="10,10">
                 <StackPanel Orientation="Horizontal" Margin="10" >
-                    <TextBlock Text="Mã chuyến bay: "  VerticalAlignment='Center'>
-                        <TextBlock.Foreground>
-                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                                <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                                <GradientStop Color="#2027CC" Offset="0.9961" />
-                            </LinearGradientBrush>
-                        </TextBlock.Foreground>
-                    </TextBlock>
-                    <TextBox Width="300" Height="30" BorderBrush="Black" BorderThickness="1" x:Name="machuyenbayTxb"  VerticalAlignment='Center' Margin="50,0,0,0" PreviewTextInput="machuyenbayTxb_PreviewTextInput"/>
+                    <TextBlock Text="Mã chuyến bay: "  VerticalAlignment="Center" Style="{StaticResource TxtHeader}"/>
+                    <TextBox Width="300" Height="30" BorderBrush="Black" BorderThickness="1" x:Name="machuyenbayTxb"  
+                             VerticalAlignment='Center' Margin="50,0,0,0" PreviewTextInput="machuyenbayTxb_PreviewTextInput"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Margin="10">
-                    <TextBlock Text="Hãng máy bay: " VerticalAlignment='Center'>
-                        <TextBlock.Foreground>
-                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                                <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                                <GradientStop Color="#2027CC" Offset="0.9961" />
-                            </LinearGradientBrush>
-                        </TextBlock.Foreground>
-                    </TextBlock>
+                    <TextBlock Text="Hãng máy bay: " VerticalAlignment="Center" Style="{StaticResource TxtHeader}"/>
                     <ComboBox Width="300" FontSize="18"  VerticalAlignment='Center' Margin="53,0,0,0"
                       BorderBrush="Black" BorderThickness="1"
                       Background="#F5F5F5"
@@ -76,26 +55,12 @@
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Margin="10">
-                    <TextBlock Text="Loại máy bay: "  VerticalAlignment='Center'>
-                        <TextBlock.Foreground>
-                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                                <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                                <GradientStop Color="#2027CC" Offset="0.9961" />
-                            </LinearGradientBrush>
-                        </TextBlock.Foreground>
-                    </TextBlock>
+                    <TextBlock Text="Loại máy bay: "  VerticalAlignment="Center" Style="{StaticResource TxtHeader}"/>
                     <ComboBox Width="300" FontSize="18" Height="30" BorderBrush="Black" BorderThickness="1" x:Name="loaimaybaycb"  VerticalAlignment='Center' Margin="60,0,0,0"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Margin="10">
-                    <TextBlock Text="Sân bay đi: "  VerticalAlignment='Center'>
-                        <TextBlock.Foreground>
-                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                                <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                                <GradientStop Color="#2027CC" Offset="0.9961" />
-                            </LinearGradientBrush>
-                        </TextBlock.Foreground>
-                    </TextBlock>
+                    <TextBlock Text="Sân bay đi: "  VerticalAlignment="Center" Style="{StaticResource TxtHeader}"/>
                     <ComboBox Width="300" FontSize="18" VerticalAlignment="Center" Margin="75,0,0,0"
                       BorderBrush="Black" BorderThickness="1"
                       Background="#F5F5F5"
@@ -103,14 +68,7 @@
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Margin="10">
-                    <TextBlock Text="Sân bay đến: "  VerticalAlignment='Center'>
-                        <TextBlock.Foreground>
-                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                                <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                                <GradientStop Color="#2027CC" Offset="0.9961" />
-                            </LinearGradientBrush>
-                        </TextBlock.Foreground>
-                    </TextBlock>
+                    <TextBlock Text="Sân bay đến: "  VerticalAlignment="Center" Style="{StaticResource TxtHeader}"/>
                     <ComboBox Width="300" FontSize="18" VerticalAlignment="Center" Margin="65,0,0,0"
                       BorderBrush="Black" BorderThickness="1"
                       Background="#F5F5F5"
@@ -124,69 +82,29 @@
 
             <StackPanel Grid.Column="1" Margin="10 10">
                 <StackPanel Orientation="Horizontal" Margin="10 10">
-                    <TextBlock Text="Ngày giờ: "  VerticalAlignment='Center'>
-                        <TextBlock.Foreground>
-                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                                <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                                <GradientStop Color="#2027CC" Offset="0.9961" />
-                            </LinearGradientBrush>
-                        </TextBlock.Foreground>
-                    </TextBlock>
+                    <TextBlock Text="Ngày giờ: "  VerticalAlignment="Center" Style="{StaticResource TxtHeader}"/>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="50,0,0,0">
-                        <DatePicker  DisplayDateStart="{x:Static sys:DateTime.Now}" Width="300"  BorderBrush="Black" BorderThickness="1" x:Name="Ngaypicker"  VerticalAlignment='Center' Focusable="False" Margin="50,0,0,0"/>
-                        <!--<DatePicker.Resources>
-                                <Style TargetType="DatePickerTextBox">
-                                    <Setter Property="IsReadOnly" Value="True"/>
-                                </Style>
-                            </DatePicker.Resources>
-                        </DatePicker>-->
-                        
+                        <DatePicker  DisplayDateStart="{x:Static sys:DateTime.Now}" Width="300"  BorderBrush="Black" 
+                                     BorderThickness="1" x:Name="Ngaypicker"  VerticalAlignment='Center' Focusable="False" Margin="50,0,0,0"/>
                     </StackPanel>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Margin="10">
-                    <TextBlock Text="Giờ (24h):" VerticalAlignment='Center'>
-                        <TextBlock.Foreground>
-                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                                <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                                <GradientStop Color="#2027CC" Offset="0.9961" />
-                            </LinearGradientBrush>
-                        </TextBlock.Foreground>
-                    </TextBlock>
+                    <TextBlock Text="Giờ (24h):" VerticalAlignment="Center" Style="{StaticResource TxtHeader}"/>
                     <TextBox Width="300" Height="30" BorderBrush="Black" BorderThickness="1" x:Name="gioTxb" VerticalAlignment='Center' Margin="100,0,0,0"/>
                 </StackPanel>
                 
                 <StackPanel Orientation="Horizontal" Margin="10">
-                    <TextBlock Text="Thời gian bay (phút) : "  VerticalAlignment='Center' >
-                        <TextBlock.Foreground>
-                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                                <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                                <GradientStop Color="#2027CC" Offset="0.9961" />
-                            </LinearGradientBrush>
-                        </TextBlock.Foreground>
-                    </TextBlock>
+                    <TextBlock Text="Thời gian bay (phút) : "  VerticalAlignment="Center" Style="{StaticResource TxtHeader}" />
                     <TextBox Width="300" Height="30" BorderBrush="Black" BorderThickness="1" x:Name="TGbayTxb"  VerticalAlignment='Center' Margin="35,0,0,0"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Margin="10">
-                    <TextBlock Text="Giá vé: "  VerticalAlignment='Center'>
-                        <TextBlock.Foreground>
-                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                                <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                                <GradientStop Color="#2027CC" Offset="0.9961" />
-                            </LinearGradientBrush>
-                        </TextBlock.Foreground>
-                    </TextBlock>
+                    <TextBlock Text="Giá vé: "  VerticalAlignment="Center" Style="{StaticResource TxtHeader}"/>
                     <TextBox Width="300" Height="30" BorderBrush="Black" BorderThickness="1" x:Name="GiaTxb"  VerticalAlignment='Center' Margin="110,0,0,0"/>
                 </StackPanel>
-                <Button Grid.Row="2"  Height="30" Width="100" Content="Lưu" Foreground="White" FontSize="14"  Click="Luu_Click" Margin="335,20,0,0">
-                    <Button.Background>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                            <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                            <GradientStop Color="#2027CC" Offset="0.9961" />
-                        </LinearGradientBrush>
-                    </Button.Background>
-                </Button>
+
+                <Button Grid.Row="2"  Height="30" Width="100" Content="Lưu" Style="{StaticResource BtnPrimary}" FontSize="14"  Click="Luu_Click" Margin="335,20,0,0"/>
             </StackPanel>
 
         </Grid>
@@ -198,15 +116,9 @@
             </Grid.ColumnDefinitions>
             
             <StackPanel Orientation="Horizontal">
-                <Button  Height="30" Width="130" Content="Thêm hạng vé" Foreground="White" FontSize="14" Click="ThemHV_Click"
-                          Margin="20 0 0 0">
-                    <Button.Background>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                            <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                            <GradientStop Color="#2027CC" Offset="0.9961" />
-                        </LinearGradientBrush>
-                    </Button.Background>
-                </Button>
+                <Button  Height="30" Width="130" Content="Thêm hạng vé" FontSize="14" Click="ThemHV_Click"
+                          Margin="20 0 0 0" Style="{StaticResource BtnPrimary}"/>
+
                 <ListView x:Name="HangVeList" 
                       HorizontalContentAlignment="Stretch" 
                       ScrollViewer.VerticalScrollBarVisibility="Hidden">
@@ -225,7 +137,7 @@
                                 <uc:HangVeItem/>
                                 <Button Style ="{StaticResource MaterialDesignIconButton}"
                                  Height="25" Width="25" Click="XoaHV_Click" Grid.Column="1">
-                                    <materialDesign:PackIcon Kind="Close" Foreground="#2E8B57"/>
+                                    <materialDesign:PackIcon Kind="Close" Foreground="#d9445f"/>
                                 </Button>
 
                             </Grid>
@@ -272,51 +184,22 @@
             </DataGrid>
 
             <StackPanel Orientation="Vertical" Grid.Column="0" Margin="0 0 20 0" >
-                <TextBlock Text="SÂN BAY TRUNG GIAN" Margin="20 0 0 0" FontSize="15" FontWeight="Medium">
-                    <TextBlock.Foreground>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                            <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                            <GradientStop Color="#2027CC" Offset="0.9961" />
-                        </LinearGradientBrush>
-                    </TextBlock.Foreground>
-                </TextBlock>
-                <Button Margin="0 20 0 20 " Height="30" Width="80" Content="Thêm" Foreground="White" FontSize="14"  Click="AddSBTG_Click">
-                    <Button.Background>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                            <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                            <GradientStop Color="#2027CC" Offset="0.9961" />
-                        </LinearGradientBrush>
-                    </Button.Background>
-                </Button>
+                <TextBlock Text="SÂN BAY TRUNG GIAN" Margin="20 0 0 0" FontSize="15" FontWeight="Medium" Style="{StaticResource TxtHeader}"/>
 
-                <Button Margin="0,0,0,10" Height="30" Width="80" Content="Xóa" Foreground="White" FontSize="14" Click="XoaSBTG_Click">
-                    <Button.Background>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                            <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                            <GradientStop Color="#2027CC" Offset="0.9961" />
-                        </LinearGradientBrush>
-                    </Button.Background>
-                </Button>
+                <Button Margin="0 20 0 20 " Height="30" Width="80" Content="Thêm" Foreground="White" FontSize="14"  Click="AddSBTG_Click"
+                        Style="{StaticResource BtnPrimary}"/>
 
-                <Button Margin="0,10,0,10" Height="30" Width="80" Content="Sửa" Foreground="White" FontSize="14" Click="SuaSBTG_Click">
-                    <Button.Background>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                            <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                            <GradientStop Color="#2027CC" Offset="0.9961" />
-                        </LinearGradientBrush>
-                    </Button.Background>
-                </Button>
+
+                <Button Margin="0,0,0,10" Height="30" Width="80" FontSize="14" Content="Xóa" Click="XoaSBTG_Click"
+                        Style="{StaticResource BtnPrimary}"/>
+
+
+                <Button Margin="0,10,0,10" Height="30" Width="80" Content="Sửa" Style="{StaticResource BtnPrimary}" 
+                        FontSize="14" Click="SuaSBTG_Click"/>
             </StackPanel>
         </Grid>
 
-        <Button Grid.Row="4"  Height="30" Width="200" Content="XÁC NHẬN TẤT CẢ" Foreground="White" FontSize="14" Click="Hoantat_Click" Margin="10">
-            <Button.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                    <GradientStop Color="#FB4A4A" Offset="-0.1093" />
-                    <GradientStop Color="#2027CC" Offset="0.9961" />
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-
+        <Button Grid.Row="4"  Height="30" Width="200" Content="XÁC NHẬN TẤT CẢ" 
+                Style="{StaticResource BtnPrimary}" FontSize="14" Click="Hoantat_Click" Margin="10"/>
     </Grid>
 </Window>

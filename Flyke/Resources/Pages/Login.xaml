@@ -7,8 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-      Title="Login" Background="Transparent" Foreground="White"
-      FontFamily="Raleway">
+      Title="Login" Background="Transparent" Foreground="White">
 
     <StackPanel>
         <StackPanel.Background>
@@ -16,13 +15,8 @@
         </StackPanel.Background>
 
         <StackPanel>
-            <TextBlock Text="Đăng nhập" 
-                   TextAlignment="Center"
-                   FontSize="35"
-                   FontWeight="Bold"
-                   FontFamily="Raleway"
-                   Margin="400 60 0 0"
-                   />
+            <TextBlock Text="Đăng nhập" FontSize="35" Style="{StaticResource TxtTitle}"
+                       Margin="400 60 0 0"/>
             <TextBlock x:Name="txblError"  Foreground="Red" Margin="400 2 0 1" FontWeight="Medium"/>
             
             <StackPanel Width="250" Orientation="Horizontal" Margin="400 0 0 0">
