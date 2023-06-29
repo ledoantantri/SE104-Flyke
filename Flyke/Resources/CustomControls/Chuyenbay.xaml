@@ -34,7 +34,6 @@
                 </Style>
             </DataGrid.Resources>
 
-
             <DataGrid.Columns>
                 <DataGridTextColumn Header="STT" Width="50" Binding="{Binding STT}"/>
                 <DataGridTextColumn Header="Mã chuyến" Width="100" Binding="{Binding maCB}"/>
@@ -46,13 +45,13 @@
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Right">
-            <Button Content="Thêm" Click="Them_Click" Width="50" Height="30" Style="{StaticResource BtnPrimary}" 
+            <Button Content="Thêm" Click="Them_Click" Width="70" Height="30" Style="{StaticResource BtnPrimary}" 
                     Margin="0 0 10 0"/>
 
-            <Button Content="Xóa" Click="Xoa_Click" Width="50" Height="30" Style="{StaticResource BtnPrimary}" 
+            <Button Content="Xóa" Click="Xoa_Click" Width="70" Height="30" Style="{StaticResource BtnPrimary}" 
                     Margin="0 0 10 0"/>
 
-            <Button Content="Sửa"  Click="Sua_Click" Width="50" Height="30" Style="{StaticResource BtnPrimary}" 
+            <Button Content="Sửa"  Click="Sua_Click" Width="70" Height="30" Style="{StaticResource BtnPrimary}" 
                     Margin="0 0 10 0"/>
         </StackPanel>
 

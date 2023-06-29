@@ -18,40 +18,40 @@
         </Border>
         
         <Grid>
-            <Image Source="/Resources/Images/Flyke logo.png" Margin="772,34,128,416" Style="{StaticResource ImgLogo}"/>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Right" Width="450" Margin="0 30 25 0">
+                <Image Source="/Resources/Images/Flyke logo.png"  Style="{StaticResource ImgLogo}"/>
 
-            <TextBlock Text="Chào mừng đến với Flyke!" Margin="694,139,52,375" FontSize="20" Style="{StaticResource TxtTitle}"/>
+                <TextBlock Text="Chào mừng đến với Flyke!" FontSize="20" Style="{StaticResource TxtTitle}"/>
 
-            <TextBlock Text="Hãy thử tìm kiếm một vài chuyến bay..." Margin="685,180,43,334" FontSize="15" FontWeight="Regular" Foreground="White"/>
-            
-            <TextBlock Margin="700,225,0,275" Height="50" Text="Điểm đi" Foreground="White" FontSize="15"/>
-            <ComboBox Name="cbbDeparture"
-                                FontSize="10" Foreground="Black"
-                                Style="{StaticResource MaterialDesignFloatingHintComboBox}"
-                                Margin="788,211,43,0" Height="50" VerticalAlignment="Top"/>
+                <TextBlock Text="Hãy thử tìm kiếm một vài chuyến bay..." FontSize="15" TextAlignment="Center" FontWeight="Regular" Foreground="White"/>
 
-            <TextBlock Margin="700,272,20,253" Text="Điểm đến" Foreground="White" FontSize="15"/>
-            <ComboBox Name="cbbDestination"
-                                FontSize="15" Foreground="Black"
-                                Style="{StaticResource MaterialDesignFloatingHintComboBox}"
-                                Margin="788,261,43,0" Height="50" VerticalAlignment="Top"/>
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <TextBlock Text="Điểm đi" FontWeight="Medium" Foreground="White" VerticalAlignment="Center" FontSize="15"/>
+                    <ComboBox Name="cbbDeparture" FontSize="15" Foreground="Black" 
+                              Style="{StaticResource MaterialDesignFloatingHintComboBox}" Width="300" Margin="30 0 0 0" />
+                </StackPanel>
 
-            <TextBlock Margin="700,320,20,180" Height="50" Text="Ngày" 
-                                               Foreground="White" FontSize="15"/>
-            <DatePicker FontSize="15" Margin="788,315,43,0" Foreground="Black"
-                                        VerticalAlignment="Top" 
-                                        Style="{StaticResource MaterialDesignDatePicker}" 
-                                        Name="date"/>
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <TextBlock Text="Điểm đến" FontWeight="Medium" Foreground="White" VerticalAlignment="Center" FontSize="15"/>
+                    <ComboBox Name="cbbDestination" FontSize="15" Foreground="Black" 
+                              Style="{StaticResource MaterialDesignFloatingHintComboBox}" Width="300" Margin="15 0 0 0" />
+                </StackPanel>
 
-            <TextBlock Margin="700,368,220,132" Height="50" Text="Hạng vé" Foreground="White" FontSize="15"/>
-            <ComboBox Name ="cbbClass"
-                                
-                                Margin="788,349,43,0" FontSize="15" Foreground="Black"
-                                Style="{StaticResource MaterialDesignFloatingHintComboBox}" VerticalAlignment="Top"/>
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <TextBlock Text="Ngày" FontWeight="Medium" Foreground="White" FontSize="15" VerticalAlignment="Center"/>
+                    <DatePicker FontSize="15"  Foreground="Black" Width="300" Margin="45 0 0 0"
+                        Style="{StaticResource MaterialDesignDatePicker}" Name="date"/>
+                </StackPanel>
 
-            <Button Style="{StaticResource BtnPrimary}"
-                     Width="120" Height="40" 
-                     Content="Tìm kiếm" FontSize="18" Click="btnSearch_Click"  Margin="761,400,120,0" />
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <TextBlock Text="Hạng vé" FontWeight="Medium" Foreground="White" FontSize="15" VerticalAlignment="Center"/>
+                    <ComboBox Name ="cbbClass" FontSize="15" Foreground="Black" Width="300" Margin="25 0 0 0"
+                      Style="{StaticResource MaterialDesignFloatingHintComboBox}"/>
+                </StackPanel>
+                
+                <Button Style="{StaticResource BtnPrimary}" Width="120" Height="40" Content="Tìm kiếm" 
+                        FontSize="18" Click="btnSearch_Click" Margin="0 40 0 0"  />
+            </StackPanel>
         </Grid>
     </Grid>
 
