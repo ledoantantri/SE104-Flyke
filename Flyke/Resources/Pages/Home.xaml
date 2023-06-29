@@ -25,32 +25,24 @@
 
                 <TextBlock Text="Hãy thử tìm kiếm một vài chuyến bay..." FontSize="15" TextAlignment="Center" FontWeight="Regular" Foreground="White"/>
 
-                <StackPanel Orientation="Horizontal" Margin="10">
-                    <TextBlock Text="Điểm đi" FontWeight="Medium" Foreground="White" VerticalAlignment="Center" FontSize="15"/>
-                    <ComboBox Name="cbbDeparture" FontSize="15" Foreground="Black" 
-                              Style="{StaticResource MaterialDesignFloatingHintComboBox}" Width="300" Margin="30 0 0 0" />
-                </StackPanel>
+                <ComboBox Margin="0 20 0 0" Name="cbbDeparture" BorderBrush="White" FontSize="15" materialDesign:HintAssist.Hint="Điểm đi" 
+                          materialDesign:HintAssist.Foreground="Black"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}" Width="300" />
 
-                <StackPanel Orientation="Horizontal" Margin="10">
-                    <TextBlock Text="Điểm đến" FontWeight="Medium" Foreground="White" VerticalAlignment="Center" FontSize="15"/>
-                    <ComboBox Name="cbbDestination" FontSize="15" Foreground="Black" 
-                              Style="{StaticResource MaterialDesignFloatingHintComboBox}" Width="300" Margin="15 0 0 0" />
-                </StackPanel>
+                <ComboBox Name="cbbDestination" FontSize="15" BorderBrush="White" materialDesign:HintAssist.Hint="Điểm đến" 
+                          materialDesign:HintAssist.Foreground="Black"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}" Width="300" Margin="0 20 0 0" />
 
-                <StackPanel Orientation="Horizontal" Margin="10">
-                    <TextBlock Text="Ngày" FontWeight="Medium" Foreground="White" FontSize="15" VerticalAlignment="Center"/>
-                    <DatePicker FontSize="15"  Foreground="Black" Width="300" Margin="45 0 0 0"
-                        Style="{StaticResource MaterialDesignDatePicker}" Name="date"/>
-                </StackPanel>
+                <DatePicker FontSize="15"  BorderBrush="White" Width="300" Margin="0 20 0 0" materialDesign:HintAssist.Hint="Thời gian (mm/dd/yyyy)" 
+                            materialDesign:HintAssist.Foreground="Black"
+                            Style="{StaticResource MaterialDesignOutlinedDatePicker}" Name="date"/>
 
-                <StackPanel Orientation="Horizontal" Margin="10">
-                    <TextBlock Text="Hạng vé" FontWeight="Medium" Foreground="White" FontSize="15" VerticalAlignment="Center"/>
-                    <ComboBox Name ="cbbClass" FontSize="15" Foreground="Black" Width="300" Margin="25 0 0 0"
-                      Style="{StaticResource MaterialDesignFloatingHintComboBox}"/>
-                </StackPanel>
+                <ComboBox Name ="cbbClass" FontSize="15" BorderBrush="White" Width="300" Margin="0 20 0 0" materialDesign:HintAssist.Hint="Hạng vé" 
+                          materialDesign:HintAssist.Foreground="Black"
+                          Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
                 
                 <Button Style="{StaticResource BtnPrimary}" Width="120" Height="40" Content="Tìm kiếm" 
-                        FontSize="18" Click="btnSearch_Click" Margin="0 40 0 0"  />
+                        FontSize="18" Click="btnSearch_Click" Margin="0 20 0 0"  />
             </StackPanel>
         </Grid>
     </Grid>
