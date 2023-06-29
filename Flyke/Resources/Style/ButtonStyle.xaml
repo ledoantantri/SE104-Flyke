@@ -2,6 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Style x:Key="BtnUnderline" TargetType="Button">
         <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -15,7 +16,6 @@
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Foreground" Value="#CCCCCC"/>
-                <Setter Property="Cursor" Value="Hand"/>
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="Button">
@@ -36,6 +36,7 @@
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Right"/>
         <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -48,7 +49,6 @@
 
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Cursor" Value="Hand"/>
                             <Setter Property="Background" Value="#e4dde4"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
@@ -61,6 +61,7 @@
         <Setter Property="Background" Value="{StaticResource ColorPrimary}"/>
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -74,7 +75,6 @@
 
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Cursor" Value="Hand"/>
                             <Setter Property="Background" Value="#a66589" />
                         </Trigger>
                     </ControlTemplate.Triggers>
@@ -87,6 +87,7 @@
         <Setter Property="Background" Value="White"/>
         <Setter Property="Foreground" Value="{StaticResource ColorPrimary}"/>
         <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -100,7 +101,6 @@
 
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Cursor" Value="Hand"/>
                             <Setter Property="Background" Value="#e4dde4" />
                         </Trigger>
                     </ControlTemplate.Triggers>
@@ -111,7 +111,6 @@
 
     <Style x:Key="Btn_Home"
            TargetType="RadioButton">
-
         <Setter Property="HorizontalAlignment"
                 Value="Left" />
         <Setter Property="VerticalAlignment"
@@ -124,7 +123,6 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="RadioButton">
-
                     <Border x:Name="border"
                             Height="50"
                             Width="300"
@@ -136,7 +134,6 @@
                         </Border.Background>
 
                         <Grid>
-
                             <Border x:Name="Indicator"
                                     Height="40"
                                     Width="4"
@@ -147,7 +144,6 @@
                                     CornerRadius="2" />
 
                             <ContentPresenter />
-
                         </Grid>
 
                     </Border>
@@ -155,7 +151,6 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver"
                                  Value="True">
-
                             <Setter Property="Visibility"
                                     TargetName="Indicator"
                                     Value="Visible" />
@@ -163,12 +158,10 @@
                             <Setter Property="Opacity"
                                     TargetName="Indicator"
                                     Value="0.7" />
-
                         </Trigger>
 
                         <EventTrigger RoutedEvent="Border.MouseEnter"
                                       SourceName="border">
-
                             <BeginStoryboard>
                                 <Storyboard>
                                     <ColorAnimation Storyboard.TargetName="BorderBackground"
@@ -177,12 +170,10 @@
                                                     Duration="0:0:0.3" />
                                 </Storyboard>
                             </BeginStoryboard>
-
                         </EventTrigger>
 
                         <EventTrigger RoutedEvent="Border.MouseLeave"
                                       SourceName="border">
-
                             <BeginStoryboard>
                                 <Storyboard>
                                     <ColorAnimation Storyboard.TargetName="BorderBackground"
@@ -191,18 +182,14 @@
                                                     Duration="0:0:0.3" />
                                 </Storyboard>
                             </BeginStoryboard>
-
                         </EventTrigger>
 
                         <Trigger Property="IsChecked"
                                  Value="True">
-
                             <Setter Property="Visibility"
                                     TargetName="Indicator"
                                     Value="Visible" />
-
                         </Trigger>
-
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
