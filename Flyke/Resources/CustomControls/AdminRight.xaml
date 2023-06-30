@@ -16,15 +16,15 @@
         <Border BorderBrush="White" BorderThickness="2">
             <StackPanel Background="{StaticResource ColorBg}">
                 <RadioButton Style="{StaticResource Btn_QuyenQuanLy}" IsChecked="True" Click="MonthRevenue_Click">
-                    <TextBlock Text="Doanh thu theo tháng" TextAlignment="Center" FontSize="15" Foreground="Black" TextWrapping="Wrap"/>
+                    <TextBlock Text="Doanh thu theo tháng" TextAlignment="Center" FontWeight="Medium" FontSize="15" Foreground="Black" TextWrapping="Wrap"/>
                 </RadioButton>
 
                 <RadioButton Style="{StaticResource Btn_QuyenQuanLy}" Click="YearRevenue_Click">
-                    <TextBlock Text="Doanh thu theo năm" TextAlignment="Center" FontSize="15" Foreground="Black" TextWrapping="Wrap"/>
+                    <TextBlock Text="Doanh thu theo năm" TextAlignment="Center" FontWeight="Medium" FontSize="15" Foreground="Black" TextWrapping="Wrap"/>
                 </RadioButton>
 
                 <RadioButton Style="{StaticResource Btn_QuyenQuanLy}" Click="QLCB_Click">
-                    <TextBlock Text="Quản lý chuyến bay" TextAlignment="Center" FontSize="15" Foreground="Black" TextWrapping="Wrap"/>
+                    <TextBlock Text="Quản lý chuyến bay" TextAlignment="Center" FontWeight="Medium" FontSize="15" Foreground="Black" TextWrapping="Wrap"/>
                 </RadioButton>
             </StackPanel>
         </Border>

@@ -235,7 +235,7 @@
                                     <ColorAnimation Storyboard.TargetName="BorderBackground"
                                                     Storyboard.TargetProperty="Color"
                                                     To="#eb6377"
-                                                    Duration="0:0:0.3" />
+                                                    Duration="0:0:0.2" />
                                 </Storyboard>
                                 
                             </BeginStoryboard>
@@ -265,6 +265,84 @@
                                     TargetName="border"
                                     Value="#c93a50"/>
                             
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="BtnTab"
+           TargetType="RadioButton">
+
+        <Setter Property="Margin"
+                Value="20 0 0 0" />
+        <Setter Property="Cursor"
+                Value="Hand" />
+
+        <Setter Property="Template">
+
+            <Setter.Value>
+
+                <ControlTemplate TargetType="RadioButton">
+
+                    <Border x:Name="border"
+                            Height="40"
+                            Width="140"
+                            CornerRadius="5"
+                            BorderThickness="1">
+
+                        <Border.Background>
+                            <SolidColorBrush x:Name="BorderBackground"
+                                             Color="White" />
+                        </Border.Background>
+
+                        <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"/>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <EventTrigger RoutedEvent="Border.MouseEnter"
+                                      SourceName="border">
+
+                            <BeginStoryboard>
+
+                                <Storyboard>
+                                    <ColorAnimation Storyboard.TargetName="BorderBackground"
+                                                    Storyboard.TargetProperty="Color"
+                                                    To="#eb6377"
+                                                    Duration="0:0:0.2" />
+                                </Storyboard>
+
+                            </BeginStoryboard>
+
+                        </EventTrigger>
+
+                        <EventTrigger RoutedEvent="Border.MouseLeave"
+                                      SourceName="border">
+
+                            <BeginStoryboard>
+
+                                <Storyboard>
+                                    <ColorAnimation Storyboard.TargetName="BorderBackground"
+                                                    Storyboard.TargetProperty="Color"
+                                                    To="White"
+                                                    Duration="0:0:0.2" />
+                                </Storyboard>
+
+                            </BeginStoryboard>
+
+                        </EventTrigger>
+
+                        <Trigger Property="IsChecked"
+                                 Value="True">
+
+                            <Setter Property="Background"
+                                    TargetName="border"
+                                    Value="#c93a50"/>
+
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

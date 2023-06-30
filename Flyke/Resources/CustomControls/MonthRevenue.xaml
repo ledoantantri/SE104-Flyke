@@ -28,8 +28,10 @@
                       x:Name="cBoxYear">
                 </ComboBox>
 
-                <Button x:Name="bt_ok" Content="Xem báo cáo" Width="120" Height="30"
-                        Margin="310 0 0 0" Style="{StaticResource BtnPrimary}" Click="btOk_click"/>
+                <Button x:Name="bt_ok" Content="Xem báo cáo" Width="120" Height="30" HorizontalAlignment="Right"
+                         Style="{StaticResource BtnPrimary}" Click="btOk_click"/>
+                <Button x:Name="Excel" Content="Xuất Excel" Width="100" Height="30" HorizontalAlignment="Right" Margin="10 0 0 0"
+                    Click="Excel_Click" Style="{StaticResource BtnPrimary}"/>
             </StackPanel>
             
         </Grid>
@@ -55,7 +57,6 @@
                 </Style>
             </DataGrid.Resources>
 
-
             <DataGrid.Columns>
                 <DataGridTextColumn Header="STT" Width="100" Binding="{Binding stt}"/>
                 <DataGridTextColumn Header="Chuyến bay" Width="*" Binding="{Binding chuyenbay}"/>
@@ -64,13 +65,11 @@
                 <DataGridTextColumn Header="Tỉ lệ" Width="0.8*" Binding="{Binding tile}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <StackPanel Grid.Row="2" Orientation="Horizontal">
+        <StackPanel Grid.Row="2" Orientation="Horizontal" >
             <TextBlock  Text="Tổng doanh thu: " FontSize="20" Style="{StaticResource TxtHeader}"
                         VerticalAlignment="Center" Margin="20 0 0 0"/>
 
             <TextBlock  x:Name="tb_total" FontSize="20" VerticalAlignment="Center" Margin="10 0 0 0"/>
-            <Button Grid.Column="1" x:Name="Excel" Content="Xuất Excel" Width="100" Height="30"
-                    Click="Excel_Click" Style="{StaticResource BtnPrimary}" Margin="500 0 0 0"/>
         </StackPanel>
     </Grid>
 </UserControl>

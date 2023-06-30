@@ -18,18 +18,15 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <StackPanel Orientation="Horizontal">
-                <Button BorderBrush="Black" BorderThickness="2" Height="40" Width="150" Background="#F5F5F5" Margin="10,0" Click="SanBay_Click">
-                    <TextBlock Text="Sân bay"/>
-                </Button>
-                <!--<Button BorderBrush="Black" BorderThickness="2" Height="40" Width="130" Background="#F5F5F5" Margin="10,0" Click="HangMB_Click">
-                    <TextBlock Text="Hãng máy bay"/>
-                </Button>-->
-                <Button BorderBrush="Black" BorderThickness="2" Height="40" Width="150" Background="#F5F5F5" Margin="10,0" Click="ChuyenBay_Click">
-                    <TextBlock Text="Chuyến bay"/>
-                </Button>
-                <Button BorderBrush="Black" BorderThickness="2" Height="40" Width="150" Background="#F5F5F5" Margin="10,0" Click="HangVe_Click">
-                    <TextBlock Text="Hạng vé"/>
-                </Button>
+                <RadioButton Style="{StaticResource BtnTab}"  Click="SanBay_Click" IsChecked="True">
+                    <TextBlock FontSize="15" FontWeight="Medium" Text="Sân bay"/>
+                </RadioButton>
+                <RadioButton Style="{StaticResource BtnTab}" Click="ChuyenBay_Click">
+                    <TextBlock FontSize="15" FontWeight="Medium" Text="Chuyến bay"/>
+                </RadioButton>
+                <RadioButton Style="{StaticResource BtnTab}" Click="HangVe_Click">
+                    <TextBlock FontSize="15" FontWeight="Medium" Text="Hạng vé"/>
+                </RadioButton>
             </StackPanel>
             <Frame Grid.Row="1" x:Name="SB_CB"></Frame>
         </Grid>
