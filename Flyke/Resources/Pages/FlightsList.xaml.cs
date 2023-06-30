@@ -67,12 +67,12 @@ namespace Flyke
             lvAirline.ItemsSource = listAirline;
 
         }
-        //filter by airport name
+
         private bool airlineNameFilter(object item)
         {
             return ((item as Flight).AirlineName.CompareTo(selectedAirlineName) == 0);
         }
-        //set up flightList Screen
+
         public void FlightSearched(string departure, string destination, string date, int quantity, string flightClass)
         {
             infoSearch.Text = departure + " -> " + destination + " | " + date + " | " + flightClass + " | " + quantity + " người";

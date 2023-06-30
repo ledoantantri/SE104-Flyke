@@ -59,7 +59,6 @@ namespace Flyke.Pages
         public Home()
         {
             InitializeComponent();
-            date.Text = DateTime.Now.ToString("dd/MM/yyyy");
             addDataToClass();
             addDataToCCBDeparture();
             addDataToCCBDestination();
@@ -80,7 +79,7 @@ namespace Flyke.Pages
                 {
                     departure = cbbDeparture.Text;
                     destination = cbbDestination.Text;
-                    //quantity = int.Parse(cbbQuantity.Text);
+                    quantity = 1;
                     _date = date.Text;
                     flightClass = cbbClass.Text;
                     Search?.Invoke(this, new RoutedEventArgs());
