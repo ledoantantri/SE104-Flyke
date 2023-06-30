@@ -21,9 +21,7 @@ using Flyke.UserControls;
 
 namespace Flyke.MVVM.View
 {
-    /// <summary>
-    /// Interaction logic for AddSBTG.xaml
-    /// </summary>
+
     public partial class AddSBTG : Window
     {
         DataGrid SanBayTG;
@@ -54,15 +52,6 @@ namespace Flyke.MVVM.View
             if (thaotac == 1)
             {
                 headertxt.Text = "Sửa sân bay";
-                //string s = "SELECT * From SANBAY WHERE MaSanBay = @ma";
-                //SqlParameter p = new SqlParameter("@ma", AddChuyenbay.infotofix.tenSB);
-                //using (SqlDataReader reader = DataProvider.ExecuteReader(s, CommandType.Text, p))
-                //{
-                //    if (reader.Read())
-                //    {
-                //        SBTGcBox.SelectedItem = reader.GetString(reader.GetOrdinal("TenSanBay"));
-                //    }
-                //}
                 SBTGcBox.SelectedItem = AddChuyenbay.infotofix.tenSB;
                 thoigiandungTxb.Text = AddChuyenbay.infotofix.TGdung;
                 ghichuTxb.Text = AddChuyenbay.infotofix.ghichu;
@@ -102,7 +91,7 @@ namespace Flyke.MVVM.View
                         sb.tenSB = reader.GetString(reader.GetOrdinal("TenSanBay"));
                     }
                 }
-                //sb.tenSB = dr["SanBayTrungGian"].ToString();
+
                 sb.TGdung = dr["ThoiGianDung"].ToString();
                 sb.ghichu = dr["GhiChu"].ToString();
                 SanBayTG.Items.Add(sb);
@@ -204,17 +193,17 @@ namespace Flyke.MVVM.View
                 {
                     dt9.Load(reader);
                 }
-                foreach(DataRow dr in dt9.Rows)
+                foreach (DataRow dr in dt9.Rows)
                 {
                     tongTG += int.Parse(dr["ThoiGianDung"].ToString());
                 }
             }
-            if (int.Parse(tgDung) + tongTG >= int.Parse(AddChuyenbay.thoigianbayDC) && thaotac==0)
+            if (int.Parse(tgDung) + tongTG >= int.Parse(AddChuyenbay.thoigianbayDC) && thaotac == 0)
             {
                 MessageBox.Show("Tổng thời gian dừng không được lớn hơn hoặc bằng thời gian bay: " + AddChuyenbay.thoigianbayDC + " phút", "Dữ liệu không hợp lệ!");
                 return;
             }
-           
+
 
             if (thaotac == 0)
             {
@@ -240,7 +229,6 @@ namespace Flyke.MVVM.View
                         sb.tenSB = reader.GetString(reader.GetOrdinal("TenSanBay"));
                     }
                 }
-                // sb.tenSB = tenSB;
                 sb.TGdung = tgDung;
                 sb.ghichu = GhiChu;
                 SanBayTG.Items.Add(sb);

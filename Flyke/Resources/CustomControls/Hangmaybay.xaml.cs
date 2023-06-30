@@ -16,7 +16,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Flyke.MVVM.View;
-using Flyke.MVVM.Model;
 
 namespace Flyke.Resources.CustomControls
 {

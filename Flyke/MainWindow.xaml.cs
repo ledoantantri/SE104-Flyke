@@ -363,6 +363,7 @@ namespace Flyke
             flightDetail.Show(allFlight.flightID, allFlight.airlineLogo, allFlight.time, allFlight.dateTimeDestination, allFlight.dateTimeDeparture, true);
             fContainer.Content = flightDetail;
         }
+
         private void setting_click(object sender, RoutedEventArgs e)
         {
             if (curAccount != null)
@@ -371,11 +372,7 @@ namespace Flyke
                 fContainer.Content = setting;
             }
         }
-        //private void contactsUs_click(object sender, RoutedEventArgs e)
-        //{
-        //    ContactUs contactUs = new ContactUs();
-        //    fContainer.Content = contactUs;
-        //}
+
         private void Reload_Mybookings(object sender, RoutedEventArgs e)
         {
             myBookings = new MyBookings();

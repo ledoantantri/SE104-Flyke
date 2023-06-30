@@ -25,8 +25,6 @@ namespace Flyke.MVVM.View
 {
     public partial class AddInforHK : System.Windows.Window
     {
-
-
         List<Ve> ve = new List<Ve>();
         List<string> list_mave = new List<string>();
         DateTime ngayHD = new DateTime();
@@ -34,16 +32,17 @@ namespace Flyke.MVVM.View
 
         public AddInforHK()
         {
-            InitializeComponent();            
-            if (MainWindow.curAccount != null) {
+            InitializeComponent();
+            if (MainWindow.curAccount != null)
+            {
                 if (MainWindow.curAccount.type == 1 || MainWindow.curAccount.type == 2)
                 {
                     tbl_MaTK.Text = "Mã nhân viên: ";
-                    btnTTNgay.Content = "Đã thanh toán";
-                    btnTTSau.Content = "Chưa thanh toán";
+                    btnTTNgay.Content = "Đã thanh toán!";
+                    btnTTSau.Content = "Chưa thanh toán!";
                 }
             }
-        }               
+        }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
@@ -60,7 +59,7 @@ namespace Flyke.MVVM.View
             {
                 if (!CheckCMND())
                 {
-                    MessageBox.Show("Thông tin hành khách không hợp lệ.\nCMND đã được đăng ký cho một vé khác\nVui lòng kiểm tra và sửa đổi thông tin hành khách!");
+                    MessageBox.Show("Thông tin hành khách đã không hợp lệ.\nCMND này đã được đăng ký cho một vé khác\nVui lòng kiểm tra đồng thời sửa đổi thông tin hành khách!");
                 }
                 else
                 {
@@ -83,7 +82,7 @@ namespace Flyke.MVVM.View
         {
             bool check = true;
             if (DataProvider.sqlConnection.State != ConnectionState.Open)
-            DataProvider.sqlConnection.Open();
+                DataProvider.sqlConnection.Open();
             SqlCommand sqlCommand = new SqlCommand(
                 "select [v].CMND from [VE] [v] where [v].CMND = @cmnd ", DataProvider.sqlConnection);
             sqlCommand.Parameters.Add("@cmnd", SqlDbType.NVarChar).Value = cmndTxt.Text;
@@ -93,8 +92,8 @@ namespace Flyke.MVVM.View
                 check = false;
             }
             DataProvider.sqlConnection.Close();
-            
-            foreach(Ve ticket in ve)
+
+            foreach (Ve ticket in ve)
             {
                 if (ticket.CMND == cmndTxt.Text)
                 {
@@ -169,7 +168,6 @@ namespace Flyke.MVVM.View
             }
             else maHoaDonTxt.Text = "1";
             DataProvider.sqlConnection.Close();
-                        
         }
 
         private int NewHK_ID()
@@ -252,7 +250,6 @@ namespace Flyke.MVVM.View
             }
             veLV.ItemsSource = ve;
 
-
             DataProvider.sqlConnection.Open();
             SqlCommand sqlcommand = new SqlCommand(
                 " select [s1].TenSanBay sbDi, [s2].TenSanBay sbDen, [c].NgayKhoiHanh, [c].ThoiGianXuatPhat " +
@@ -269,7 +266,7 @@ namespace Flyke.MVVM.View
                     denTxt.Text = rd["sbDen"].ToString();
                     ngayGiotxt.Text = rd["NgayKhoiHanh"].ToString() + " " + rd["ThoiGianXuatPhat"].ToString();
                 }
-            }            
+            }
             DataProvider.sqlConnection.Close();
 
             maVeBox.SelectedIndex = 0;
@@ -312,7 +309,6 @@ namespace Flyke.MVVM.View
             }
             else
             {
-                //ko đặt vé nếu quá hạn chậm đặt vé
                 SqlCommand _sqlCommand = new SqlCommand(
             "select GiaTri from [BANGTHAMSO] " +
             "where convert(varchar, TenThamSo)='ThoiGianChamNhatChoPhepDatVe'", DataProvider.sqlConnection);
@@ -343,7 +339,7 @@ namespace Flyke.MVVM.View
 
                         SaveVe("BOOKED");
                         SaveCTHD();
-                        //go to home screen in MainWindow
+
                         if (MainWindow.curAccount.type == 1 || MainWindow.curAccount.type == 2)
                         {
                             result = MessageBox.Show("Đặt vé thành công! \nVui lòng nhắc nhở hành khách thanh toán hóa đơn trước khi chuyến bay xuất phát! \n" +
@@ -377,7 +373,7 @@ namespace Flyke.MVVM.View
             }
             else
             {
-                //ko mua vé nếu hết hạn
+
                 CultureInfo provider = CultureInfo.InvariantCulture;
                 string format = "dd/MM/yyyy HH:mm";
                 DateTime dateTimeDeparture = DateTime.ParseExact(ngayGiotxt.Text, format, provider);
@@ -409,7 +405,6 @@ namespace Flyke.MVVM.View
                         {
                             result = MessageBox.Show("Thanh toán vé thành công!");
                         }
-                        //go to home screen in MainWindow
                         if (result == MessageBoxResult.OK)
                         {
                             GoToHomeScreen?.Invoke(this, new RoutedEventArgs());
@@ -445,7 +440,7 @@ namespace Flyke.MVVM.View
         }
         private void SaveCTHD()
         {
-           int count = 1;
+            int count = 1;
             DataProvider.sqlConnection.Open();
             SqlCommand sqlCommand = new SqlCommand("select count(*) SL from [CTHD]", DataProvider.sqlConnection);
             SqlDataReader rd = sqlCommand.ExecuteReader();
@@ -456,15 +451,9 @@ namespace Flyke.MVVM.View
                     count = int.Parse(rd["SL"].ToString()) + 1;
                 }
             }
-          
+
             DataProvider.sqlConnection.Close();
 
-            // SqlCommand _sqlCommand = new SqlCommand(
-            //"select * from [CTHD]", DataProvider.sqlConnection);
-            //SqlDataAdapter _adapter = new SqlDataAdapter(_sqlCommand);
-            //DataSet ds = new DataSet();
-            //_adapter.Fill(ds);            
-            //int count = ds.Tables[0].Rows.Count + 1;
             int i = 1;
             foreach (Ve item in ve)
             {

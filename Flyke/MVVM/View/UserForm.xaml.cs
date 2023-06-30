@@ -19,23 +19,20 @@ using System.Xml.Linq;
 
 namespace Flyke.MVVM.View
 {
-    /// <summary>
-    /// Interaction logic for UserForm.xaml
-    /// </summary>
     public partial class UserForm : Window
     {
-        int action;
+        int hanhdong;
         public bool isSaved = false;
         string userId;
-        public UserForm(int action)
+        public UserForm(int hanhdong)
         {
             InitializeComponent();
-            this.action = action;
+            this.hanhdong = hanhdong;
         }
-        public UserForm(int action, TaiKhoan account)
+        public UserForm(int hanhdong, TaiKhoan account)
         {
             InitializeComponent();
-            this.action = action;
+            this.hanhdong = hanhdong;
             headertxt.Text = "Sửa thông tin user";
             PasswordBox1.Visibility = Visibility.Collapsed;
             PasswordBox2.Visibility = Visibility.Collapsed;
@@ -49,7 +46,7 @@ namespace Flyke.MVVM.View
 
         private void BtnSave_click(object sender, RoutedEventArgs e)
         {
-            isSaved= true;
+            isSaved = true;
             if (Email.Text == "" || Displayname.Text == "" || Username.Text == "" || PasswordBox1.Password == "" || PasswordBox2.Password == "" || cbRBAC.SelectedIndex == -1)
             {
                 txblError.Text = "Vui lòng nhập đầy đủ thông tin!";
@@ -69,7 +66,8 @@ namespace Flyke.MVVM.View
                 return;
             }
 
-            if (action == 0) {
+            if (hanhdong == 0)
+            {
                 SqlConnection sqlCon = DataProvider.sqlConnection;
                 try
                 {
@@ -102,9 +100,11 @@ namespace Flyke.MVVM.View
                     sqlCon.Close();
                     this.Close();
                     MessageBox.Show("Thêm tài khoản thành công!", "Success");
-                } catch (Exception ex) { Console.WriteLine(ex); }
-        }
-            else if(action == 1) {
+                }
+                catch (Exception ex) { Console.WriteLine(ex); }
+            }
+            else if (hanhdong == 1)
+            {
                 SqlConnection sqlCon = DataProvider.sqlConnection;
                 try
                 {

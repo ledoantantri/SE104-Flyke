@@ -18,13 +18,10 @@ using System.Windows.Shapes;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using Flyke.MVVM.Model;
-using Flyke.MVVM.Model;
 
 namespace Flyke.MVVM.View
 {
-    /// <summary>
-    /// Interaction logic for FareClassForm.xaml
-    /// </summary>
+
     public partial class FareClassForm : Window
     {
         public bool isSaved = false;
@@ -36,7 +33,7 @@ namespace Flyke.MVVM.View
         private void BtnSave_click(object sender, RoutedEventArgs e)
         {
             isSaved = true;
-            if (Name.Text == "" || Percentage.Text == "" )
+            if (Name.Text == "" || Percentage.Text == "")
             {
                 txblError.Text = "Vui lòng nhập đầy đủ thông tin!";
                 return;
@@ -87,7 +84,7 @@ namespace Flyke.MVVM.View
                 this.Close();
                 MessageBox.Show("Thêm hạng vé thành công!", "Success");
             }
-            catch (Exception ex){ Console.WriteLine(ex); }                      
+            catch (Exception ex) { Console.WriteLine(ex); }
         }
 
         private void BtnCancel_click(object sender, RoutedEventArgs e)

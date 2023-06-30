@@ -21,18 +21,15 @@ using Flyke.Resources.CustomControls;
 
 namespace Flyke.MVVM.View
 {
-    /// <summary>
-    /// Interaction logic for AddHangMB.xaml
-    /// </summary>
     public partial class AddHangMB : Window
     {
         int thaotac;
-        DataGrid hangmbtable;
+        DataGrid banghangmaybay;
         public AddHangMB(DataGrid dataGrid, int thaotac)
         {
             InitializeComponent();
             this.thaotac = thaotac;
-            this.hangmbtable = dataGrid;
+            this.banghangmaybay = dataGrid;
             if (thaotac == 1)
             {
                 headertxt.Text = "Sửa hãng bay";
@@ -66,7 +63,7 @@ namespace Flyke.MVVM.View
                 hb.STT = stt.ToString();
                 hb.mahang = dr["MaHang"].ToString();
                 hb.tenhang = dr["TenHang"].ToString();
-                hangmbtable.Items.Add(hb);
+                banghangmaybay.Items.Add(hb);
                 stt++;
             }
         }
@@ -77,7 +74,7 @@ namespace Flyke.MVVM.View
             tenhang = tenhangTxb.Text;
             if (mahang == "" || tenhang == "")
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+                MessageBox.Show("Xin vui lòng nhập đầy đủ thông tin!");
                 return;
             }
             if (thaotac == 0)
@@ -88,7 +85,7 @@ namespace Flyke.MVVM.View
                 {
                     if (reader.HasRows)
                     {
-                        MessageBox.Show("Mã hãng đã tồn tại. ", "Dữ liệu không hợp lệ!");
+                        MessageBox.Show("Mã hãng này đã tồn tại. ", "Dữ liệu không hợp lệ!");
                         return;
                     }
                 }
@@ -110,7 +107,7 @@ namespace Flyke.MVVM.View
                 hb.STT = (dt.Rows.Count + 1).ToString();
                 hb.tenhang = tenhang;
                 hb.mahang = mahang;
-                hangmbtable.Items.Add(hb);
+                banghangmaybay.Items.Add(hb);
                 SqlConnection con = DataProvider.sqlConnection;
                 if (con.State == ConnectionState.Closed)
                 {
@@ -134,7 +131,7 @@ namespace Flyke.MVVM.View
                 cmd.CommandType = CommandType.Text;
                 cmd.ExecuteNonQuery();
                 con.Close();
-                hangmbtable.Items.Clear();
+                banghangmaybay.Items.Clear();
                 loadDatatoHMB();
                 this.Close();
             }

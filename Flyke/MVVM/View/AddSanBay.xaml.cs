@@ -1,6 +1,4 @@
-﻿
-using Flyke.MVVM.Model;
-using Flyke.MVVM.Model;
+﻿using Flyke.MVVM.Model;
 using Flyke.Resources.CustomControls;
 using Flyke.UserControls;
 using System;
@@ -23,17 +21,15 @@ using static Flyke.Resources.CustomControls.Sanbay;
 
 namespace Flyke.MVVM.View
 {
-    /// <summary>
-    /// Interaction logic for AddSanBay.xaml
-    /// </summary>
+
     public partial class AddSanBay : Window
     {
-        DataGrid SanbayDataGrid;
+        DataGrid ThongtinSanBay;
         int thaotac;
-        public AddSanBay(DataGrid sanbayDataGrid, int thaotac)
+        public AddSanBay(DataGrid thongtinSanBay, int thaotac)
         {
             InitializeComponent();
-            SanbayDataGrid = sanbayDataGrid;
+            ThongtinSanBay = thongtinSanBay;
             this.thaotac = thaotac;
             if (thaotac == 1)
             {
@@ -71,7 +67,7 @@ namespace Flyke.MVVM.View
                 sb.maSB = dr["MaSanBay"].ToString();
                 sb.tenSB = dr["TenSanBay"].ToString();
                 sb.tinh = dr["Tinh"].ToString();
-                SanbayDataGrid.Items.Add(sb);
+                ThongtinSanBay.Items.Add(sb);
                 stt++;
             }
         }
@@ -116,7 +112,7 @@ namespace Flyke.MVVM.View
                 sb.maSB = MaSB;
                 sb.tenSB = TenSB;
                 sb.tinh = Tinh;
-                SanbayDataGrid.Items.Add(sb);
+                ThongtinSanBay.Items.Add(sb);
 
                 SqlConnection con = DataProvider.sqlConnection;
                 if (con.State == ConnectionState.Closed)
@@ -142,7 +138,7 @@ namespace Flyke.MVVM.View
                 cmd.CommandType = CommandType.Text;
                 cmd.ExecuteNonQuery();
                 con.Close();
-                SanbayDataGrid.Items.Clear();
+                ThongtinSanBay.Items.Clear();
                 loadDatatoTable();
                 this.Close();
             }

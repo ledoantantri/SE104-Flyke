@@ -15,13 +15,10 @@ using Flyke.MVVM.Model;
 using System.Data;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
-using Flyke.MVVM.Model;
 
 namespace Flyke.MVVM.View
 {
-    /// <summary>
-    /// Interaction logic for BookingsUpdate.xaml
-    /// </summary>
+
     public partial class BookingsUpdate : Window
     {
         string maVe;
@@ -116,7 +113,7 @@ namespace Flyke.MVVM.View
         private void tbnCancle_Click(object sender, RoutedEventArgs e)
         {
 
-            MessageBoxResult result = MessageBox.Show("Bạn có chắc chắn muốn hủy cập nhật thông tin hành khách?", "Thông báo", MessageBoxButton.YesNo);
+            MessageBoxResult result = MessageBox.Show("Bạn có chắc muốn hủy cập nhật thông tin hành khách?", "Thông báo", MessageBoxButton.YesNo);
             if (result == MessageBoxResult.Yes)
             {
                 this.Close();

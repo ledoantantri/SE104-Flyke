@@ -16,7 +16,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using static Flyke.MainWindow;
 using Flyke.MVVM.Model;
-using Flyke.MVVM.Model;
 
 namespace Flyke.Pages
 {

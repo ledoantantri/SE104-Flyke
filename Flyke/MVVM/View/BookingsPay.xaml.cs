@@ -15,13 +15,9 @@ using Flyke.MVVM.Model;
 using System.Data.SqlClient;
 using System.Data;
 using System.Text.RegularExpressions;
-using Flyke.MVVM.Model;
 
 namespace Flyke.MVVM.View
 {
-    /// <summary>
-    /// Interaction logic for BookingsUpdate.xaml
-    /// </summary>
     public partial class BookingsPay : Window
     {
         private string MaHD;
@@ -74,7 +70,7 @@ namespace Flyke.MVVM.View
 
         private void btnHuy_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult result = MessageBox.Show("Bạn có chắc chắn muốn hủy thanh toán?","",MessageBoxButton.YesNo);
+            MessageBoxResult result = MessageBox.Show("Bạn có chắc chắn muốn hủy thanh toán?", "", MessageBoxButton.YesNo);
             if (result == MessageBoxResult.Yes)
             {
                 this.Close();
@@ -141,17 +137,6 @@ namespace Flyke.MVVM.View
             sqlCommand.ExecuteNonQuery();
             DataProvider.sqlConnection.Close();
         }
-
-        private void RemoveCTHD()
-        {
-            DataProvider.sqlConnection.Open();
-            SqlCommand sqlCommand = new SqlCommand(
-                "delete from [CTHD] where MaHD = @mahd", DataProvider.sqlConnection);
-            sqlCommand.Parameters.Add("@mahd", SqlDbType.NVarChar).Value = MaHD;
-            sqlCommand.ExecuteNonQuery();
-            DataProvider.sqlConnection.Close();
-        }
-
         private void RemoveVe()
         {
             foreach (SymbolTicket ticket in list_ticker)
@@ -165,5 +150,17 @@ namespace Flyke.MVVM.View
                 DataProvider.sqlConnection.Close();
             }
         }
+
+        private void RemoveCTHD()
+        {
+            DataProvider.sqlConnection.Open();
+            SqlCommand sqlCommand = new SqlCommand(
+                "delete from [CTHD] where MaHD = @mahd", DataProvider.sqlConnection);
+            sqlCommand.Parameters.Add("@mahd", SqlDbType.NVarChar).Value = MaHD;
+            sqlCommand.ExecuteNonQuery();
+            DataProvider.sqlConnection.Close();
+        }
+
+
     }
 }

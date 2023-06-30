@@ -31,20 +31,17 @@ using Flyke.Resources.CustomControls;
 
 namespace Flyke.MVVM.View
 {
-    /// <summary>
-    /// Interaction logic for AddChuyenbay.xaml
-    /// </summary>
     public partial class AddChuyenbay : Window
     {
-        DataGrid chuyenbayTable;
+        DataGrid bangchuyenbay;
         int thaotac;
         List<HangVe> qLHangVeClass;
         List<HangVe> qLHangVeClassexist;
         Boolean isSave = false;
-        public AddChuyenbay(DataGrid chuyenbayTable, int thaotac)
+        public AddChuyenbay(DataGrid bangchuyenbay, int thaotac)
         {
             InitializeComponent();
-            this.chuyenbayTable = chuyenbayTable;
+            this.bangchuyenbay = bangchuyenbay;
             this.thaotac = thaotac;
             qLHangVeClass = new List<HangVe>();
             qLHangVeClassexist = new List<HangVe>();
@@ -106,29 +103,7 @@ namespace Flyke.MVVM.View
                         dt.Load(reader);
                     }
                 }
-                //string query1 = "SELECT * FROM SANBAYTRUNGGIAN WHERE MaChuyenBay=@macb";
-                //SqlParameter param2 = new SqlParameter("@macb", Chuyenbay.chuyenbaytofix.maCB);
-                //DataTable dt2;
-                //using (SqlDataReader reader = DataProvider.ExecuteReader(query1, CommandType.Text, param2))
-                //{
-                //    dt2 = new DataTable();
-                //    if (reader.HasRows)
-                //    {
-                //        dt2.Load(reader);
-                //    }
-                //}
-                //int stt2 = 1;
-                //foreach (DataRow dr in dt2.Rows)
-                //{
 
-                //    SanbayTG sb = new SanbayTG();
-                //    sb.STT = stt2.ToString();
-                //    sb.tenSB = dr["SanBayTrungGian"].ToString();
-                //    sb.TGdung = dr["ThoiGianDung"].ToString();
-                //    sb.ghichu = dr["GhiChu"].ToString();
-                //    SBTGTable.Items.Add(sb);
-                //    stt2++;
-                //}
                 loadDatatoSBTG(Chuyenbay.chuyenbaytofix.maCB);
                 int stt = 1;
                 foreach (DataRow dr in dt.Rows)
@@ -148,7 +123,7 @@ namespace Flyke.MVVM.View
                             MaHcBox.SelectedItem = reader.GetString(reader.GetOrdinal("TenHang"));
                         }
                     }
-                    // MaHcBox.SelectedItem = dr["MaHangMayBay"].ToString();
+
                     loaimaybaycb.Text = dr["LoaiMayBay"].ToString();
                 }
                 machuyenbayTxb.Text = Chuyenbay.chuyenbaytofix.maCB;
@@ -163,7 +138,7 @@ namespace Flyke.MVVM.View
                         FromcBox.Text = reader.GetString(reader.GetOrdinal("TenSanBay"));
                     }
                 }
-                // FromcBox.Text = Chuyenbay.chuyenbaytofix.SBdi;
+
                 s = "SELECT * From SANBAY WHERE MaSanBay = @ma";
                 p = new SqlParameter("@ma", Chuyenbay.chuyenbaytofix.SBden);
                 using (SqlDataReader reader = DataProvider.ExecuteReader(s, CommandType.Text, p))
@@ -173,7 +148,7 @@ namespace Flyke.MVVM.View
                         TocBox.Text = reader.GetString(reader.GetOrdinal("TenSanBay"));
                     }
                 }
-                //TocBox.Text = Chuyenbay.chuyenbaytofix.SBden;
+
                 TGbayTxb.Text = Chuyenbay.chuyenbaytofix.tgBay;
                 GiaTxb.Text = Chuyenbay.chuyenbaytofix.Gia;
 
@@ -200,18 +175,15 @@ namespace Flyke.MVVM.View
                             HV.Mahangve = reader.GetString(reader.GetOrdinal("TenHangVe"));
                         }
                     }
-                    // HV.Mahangve = dr["TenHangVe"].ToString();
+
                     HV.Machuyenbay = dr["MaChuyenBay"].ToString();
                     HV.Soluong = dr["SoLuong"].ToString();
-                    // qLHangVeClass.Add(HV);
+
                     qLHangVeClassexist.Add(HV);
                     HangVeList.Items.Add(HV);
                 }
-
             }
-
         }
-
         private void BtnClose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -248,7 +220,7 @@ namespace Flyke.MVVM.View
             }
             else
             {
-                MessageBox.Show("Số sân bay trung gian đã đạt đến giới hạn quy định. ", "Thông báo!");
+                MessageBox.Show("Đã đạt đến giới hạn quy định số sân bay trung gian.", "Thông báo!");
             }
         }
 
@@ -280,7 +252,6 @@ namespace Flyke.MVVM.View
                         sb.tenSB = reader.GetString(reader.GetOrdinal("TenSanBay"));
                     }
                 }
-                // sb.tenSB = dr["SanBayTrungGian"].ToString();
                 sb.TGdung = dr["ThoiGianDung"].ToString();
                 sb.ghichu = dr["GhiChu"].ToString();
                 SBTGTable.Items.Add(sb);
@@ -301,7 +272,6 @@ namespace Flyke.MVVM.View
             {
                 rowCount = (int)sqlCmd.ExecuteScalar();
             }
-
 
             if (HangVeList.Items.Count < rowCount)
             {
@@ -405,7 +375,6 @@ namespace Flyke.MVVM.View
             int stt = 1;
             foreach (DataRow dr in dt.Rows)
             {
-
                 chuyenbayclass cb = new chuyenbayclass();
                 cb.STT = stt.ToString();
                 cb.maCB = dr["MaChuyenBay"].ToString();
@@ -414,7 +383,7 @@ namespace Flyke.MVVM.View
                 cb.datetime = dr["NgayKhoiHanh"].ToString() + "-" + dr["ThoiGianXuatPhat"].ToString();
                 cb.tgBay = dr["ThoiGianDuKien"].ToString();
                 cb.Gia = dr["Gia"].ToString();
-                chuyenbayTable.Items.Add(cb);
+                bangchuyenbay.Items.Add(cb);
                 stt++;
             }
         }
@@ -484,10 +453,9 @@ namespace Flyke.MVVM.View
                     }
                 }
                 catch (Exception ex) { Console.WriteLine(ex); }
-
             }
         }
-        public string MaCB = "", Sanbaydi = "", Sanbayden = "", Ngay="", Gio = "", TgBay ="", Gia = "", mahangMB = "", loaiMB = "";
+        public string MaCB = "", Sanbaydi = "", Sanbayden = "", Ngay = "", Gio = "", TgBay = "", Gia = "", mahangMB = "", loaiMB = "";
 
         private void machuyenbayTxb_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
@@ -543,7 +511,7 @@ namespace Flyke.MVVM.View
                     mahangMB = reader.GetString(reader.GetOrdinal("MaHang"));
                 }
             }
-            //mahangMB = MaHcBox.Text;
+
             loaiMB = loaimaybaycb.Text;
             if (machuyenbayTxb.Text == "" || gioTxb.Text == "" || TGbayTxb.Text == "" || GiaTxb.Text == "" || MaHcBox.Text == "" || loaimaybaycb.Text == "" || Ngay == "")
             {
@@ -583,24 +551,18 @@ namespace Flyke.MVVM.View
                     return;
                 }
 
-                    DateTime currentTime = DateTime.Now;
-                    int second = currentTime.Second;
-                    string[] thoigian = Ngay.Split('/');
-                    int nam = int.Parse(thoigian[2]);
-                    int thang = int.Parse(thoigian[1]);
-                    int ngay = int.Parse(thoigian[0]);
-                    DateTime specificTime = new DateTime(nam, thang, ngay, int.Parse(thoigianKH[0]), int.Parse(thoigianKH[1]), second);
-                    if (specificTime <= currentTime)
-                    {
-                        MessageBox.Show("Số giờ khởi hành phải lớn hơn thời gian hiện tại ", "Dữ liệu không hợp lệ!");
-                        return;
-                    }
-                    //else if (int.Parse(thoigianKH[0]) == hour && int.Parse(thoigianKH[1]) <= minute)
-                    //{
-                    //    MessageBox.Show("Số giờ khởi hành phải lớn hơn thời gian hiện tại ", "Dữ liệu không hợp lệ!");
-                    //    return;
-                    //}
-                
+                DateTime currentTime = DateTime.Now;
+                int second = currentTime.Second;
+                string[] thoigian = Ngay.Split('/');
+                int nam = int.Parse(thoigian[2]);
+                int thang = int.Parse(thoigian[1]);
+                int ngay = int.Parse(thoigian[0]);
+                DateTime specificTime = new DateTime(nam, thang, ngay, int.Parse(thoigianKH[0]), int.Parse(thoigianKH[1]), second);
+                if (specificTime <= currentTime)
+                {
+                    MessageBox.Show("Số giờ khởi hành phải lớn hơn thời gian hiện tại ", "Dữ liệu không hợp lệ!");
+                    return;
+                }
             }
             catch
             {
@@ -723,7 +685,7 @@ namespace Flyke.MVVM.View
                 cb.datetime = Ngay + "-" + Gio;
                 cb.tgBay = TgBay;
                 cb.Gia = Gia;
-                chuyenbayTable.Items.Add(cb);
+                bangchuyenbay.Items.Add(cb);
                 SqlConnection con = DataProvider.sqlConnection;
                 if (con.State == ConnectionState.Closed)
                 {
@@ -751,17 +713,7 @@ namespace Flyke.MVVM.View
                     }
                 }
                 SqlConnection con = DataProvider.sqlConnection;
-                //con.Open();
-                //SqlCommand cmd2 = new SqlCommand("Delete from VE where  MaChuyenBay=N'" + Chuyenbay.chuyenbaytofix.maCB + "'", con);
-                //cmd2.CommandType = CommandType.Text;
-                //cmd2.ExecuteReader();
-                //con.Close();
 
-                //con.Open();
-                //SqlCommand cmd1 = new SqlCommand("Delete from QuanLyHangVeChuyenBay where  MaChuyenBay=N'" + Chuyenbay.chuyenbaytofix.maCB + "'", con);
-                //cmd1.CommandType = CommandType.Text;
-                //cmd1.ExecuteReader();
-                //con.Close();
                 if (con.State == ConnectionState.Closed)
                 {
                     con.Open();
@@ -772,7 +724,7 @@ namespace Flyke.MVVM.View
                 con.Close();
                 if (qLHangVeClass.Count > 0)
                     SaveHV_VE();
-                chuyenbayTable.Items.Clear();
+                bangchuyenbay.Items.Clear();
                 loadDatatoTable();
             }
             MessageBox.Show("Bạn đã lưu chuyến bay thành công. ", "Thông báo");
@@ -802,10 +754,6 @@ namespace Flyke.MVVM.View
                 isSave = false;
                 this.Close();
             }
-
-
-
         }
-
     }
 }

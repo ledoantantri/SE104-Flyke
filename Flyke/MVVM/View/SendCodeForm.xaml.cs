@@ -17,13 +17,10 @@ using System.Windows.Shapes;
 using Flyke.MVVM.Model;
 using System.Data.SqlClient;
 using System.Data;
-using Flyke.MVVM.Model;
 
 namespace Flyke.MVVM.View
 {
-    /// <summary>
-    /// Interaction logic for SendCodeForm.xaml
-    /// </summary>
+
     public partial class SendCodeForm : Window
     {
         public SendCodeForm()

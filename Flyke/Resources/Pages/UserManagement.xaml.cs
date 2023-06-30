@@ -20,7 +20,6 @@ using Flyke.MVVM.View;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Globalization;
-using Flyke.MVVM.Model;
 
 namespace Flyke.Pages
 {

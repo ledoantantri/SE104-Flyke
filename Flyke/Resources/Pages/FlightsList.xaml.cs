@@ -28,7 +28,6 @@ using Flyke.Converter;
 using System.Drawing;
 using Flyke.UserControls;
 using static Flyke.MVVM.View.AddInforHK;
-using Flyke.MVVM.Model;
 
 namespace Flyke
 {
@@ -77,7 +76,7 @@ namespace Flyke
         public void FlightSearched(string departure, string destination, string date, int quantity, string flightClass)
         {
             infoSearch.Text = departure + " -> " + destination + " | " + date + " | " + flightClass + " | " + quantity + " người";
-           
+
             if (DataProvider.sqlConnection.State != ConnectionState.Open)
                 DataProvider.sqlConnection.Open();
             SqlCommand sqlCommand = new SqlCommand();
@@ -118,7 +117,7 @@ namespace Flyke
             sqlCommand.Parameters.Add("@departure", SqlDbType.NVarChar).Value = departure;
             sqlCommand.Parameters.Add("@destination", SqlDbType.NVarChar).Value = destination;
             sqlCommand.Parameters.Add("@flightClass", SqlDbType.NVarChar).Value = flightClass;
-            sqlCommand.Parameters.Add("@quantity", SqlDbType.Int).Value = quantity; 
+            sqlCommand.Parameters.Add("@quantity", SqlDbType.Int).Value = quantity;
             SqlDataReader reader = sqlCommand.ExecuteReader();
             List<Flight> flight_list = new List<Flight>();
             if (reader.HasRows)
@@ -144,7 +143,7 @@ namespace Flyke
                     int stop = int.Parse(reader["SoSBTG"].ToString());
                     long price = long.Parse(reader["Gia"].ToString());
                     flight_list.Add(new Flight(flightID, airlineLogo, airlineName, airportDepartureName, airportDestinationName, timeDestination, timeDeparture, time, dateTimeDeparture, dateTimeDestination, stop, price));
-                    
+
                 }
             }
             DataProvider.sqlConnection.Close();
