@@ -36,7 +36,7 @@
 
         <Border Grid.Column="0" BorderBrush="AntiqueWhite" BorderThickness="2">
             <Grid>
-                <TextBlock Text="Detail" FontSize="20" Foreground="AntiqueWhite" TextAlignment="Center"/>
+                <TextBlock Text="Thông tin" FontSize="20" Foreground="AntiqueWhite" TextAlignment="Center"/>
                 <StackPanel Orientation="Vertical" VerticalAlignment="Center" x:Name="sanbaydetail">
                     <TextBlock Text="Mã sân bay:" FontSize="20" Foreground="AntiqueWhite" TextAlignment="Left" x:Name="masb"/>
                     <TextBox Width="150" Height="30" BorderBrush="Black" BorderThickness="1" x:Name="masanbayTxb" Background="White"/>
