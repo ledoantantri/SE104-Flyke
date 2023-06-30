@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="Flyke.Resources.CustomControls.QLCB_SB"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Flyke.Resources.CustomControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="{StaticResource ColorBg}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition ></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal">
+                <RadioButton Style="{StaticResource BtnTab}"  Click="SanBay_Click" IsChecked="True">
+                    <TextBlock FontSize="15" FontWeight="Medium" Text="Sân bay"/>
+                </RadioButton>
+                <RadioButton Style="{StaticResource BtnTab}" Click="ChuyenBay_Click">
+                    <TextBlock FontSize="15" FontWeight="Medium" Text="Chuyến bay"/>
+                </RadioButton>
+                <RadioButton Style="{StaticResource BtnTab}" Click="HangVe_Click">
+                    <TextBlock FontSize="15" FontWeight="Medium" Text="Hạng vé"/>
+                </RadioButton>
+            </StackPanel>
+            <Frame Grid.Row="1" x:Name="SB_CB"></Frame>
+        </Grid>
+
+        <Border Grid.Column="0" BorderBrush="AntiqueWhite" BorderThickness="2">
+            <Grid>
+                <TextBlock Text="Thông tin" FontSize="20" Foreground="AntiqueWhite" TextAlignment="Center"/>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center" x:Name="sanbaydetail">
+                    <TextBlock Text="Mã sân bay:" FontSize="20" Foreground="AntiqueWhite" TextAlignment="Left" x:Name="masb"/>
+                    <TextBox Width="150" Height="30" BorderBrush="Black" BorderThickness="1" x:Name="masanbayTxb" Background="White"/>
+                    <TextBlock Text="Tên sân bay:" FontSize="20" Foreground="AntiqueWhite" TextAlignment="Left"/>
+                    <TextBox Width="150" Height="30" BorderBrush="Black" BorderThickness="1" x:Name="tensanbayTxb" Background="White"/>
+                    <TextBlock Text="Tỉnh:" FontSize="20" Foreground="AntiqueWhite" TextAlignment="Left"/>
+                    <TextBox Width="150" Height="30" BorderBrush="Black" BorderThickness="1" x:Name="tinhTxb" Background="White"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center" x:Name="Cbaydetail">
+                    <TextBlock Text="Mã chuyến bay:" FontSize="20" Foreground="AntiqueWhite" TextAlignment="Left"/>
+                    <TextBox Width="170" Height="30" BorderBrush="Black" BorderThickness="1" x:Name="machuyenbayTxb" Background="White"/>
+                    <TextBlock Text="Sân bay đi:" FontSize="20" Foreground="AntiqueWhite" TextAlignment="Left"/>
+                    <TextBox Width="170" Height="30" BorderBrush="Black" BorderThickness="1" x:Name="fromTxb" Background="White"/>
+                    <TextBlock Text="Sân bay đến:" FontSize="20" Foreground="AntiqueWhite" TextAlignment="Left"/>
+                    <TextBox Width="170" Height="30" BorderBrush="Black" BorderThickness="1" x:Name="toTxb" Background="White"/>
+                    <TextBlock Text="Ngay - gio:" FontSize="20" Foreground="AntiqueWhite" TextAlignment="Left"/>
+                    <TextBox Width="170" Height="30" BorderBrush="Black" BorderThickness="1" x:Name="datetimeTxb" Background="White"/>
+                    <TextBlock Text="Giá:" FontSize="20" Foreground="AntiqueWhite" TextAlignment="Left"/>
+                    <TextBox Width="170" Height="30" BorderBrush="Black" BorderThickness="1" x:Name="GiaTxb" Background="White"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center" x:Name="Hbaydetail">
+                    <TextBlock Text="Mã hãng:" FontSize="20" Foreground="AntiqueWhite" TextAlignment="Left"/>
+                    <TextBox Width="170" Height="30" BorderBrush="Black" BorderThickness="1" x:Name="mahangTxb" Background="White"/>
+                    <TextBlock Text="Tên hãng:" FontSize="20" Foreground="AntiqueWhite" TextAlignment="Left"/>
+                    <TextBox Width="170" Height="30" BorderBrush="Black" BorderThickness="1" x:Name="tenhangTxb" Background="White"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center" x:Name="Hvedetail">
+                    <TextBlock Text="Mã hãng vé:" FontSize="20" Foreground="AntiqueWhite" TextAlignment="Left"/>
+                    <TextBox Width="170" Height="30" BorderBrush="Black" BorderThickness="1" x:Name="mahangveTxb" Background="White"/>
+                    <TextBlock Text="Tên hãng vé:" FontSize="20" Foreground="AntiqueWhite" TextAlignment="Left"/>
+                    <TextBox Width="170" Height="30" BorderBrush="Black" BorderThickness="1" x:Name="tenhangveTxb" Background="White"/>
+                    <TextBlock Text="Tỉ lệ:" FontSize="20" Foreground="AntiqueWhite" TextAlignment="Left"/>
+                    <TextBox Width="170" Height="30" BorderBrush="Black" BorderThickness="1" x:Name="tileTxb" Background="White"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>
