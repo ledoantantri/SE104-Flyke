@@ -10,6 +10,7 @@
         Width="1320"  
         Background="Transparent"
         WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
         Title="Flyke"
         FontFamily="Raleway">
     <Grid>
